@@ -1,3 +1,5 @@
+using UnityEngine;
+
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Health))]
 [RequireComponent(typeof(Rigidbody2D))]
