@@ -1,5 +1,7 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Health))]
@@ -62,12 +64,13 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float sprintMultiplier = speed * 3f;
+        float sprintMultiplier = speed * 1.5f;
         if (health.isDead)
             return;
             
         // Move with WASD
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        //if(Input.GetKeyDown(KeyCode.LeftControl))
+        if(Keyboard.current.ctrlKey.isPressed)
         {
             rb.MovePosition(rb.position + moveDir * sprintMultiplier * Time.fixedDeltaTime);
             Debug.Log("Key is being pressed");
