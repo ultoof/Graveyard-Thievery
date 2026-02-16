@@ -68,22 +68,27 @@ public class PlayerController : MonoBehaviour
 
         if (health.isDead)
             return;
-            
+
         // Move with WASD
-        //if(Input.GetKeyDown(KeyCode.LeftControl))
+        // When shift key is pressed = increased movment speed : higher detection
+        // When ctrl key is pressed = reduced movement speed : lower detection 
         if(Keyboard.current.shiftKey.isPressed)
         {
             rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
+            animator.SetBool("sprint" , true);
             Debug.Log("Shift Key is being pressed");
         }
         else if (Keyboard.current.ctrlKey.isPressed)
         {
             rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
+            animator.SetBool("crouch", true);
             Debug.Log("Ctrl key is pressed");
         }
         else
         {
             rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
+            animator.SetBool("sprint" , false);
+            animator.SetBool("crouch", false);
         }
         
 
