@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -61,11 +62,21 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        float sprintMultiplier = speed * 3f;
         if (health.isDead)
             return;
             
         // Move with WASD
-        rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            rb.MovePosition(rb.position + moveDir * sprintMultiplier * Time.fixedDeltaTime);
+            Debug.Log("Key is being pressed");
+        }
+        else
+        {
+            rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
+        }
+        
 
         // Move with mouse position
         //rb.MovePosition(Vector2.MoveTowards(rb.position, movePos, speed * Time.fixedDeltaTime));
