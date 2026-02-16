@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 4f;
+    public float sprintMultiplier = 1.5f;
     //public AudioSource footSteps;
     private Vector2 moveDir; // used for WASD movement
     private Vector2 movePos; // used for mouse click movement
@@ -52,7 +53,6 @@ public class PlayerController : MonoBehaviour
             lastDir = moveDir;
             animator.SetFloat("xMove", moveDir.x);
             animator.SetFloat("yMove", moveDir.y);
-            spriteRenderer.flipX = moveDir.x > 0f ? true : false; // Remove if right faced animations is present
             //if (footSteps != null) footSteps.UnPause();
         }
         else
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float sprintMultiplier = speed * 1.5f;
+
         if (health.isDead)
             return;
             
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         //if(Input.GetKeyDown(KeyCode.LeftControl))
         if(Keyboard.current.ctrlKey.isPressed)
         {
-            rb.MovePosition(rb.position + moveDir * sprintMultiplier * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
             Debug.Log("Key is being pressed");
         }
         else
