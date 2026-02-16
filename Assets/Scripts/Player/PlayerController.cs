@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 4f;
-    public AudioSource footSteps;
+    //public AudioSource footSteps;
     private Vector2 moveDir; // used for WASD movement
     private Vector2 movePos; // used for mouse click movement
     [HideInInspector] public Vector2 lastDir;
@@ -50,11 +50,11 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("xMove", moveDir.x);
             animator.SetFloat("yMove", moveDir.y);
             spriteRenderer.flipX = moveDir.x > 0f ? true : false; // Remove if right faced animations is present
-            if (footSteps != null) footSteps.UnPause();
+            //if (footSteps != null) footSteps.UnPause();
         }
         else
         {
-            if (footSteps != null) footSteps.Pause();
+            //if (footSteps != null) footSteps.Pause();
         }
         animator.SetBool("moving", moveDir.sqrMagnitude > 0.01f ? true : false);
     }
