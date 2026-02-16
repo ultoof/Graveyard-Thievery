@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 4f;
     public float sprintMultiplier = 1.5f;
+    public float crouchMultiplier = 0.8f; 
     //public AudioSource footSteps;
     private Vector2 moveDir; // used for WASD movement
     private Vector2 movePos; // used for mouse click movement
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             //if (footSteps != null) footSteps.Pause();
         }
-        animator.SetBool("moving", moveDir.sqrMagnitude > 0.01f ? true : false);
+        animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
     }
 
     void FixedUpdate()
@@ -70,10 +71,15 @@ public class PlayerController : MonoBehaviour
             
         // Move with WASD
         //if(Input.GetKeyDown(KeyCode.LeftControl))
-        if(Keyboard.current.ctrlKey.isPressed)
+        if(Keyboard.current.shiftKey.isPressed)
         {
             rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
-            Debug.Log("Key is being pressed");
+            Debug.Log("Shift Key is being pressed");
+        }
+        else if (Keyboard.current.ctrlKey.isPressed)
+        {
+            rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
+            Debug.Log("Ctrl key is pressed");
         }
         else
         {
