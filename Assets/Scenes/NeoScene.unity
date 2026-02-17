@@ -890,26 +890,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2328991299488207323, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115253184148711558, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115253184148711558, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
-      propertyPath: ringBufferMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813294397706202255, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
-      propertyPath: Stamina
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813294397706202255, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
-      propertyPath: crouchMultiplier
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 5347832986690659658, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

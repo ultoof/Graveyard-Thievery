@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
                 rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
                 animator.SetBool("sprint", true);
                 animator.SetBool("crouch", false);
+                animator.SetBool("slowed", false);
                 smokeEmitter.Play();
                 StaminaMod = -5;
             }
@@ -85,6 +86,7 @@ public class PlayerController : MonoBehaviour
                 rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
                 animator.SetBool("crouch", false);
                 animator.SetBool("sprint", false);
+                animator.SetBool("slowed", true);
                 smokeEmitter.Stop();
                 StaminaMod = -100;
             }
@@ -95,6 +97,7 @@ public class PlayerController : MonoBehaviour
             rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
             animator.SetBool("crouch", true);
             animator.SetBool("sprint", false);
+            animator.SetBool("slowed", false);
             smokeEmitter.Stop();
             StaminaMod = 5;
         }
@@ -103,6 +106,7 @@ public class PlayerController : MonoBehaviour
             rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
             animator.SetBool("sprint", false);
             animator.SetBool("crouch", false);
+            animator.SetBool("slowed", false);
             smokeEmitter.Stop();
             StaminaMod = 1;
         }
