@@ -70,19 +70,20 @@ public class PlayerController : MonoBehaviour
             return;
 
         // Move with WASD
-        // When shift key is pressed = increased movment speed : higher detection
-        // When ctrl key is pressed = reduced movement speed : lower detection 
+        // When shift key is pressed = increased movment speed(sprint set true, shift set false) : higher detection
+        // When ctrl key is pressed = reduced movement speed(shift set true, sprint set false) : lower detection
+        // The animator is sent a bool  true when the player is shifting and running and it is set to false when they are running or in a different state
         if(Keyboard.current.shiftKey.isPressed)
         {
             rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
             animator.SetBool("sprint" , true);
-            Debug.Log("Shift Key is being pressed");
+            animator.SetBool("crouch", false);
         }
         else if (Keyboard.current.ctrlKey.isPressed)
         {
             rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
             animator.SetBool("crouch", true);
-            Debug.Log("Ctrl key is pressed");
+            animator.SetBool("sprint", false);
         }
         else
         {
