@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 17dc7db4d717d4f4483b611c85438308
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 435474469390191969
+    second: zomguardwalk2 1_0
+  - first:
+      213: 3534583718225786169
+    second: zomguardwalk2 1_1
+  - first:
+      213: 1720001152013144547
+    second: zomguardwalk2 1_2
+  - first:
+      213: 9045933103722525422
+    second: zomguardwalk2 1_3
+  - first:
+      213: -2151348626476238546
+    second: zomguardwalk2 1_4
+  - first:
+      213: -6737226549789437957
+    second: zomguardwalk2 1_5
+  - first:
+      213: -2230439206694094522
+    second: zomguardwalk2 1_6
+  - first:
+      213: 8736002644954359610
+    second: zomguardwalk2 1_7
+  - first:
+      213: -1677934996604936073
+    second: zomguardwalk2 1_8
+  - first:
+      213: 7267390016921071010
+    second: zomguardwalk2 1_9
+  - first:
+      213: -6418640858512083552
+    second: zomguardwalk2 1_10
+  - first:
+      213: -280979844018042363
+    second: zomguardwalk2 1_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zomguardwalk2 1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 203
+        width: 62
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d01c009bd1b0600800000000000000
+      internalID: 435474469390191969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 203
+        width: 41
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9353ab92a2d5d0130800000000000000
+      internalID: 3534583718225786169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 203
+        width: 62
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1910f4febaed710800000000000000
+      internalID: 1720001152013144547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 203
+        width: 41
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2f35dfa3c998d70800000000000000
+      internalID: 9045933103722525422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 110
+        width: 56
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29fbd292dfd422e0800000000000000
+      internalID: -2151348626476238546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_5
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 121
+        width: 63
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff4878f5209082a0800000000000000
+      internalID: -6737226549789437957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_6
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 114
+        width: 57
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 649f4efdb53eb01e0800000000000000
+      internalID: -2230439206694094522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 121
+        width: 65
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37a069ce148c3970800000000000000
+      internalID: 8736002644954359610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 14
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770aa2bb207c6b8e0800000000000000
+      internalID: -1677934996604936073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_9
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 24
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adecc257b4fad460800000000000000
+      internalID: 7267390016921071010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 18
+        width: 58
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5349785286ce6a0800000000000000
+      internalID: -6418640858512083552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zomguardwalk2 1_11
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 26
+        width: 63
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a82401252c91cf0800000000000000
+      internalID: -280979844018042363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      zomguardwalk2 1_0: 435474469390191969
+      zomguardwalk2 1_1: 3534583718225786169
+      zomguardwalk2 1_10: -6418640858512083552
+      zomguardwalk2 1_11: -280979844018042363
+      zomguardwalk2 1_2: 1720001152013144547
+      zomguardwalk2 1_3: 9045933103722525422
+      zomguardwalk2 1_4: -2151348626476238546
+      zomguardwalk2 1_5: -6737226549789437957
+      zomguardwalk2 1_6: -2230439206694094522
+      zomguardwalk2 1_7: 8736002644954359610
+      zomguardwalk2 1_8: -1677934996604936073
+      zomguardwalk2 1_9: 7267390016921071010
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
