@@ -391,6 +391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 4
+  sprintMultiplier: 1.5
+  crouchMultiplier: 0.8
   lastDir: {x: 0, y: 0}
 --- !u!50 &719686205
 Rigidbody2D:
