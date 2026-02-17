@@ -16,12 +16,15 @@ public class PlayerController : MonoBehaviour
     public bool movementRestriction = false;
     public int Stamina = 100;
     private int StaminaMod;
+    
 
     private Vector2 moveDir; // used for WASD movement
     public Vector2 lastDir;
+    public GameObject smokeVFX;
     private Rigidbody2D rb;
     private Health health;
     private Animator animator;
+    private ParticleSystem smokeEmitter;
     
     void Awake()
     {
@@ -29,6 +32,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         health = GetComponent<Health>();
         animator = GetComponent<Animator>();
+        smokeEmitter = smokeVFX.GetComponent<ParticleSystem>();
         lastDir = Vector2.down; // Set to players starting direction
     }
 
@@ -65,27 +69,43 @@ public class PlayerController : MonoBehaviour
         // When ctrl key is pressed = reduced movement speed(shift set true, sprint set false) : lower detection
         // The animator is sent a bool  true when the player is shifting and running and it is set to false when they are running or in a different state
 
-        if (Keyboard.current.shiftKey.isPressed && Stamina > 0 && movementRestriction == false)
+        if (Keyboard.current.shiftKey.isPressed && movementRestriction == false)
         {
-            rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
-            animator.SetBool("sprint", true);
-            animator.SetBool("crouch", false);
-            StaminaMod = -10;
+            if (Stamina > 0)
+            {
+                rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
+                animator.SetBool("sprint", true);
+                animator.SetBool("crouch", false);
+                smokeEmitter.Play();
+                StaminaMod = -5;
+            }
+            else
+            {
+                // Slows movement if attempt to sprint when no stamina
+                rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
+                animator.SetBool("crouch", false);
+                animator.SetBool("sprint", false);
+                smokeEmitter.Stop();
+                StaminaMod = -100;
+            }
+
         }
         else if (Keyboard.current.ctrlKey.isPressed && movementRestriction == false)
         {
             rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
             animator.SetBool("crouch", true);
             animator.SetBool("sprint", false);
-            StaminaMod = 20;
+            smokeEmitter.Stop();
+            StaminaMod = 5;
         }
         else
         {
             rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
             animator.SetBool("sprint", false);
             animator.SetBool("crouch", false);
-            StaminaMod = 5;
+            smokeEmitter.Stop();
+            StaminaMod = 1;
         }
-        Stamina = math.clamp(Stamina + StaminaMod, 0, 1000);
+        Stamina = math.clamp(Stamina + StaminaMod, -100, 1000);
     }
 }
