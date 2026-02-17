@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 509810150712577835}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.003, y: -0.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 823951549
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -295083593, guid: a8a3f69010055424da080a99f34949cc, type: 3}
@@ -286,10 +286,7 @@ MonoBehaviour:
   speed: 1.8
   sprintMultiplier: 1.5
   crouchMultiplier: 0.8
-<<<<<<< HEAD
   movementRestriction: 0
-=======
->>>>>>> 2edb92db82ebbc3104010eec2864711f36688f9c
   Stamina: 100
   lastDir: {x: 0, y: 0}
 --- !u!114 &7471075357440579559
@@ -354,37 +351,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-<<<<<<< HEAD
-  m_Offset: {x: 0, y: -0.10866953}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 0.56}
-    newSize: {x: 1.11, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.24, y: 0.36276472}
-  m_EdgeRadius: 0
---- !u!114 &3541854834116286565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509810150712577835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2ae755b395cfcb46ac3e1d73f5052c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Flashlight
-  light: {fileID: 7564796484145713086}
-  player: {fileID: 509810150712577835}
-=======
   m_Offset: {x: 0, y: -0.09122187}
   m_Radius: 0.18877816
->>>>>>> 2edb92db82ebbc3104010eec2864711f36688f9c
 --- !u!1 &7564796484145713086
 GameObject:
   m_ObjectHideFlags: 0
