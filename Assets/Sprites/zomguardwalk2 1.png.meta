@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -141,7 +141,7 @@ TextureImporter:
         width: 62
         height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -163,7 +163,7 @@ TextureImporter:
         width: 41
         height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -185,7 +185,7 @@ TextureImporter:
         width: 62
         height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -207,7 +207,7 @@ TextureImporter:
         width: 41
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,7 +221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_4
+      name: PoliceZombieRunFront1
       rect:
         serializedVersion: 2
         x: 4
@@ -229,7 +229,7 @@ TextureImporter:
         width: 56
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_5
+      name: PoliceZombieRunLeft1
       rect:
         serializedVersion: 2
         x: 63
@@ -251,7 +251,7 @@ TextureImporter:
         width: 63
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_6
+      name: PoliceZombieRunBack1
       rect:
         serializedVersion: 2
         x: 134
@@ -273,7 +273,7 @@ TextureImporter:
         width: 57
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,7 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_7
+      name: PoliceZombieRunRight1
       rect:
         serializedVersion: 2
         x: 191
@@ -295,7 +295,7 @@ TextureImporter:
         width: 65
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,7 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_8
+      name: PoliceZombieRunFront2
       rect:
         serializedVersion: 2
         x: 3
@@ -317,7 +317,7 @@ TextureImporter:
         width: 58
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,7 +331,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_9
+      name: PoliceZombieRunLeft2
       rect:
         serializedVersion: 2
         x: 63
@@ -339,7 +339,7 @@ TextureImporter:
         width: 64
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -353,7 +353,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_10
+      name: PoliceZombieRunBack2
       rect:
         serializedVersion: 2
         x: 129
@@ -361,7 +361,7 @@ TextureImporter:
         width: 58
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_11
+      name: PoliceZombieRunRight2
       rect:
         serializedVersion: 2
         x: 194
@@ -383,7 +383,7 @@ TextureImporter:
         width: 63
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b03629fbc43c0cc4f8b5d43ba5ee9d63
     internalID: 0
     vertices: []
     indices: 
@@ -410,18 +410,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      PoliceZombieRunBack1: -2230439206694094522
+      PoliceZombieRunBack2: -6418640858512083552
+      PoliceZombieRunFront1: -2151348626476238546
+      PoliceZombieRunFront2: -1677934996604936073
+      PoliceZombieRunLeft1: -6737226549789437957
+      PoliceZombieRunLeft2: 7267390016921071010
+      PoliceZombieRunRight1: 8736002644954359610
+      PoliceZombieRunRight2: -280979844018042363
       zomguardwalk2 1_0: 435474469390191969
       zomguardwalk2 1_1: 3534583718225786169
-      zomguardwalk2 1_10: -6418640858512083552
-      zomguardwalk2 1_11: -280979844018042363
       zomguardwalk2 1_2: 1720001152013144547
       zomguardwalk2 1_3: 9045933103722525422
-      zomguardwalk2 1_4: -2151348626476238546
-      zomguardwalk2 1_5: -6737226549789437957
-      zomguardwalk2 1_6: -2230439206694094522
-      zomguardwalk2 1_7: 8736002644954359610
-      zomguardwalk2 1_8: -1677934996604936073
-      zomguardwalk2 1_9: 7267390016921071010
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
