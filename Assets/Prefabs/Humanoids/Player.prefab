@@ -87,7 +87,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 823951549
-  m_SortingLayer: 5
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -295083593, guid: a8a3f69010055424da080a99f34949cc, type: 3}
@@ -285,6 +285,8 @@ MonoBehaviour:
   speed: 1.8
   sprintMultiplier: 1.5
   crouchMultiplier: 0.8
+  movementRestriction: 0
+  Stamina: 100
   lastDir: {x: 0, y: 0}
 --- !u!114 &7471075357440579559
 MonoBehaviour:
@@ -357,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flashlight
   light: {fileID: 7564796484145713086}
-  player: {fileID: 5347832986690659658}
+  player: {fileID: 509810150712577835}
 --- !u!1 &7564796484145713086
 GameObject:
   m_ObjectHideFlags: 0
