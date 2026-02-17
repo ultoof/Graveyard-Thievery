@@ -286,11 +286,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 1.8
   sprintMultiplier: 1.5
-  crouchMultiplier: 0.8
+  crouchMultiplier: 0.3
   movementRestriction: 0
-  Stamina: 100
-  smokeVFX: {fileID: 2328991299488207323}
+  Stamina: 1000
   lastDir: {x: 0, y: 0}
+  smokeVFX: {fileID: 2328991299488207323}
 --- !u!114 &7471075357440579559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +405,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
