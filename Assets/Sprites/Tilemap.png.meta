@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e5e8e679ed44ab04e8ff78d6b7dd3442
+guid: a0123e96600cb5a44b4c39c42477e703
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2853607081631959377
-    second: "gra\u0308s,grus,_tiles_0"
+      213: -8121904074310726660
+    second: "gra\u0308s,grus,buskar,stenwalls_tiles_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "gra\u0308s,grus,_tiles_0"
+      name: "gra\u0308s,grus,buskar,stenwalls_tiles_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 415
-        width: 97
-        height: 97
+        y: 399
+        width: 289
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 159463d858c0a9720800000000000000
-      internalID: 2853607081631959377
+      spriteID: cfb49eea643394f80800000000000000
+      internalID: -8121904074310726660
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "gra\u0308s,grus,_tiles_0": 2853607081631959377
+      "gra\u0308s,grus,buskar,stenwalls_tiles_0": -8121904074310726660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
