@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4604704821279919780}
   - component: {fileID: 106548595463288535}
   - component: {fileID: 654059483609828874}
+  - component: {fileID: 8665363892355677088}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -138,3 +139,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8665363892355677088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850843721465355382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d0def3b955271419030c1031b26899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Traps
+  collidingTag: Player
+  player: {fileID: 0}
