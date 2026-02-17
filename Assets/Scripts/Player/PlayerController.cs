@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private Health health;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-
+    
     void Awake()
     {
         // Get components
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (health.isDead) 
+        if (health.isDead)
             return;
 
         // Get movement by WASD
