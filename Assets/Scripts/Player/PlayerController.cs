@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         */
 
         // Set animation params
-        if(moveDir.sqrMagnitude > 0.01f)
+        if (moveDir.sqrMagnitude > 0.01f)
         {
             lastDir = moveDir;
             animator.SetFloat("xMove", moveDir.x);
