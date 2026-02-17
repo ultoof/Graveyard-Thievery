@@ -14,8 +14,7 @@ public class PlayerController : MonoBehaviour
     public float crouchMultiplier = 0.8f; 
     //public AudioSource footSteps;
     private Vector2 moveDir; // used for WASD movement
-    private Vector2 movePos; // used for mouse click movement
-    [HideInInspector] public Vector2 lastDir;
+    public Vector2 lastDir;
     private Rigidbody2D rb;
     private Health health;
     private Animator animator;
