@@ -890,6 +890,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_Intensity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_ShadowsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_BlendStyleIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_OverlapOperation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_LightVolumeEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_LightVolumeIntensity
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_ShadowVolumeIntensityEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669648772674753281, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5347832986690659658, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -930,6 +982,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7564796484145713086, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066132666400442350, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066132666400442350, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

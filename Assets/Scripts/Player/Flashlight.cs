@@ -1,5 +1,7 @@
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 
@@ -8,17 +10,13 @@ public class Flashlight : MonoBehaviour
     bool isOn = false;
     public GameObject light;
     public GameObject circleLight;
-    private Light2D circleLightComponent;
     public GameObject player;
     public GameObject vfx;
-    private Transform currentOffset;
     private Animator animator;
 
-    private PlayerController playerController;
+    // Setup
     void Awake()
     {
-        playerController = GetComponent<PlayerController>();
-        circleLightComponent = circleLight.GetComponent<Light2D>();
         animator = player.GetComponent<Animator>();
     }
 
@@ -26,26 +24,10 @@ public class Flashlight : MonoBehaviour
     void Update()
     {
         // Flashlight rotation
-        if (playerController.lastDir.y > 0)
-        {
-            light.transform.rotation = Quaternion.Euler(0, 0, 0);
-            light.transform.position = transform.position + new Vector3(0, 0.27f, 0);
-        }
-        else if (playerController.lastDir.y < 0)
-        {
-            light.transform.rotation = Quaternion.Euler(0, 0, 180);
-            light.transform.position = transform.position + new Vector3(0, -0.25f, 0);
-        }
-        else if (playerController.lastDir.x > 0)
-        {
-            light.transform.rotation = Quaternion.Euler(0, 0, 270);
-            light.transform.position = transform.position + new Vector3(0.1f, 0, 0);
-        }
-        else if (playerController.lastDir.x < 0)
-        {
-            light.transform.rotation = Quaternion.Euler(0, 0, 90);
-            light.transform.position = transform.position + new Vector3(-0.1f, 0, 0);
-        }
+        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - light.transform.position;
+        diff.Normalize();
+
+        light.transform.rotation = Quaternion.Lerp(light.transform.rotation,Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90),3f * Time.deltaTime);
 
         // Flashlight
         if (Keyboard.current.fKey.wasPressedThisFrame)
