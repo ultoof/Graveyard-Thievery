@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 4f;
     public float sprintMultiplier = 1.5f;
     public float crouchMultiplier = 0.8f;
+    public bool movementRestriction = false;
     public int Stamina = 100;
     private int StaminaMod;
 
@@ -75,14 +76,15 @@ public class PlayerController : MonoBehaviour
         // When shift key is pressed = increased movment speed(sprint set true, shift set false) : higher detection
         // When ctrl key is pressed = reduced movement speed(shift set true, sprint set false) : lower detection
         // The animator is sent a bool  true when the player is shifting and running and it is set to false when they are running or in a different state
-        if (Keyboard.current.shiftKey.isPressed && Stamina > 0)
+
+        if (Keyboard.current.shiftKey.isPressed && Stamina > 0 && movementRestriction == false)
         {
             rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
             animator.SetBool("sprint", true);
             animator.SetBool("crouch", false);
             StaminaMod = -10;
         }
-        else if (Keyboard.current.ctrlKey.isPressed)
+        else if (Keyboard.current.ctrlKey.isPressed && movementRestriction == false)
         {
             rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
             animator.SetBool("crouch", true);
@@ -97,6 +99,7 @@ public class PlayerController : MonoBehaviour
             StaminaMod = 5;
         }
         Stamina = math.clamp(Stamina + StaminaMod, 0, 1000);
+
 
         // Move with mouse position
         //rb.MovePosition(Vector2.MoveTowards(rb.position, movePos, speed * Time.fixedDeltaTime));
