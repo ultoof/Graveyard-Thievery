@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 6228730187169704986}
   - component: {fileID: 4813294397706202255}
   - component: {fileID: 7471075357440579559}
-  - component: {fileID: 531580802540443846}
   - component: {fileID: 3541854834116286565}
+  - component: {fileID: 1519605855486927374}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -38,6 +38,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2697632794938481290}
   - {fileID: 773885735988142491}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -285,7 +286,10 @@ MonoBehaviour:
   speed: 1.8
   sprintMultiplier: 1.5
   crouchMultiplier: 0.8
+<<<<<<< HEAD
   movementRestriction: 0
+=======
+>>>>>>> 2edb92db82ebbc3104010eec2864711f36688f9c
   Stamina: 100
   lastDir: {x: 0, y: 0}
 --- !u!114 &7471075357440579559
@@ -300,8 +304,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df105b716058af4f9c0ff3e3c4a3d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LayerController
---- !u!61 &531580802540443846
-BoxCollider2D:
+--- !u!114 &3541854834116286565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509810150712577835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ae755b395cfcb46ac3e1d73f5052c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Flashlight
+  light: {fileID: 7564796484145713086}
+  circleLight: {fileID: 7768551186538579473}
+  player: {fileID: 509810150712577835}
+  vfx: {fileID: 7840231783324764384, guid: 4ed5c04222f373841bb3190edd6798a6, type: 3}
+--- !u!58 &1519605855486927374
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -334,6 +354,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
+<<<<<<< HEAD
   m_Offset: {x: 0, y: -0.10866953}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,6 +381,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Flashlight
   light: {fileID: 7564796484145713086}
   player: {fileID: 509810150712577835}
+=======
+  m_Offset: {x: 0, y: -0.09122187}
+  m_Radius: 0.18877816
+>>>>>>> 2edb92db82ebbc3104010eec2864711f36688f9c
 --- !u!1 &7564796484145713086
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +396,7 @@ GameObject:
   - component: {fileID: 773885735988142491}
   - component: {fileID: 3669648772674753281}
   m_Layer: 0
-  m_Name: Spot Light 2D
+  m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,6 +459,90 @@ MonoBehaviour:
   m_PointLightOuterAngle: 171.1015
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 3
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &7768551186538579473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2697632794938481290}
+  - component: {fileID: 7790826514570506803}
+  m_Layer: 0
+  m_Name: CircleLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2697632794938481290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768551186538579473}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.004, y: -0.034, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5347832986690659658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7790826514570506803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768551186538579473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.43
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 000000006bd90c44bb66927675b5e6c82bfa9414bd801c31
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
