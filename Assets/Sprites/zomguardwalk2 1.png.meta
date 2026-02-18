@@ -133,7 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zomguardwalk2 1_0
+      name: ZombieGuardIdleFront
       rect:
         serializedVersion: 2
         x: 1
@@ -155,7 +155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_1
+      name: ZombieGuardIdleLeft
       rect:
         serializedVersion: 2
         x: 76
@@ -177,7 +177,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_2
+      name: ZombieGuardIdleBack
       rect:
         serializedVersion: 2
         x: 129
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zomguardwalk2 1_3
+      name: ZombieGuardIdleRight
       rect:
         serializedVersion: 2
         x: 203
@@ -418,10 +418,10 @@ TextureImporter:
       PoliceZombieRunLeft2: 7267390016921071010
       PoliceZombieRunRight1: 8736002644954359610
       PoliceZombieRunRight2: -280979844018042363
-      zomguardwalk2 1_0: 435474469390191969
-      zomguardwalk2 1_1: 3534583718225786169
-      zomguardwalk2 1_2: 1720001152013144547
-      zomguardwalk2 1_3: 9045933103722525422
+      ZombieGuardIdleBack: 1720001152013144547
+      ZombieGuardIdleFront: 435474469390191969
+      ZombieGuardIdleLeft: 3534583718225786169
+      ZombieGuardIdleRight: 9045933103722525422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

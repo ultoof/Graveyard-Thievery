@@ -1,17 +1,14 @@
-﻿﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
-{
+public class GuardEnemy : MonoBehaviour {
     private NavMeshAgent nav;
     private Animator animator;
     private GameObject player;
 
     public LayerMask obstacleLayerMasks;
     public float viewDistance = 5f;
-    public float attackRange = 2f;
-    public int damage = 10;
-
+    public GameObject Player;
 
     private void Awake()
     {
