@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Camera_top_down_follow : MonoBehaviour
 {
-
     public Transform player;        // Reference to the player
     private Vector3 offset;         // The start offset between player and camera
     public float smoothing = 5f;   // The catch up speed for the camera
