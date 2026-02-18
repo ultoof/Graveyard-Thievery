@@ -1,10 +1,13 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class GuardEnemy : MonoBehaviour {
+public class GuardEnemy : MonoBehaviour
+{
     private NavMeshAgent nav;
     private Animator animator;
     private GameObject player;
+    public bool attacking = false;
 
     public LayerMask obstacleLayerMasks;
     public float viewDistance;
@@ -27,7 +30,7 @@ public class GuardEnemy : MonoBehaviour {
         player = GameObject.Find("Player");
     }
 
-    
+
     void Update()
     {
         // Send data to Animator
@@ -38,14 +41,22 @@ public class GuardEnemy : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
 
         // Linecast to target was succesful (did not hit anything on obstacleLayerMasks)
-        if (!hit)
+        if (!hit && !attacking)
         {
-            if (Vector2.Distance(transform.position, player.transform.position) < viewDistance)
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance < 2)
+            {
+                attacking = true;
+
+                StartCoroutine(Attack(2.0f));
+            }
+            else if (distance < viewDistance)
             {
                 Debug.DrawLine(gameObject.transform.position, player.transform.position);
                 nav.destination = player.transform.position;
                 animator.SetBool("move", true);
             }
+
             else
             {
                 animator.SetBool("move", false);
@@ -55,5 +66,13 @@ public class GuardEnemy : MonoBehaviour {
         {
             animator.SetBool("move", false);
         }
+    }
+
+    IEnumerator Attack(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        attacking = false;
+        Debug.Log("Attacked");
     }
 }
