@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7471075357440579559}
   - component: {fileID: 3541854834116286565}
   - component: {fileID: 1519605855486927374}
+  - component: {fileID: 5939157907944999135}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -284,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029d3b3723452d448a64946f14b52d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  money: 0
   speed: 1.8
   sprintMultiplier: 1.5
   crouchMultiplier: 0.3
@@ -319,6 +321,7 @@ MonoBehaviour:
   circleLight: {fileID: 7768551186538579473}
   player: {fileID: 509810150712577835}
   vfx: {fileID: 7840231783324764384, guid: 4ed5c04222f373841bb3190edd6798a6, type: 3}
+  guard: {fileID: 0}
 --- !u!58 &1519605855486927374
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -355,6 +358,21 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.09122187}
   m_Radius: 0.18877816
+--- !u!114 &5939157907944999135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509810150712577835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78b338fef4f7c44cab49038ea1f4806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Taser
+  taserProjectilePrefab: {fileID: 6122290386127711035, guid: a16efbd7517035e459f8a00826e79673, type: 3}
+  ammo: 5
+  shootingRate: 0.5
 --- !u!1 &2328991299488207323
 GameObject:
   m_ObjectHideFlags: 0
