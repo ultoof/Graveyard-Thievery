@@ -9,6 +9,11 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        math.clamp(health - damage,0,maxHealth);
+        health = math.clamp(health - damage, 0, maxHealth);
+
+        if (health == 0)
+        {
+            isDead = true;
+        }
     }
 }

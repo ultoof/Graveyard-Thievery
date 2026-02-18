@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: aa787ab1aa4b7cc46ac13092efdf1a21
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6900984738731016258
+    second: Spec2_0
+  - first:
+      213: 1577260249065519242
+    second: Spec2_1
+  - first:
+      213: 217069665798384091
+    second: Spec2_2
+  - first:
+      213: -2996818603808474062
+    second: Spec2_3
+  - first:
+      213: -1244040227457003987
+    second: Spec2_4
+  - first:
+      213: -8224150531730347404
+    second: Spec2_5
+  - first:
+      213: 5757642894642090867
+    second: Spec2_6
+  - first:
+      213: -4939790805252110423
+    second: Spec2_7
+  - first:
+      213: -132848016254769675
+    second: Spec2_8
+  - first:
+      213: -6712342581024144381
+    second: Spec2_9
+  - first:
+      213: 7120571038121633590
+    second: Spec2_10
+  - first:
+      213: 5619291818129783163
+    second: Spec2_11
+  - first:
+      213: 8961550280817490238
+    second: Spec2_12
+  - first:
+      213: 4618584579695852114
+    second: Spec2_13
+  - first:
+      213: -6671852779889662034
+    second: Spec2_14
+  - first:
+      213: 175254033509807828
+    second: Spec2_15
+  - first:
+      213: 1104113347171473168
+    second: Spec2_16
+  - first:
+      213: 3029026387623650005
+    second: Spec2_17
+  - first:
+      213: 84654088439012048
+    second: Spec2_18
+  - first:
+      213: 2453910897563112961
+    second: Spec2_19
+  - first:
+      213: -1413842132992468692
+    second: Spec2_20
+  - first:
+      213: 4944099068805956152
+    second: Spec2_21
+  - first:
+      213: -6962359079667517293
+    second: Spec2_22
+  - first:
+      213: -4075255600897860391
+    second: Spec2_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spec2_0
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 887
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebfbb8f61f6ca30a0800000000000000
+      internalID: -6900984738731016258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_1
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 887
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88f4eff6dd83e510800000000000000
+      internalID: 1577260249065519242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_2
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 890
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9ec6106bf230300800000000000000
+      internalID: 217069665798384091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_3
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 866
+        width: 53
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23cb6bf8b592966d0800000000000000
+      internalID: -2996818603808474062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 606
+        width: 55
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e012c11084cbee0800000000000000
+      internalID: -1244040227457003987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_5
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 668
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a6fd03aa2fddd80800000000000000
+      internalID: -8224150531730347404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_6
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 634
+        width: 42
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37391b615b147ef40800000000000000
+      internalID: 5757642894642090867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_7
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 678
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7053c4f66527bb0800000000000000
+      internalID: -4939790805252110423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_8
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 652
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5e40ede67082ef0800000000000000
+      internalID: -132848016254769675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_9
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 686
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304c35f6cf7f8d2a0800000000000000
+      internalID: -6712342581024144381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_10
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 659
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637ac2df1a951d260800000000000000
+      internalID: 7120571038121633590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_11
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 616
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7972e4e22cbbfd40800000000000000
+      internalID: 5619291818129783163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 394
+        width: 43
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39bde40082dd5c70800000000000000
+      internalID: 8961550280817490238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_13
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 625
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a3ed57432881040800000000000000
+      internalID: 4618584579695852114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_14
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 447
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea769f4ee31d863a0800000000000000
+      internalID: -6671852779889662034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_15
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 433
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d67ecc6d90ae6200800000000000000
+      internalID: 175254033509807828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_16
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 448
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0175ce94d39925f00800000000000000
+      internalID: 1104113347171473168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 432
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2a7997373490a20800000000000000
+      internalID: 3029026387623650005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_18
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 429
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da1136e170cc2100800000000000000
+      internalID: 84654088439012048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 436
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10695bfb5fa0e0220800000000000000
+      internalID: 2453910897563112961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_20
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 434
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29d0862216016ce0800000000000000
+      internalID: -1413842132992468692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_21
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 432
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832c48a78e7fc9440800000000000000
+      internalID: 4944099068805956152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_22
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 378
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398b3b12e4bb06f90800000000000000
+      internalID: -6962359079667517293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spec2_23
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 391
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dcdf836f98c177c0800000000000000
+      internalID: -4075255600897860391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Spec2_0: -6900984738731016258
+      Spec2_1: 1577260249065519242
+      Spec2_10: 7120571038121633590
+      Spec2_11: 5619291818129783163
+      Spec2_12: 8961550280817490238
+      Spec2_13: 4618584579695852114
+      Spec2_14: -6671852779889662034
+      Spec2_15: 175254033509807828
+      Spec2_16: 1104113347171473168
+      Spec2_17: 3029026387623650005
+      Spec2_18: 84654088439012048
+      Spec2_19: 2453910897563112961
+      Spec2_2: 217069665798384091
+      Spec2_20: -1413842132992468692
+      Spec2_21: 4944099068805956152
+      Spec2_22: -6962359079667517293
+      Spec2_23: -4075255600897860391
+      Spec2_3: -2996818603808474062
+      Spec2_4: -1244040227457003987
+      Spec2_5: -8224150531730347404
+      Spec2_6: 5757642894642090867
+      Spec2_7: -4939790805252110423
+      Spec2_8: -132848016254769675
+      Spec2_9: -6712342581024144381
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

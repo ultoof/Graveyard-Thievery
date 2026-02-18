@@ -234,18 +234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa5e756cf363774b9430dc0a36f3598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  health: 100
-  maxHealth: 100
+  health: 3
+  maxHealth: 3
   isDead: 0
-  deathEffect: {fileID: 0}
-  hurtSound: {fileID: 0}
-  deathSound: {fileID: 0}
-  onTakeDamage:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!50 &6228730187169704986
 Rigidbody2D:
   serializedVersion: 5

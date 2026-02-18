@@ -7,17 +7,20 @@ public class GuardEnemy : MonoBehaviour
     private NavMeshAgent nav;
     private Animator animator;
     private GameObject player;
-    public bool attacking = false;
+    private Health health;
 
+    public bool attacking = false;
     public LayerMask obstacleLayerMasks;
     public float viewDistance;
-    public GameObject Player;
+
 
     private void Awake()
     {
         // Get component references
+        player = GameObject.Find("Player");
         nav = GetComponentInParent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        health = player.GetComponent<Health>();
     }
 
     void Start()
@@ -25,9 +28,6 @@ public class GuardEnemy : MonoBehaviour
         // Uncomment if you don't need to manualy overwrite rotation
         nav.updateRotation = false;
         nav.updateUpAxis = false;
-
-        // Get player
-        player = GameObject.Find("Player");
     }
 
 
@@ -73,6 +73,7 @@ public class GuardEnemy : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
 
         attacking = false;
+        health.TakeDamage(1);
         Debug.Log("Attacked");
     }
 }
