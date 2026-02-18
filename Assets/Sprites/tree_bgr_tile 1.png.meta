@@ -1,17 +1,13 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: a3833593a1ae34241a2dab360682e7f2
-=======
-guid: 27dd7859ffbaf634788adfaed609ffb4
->>>>>>> 7f85a13ecb678240675a2cec338bda017d7b72be
+guid: daac16c66382e94499be34821b5e282e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4732766213933190577
-    second: tree_bgr_tile_0
+      213: 7980438304329087554
+    second: tree_bgr_tile 1_0
   - first:
-      213: -9076679758464170502
-    second: tree_bgr_tile_1
+      213: -6973985084229007377
+    second: tree_bgr_tile 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -107,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tree_bgr_tile_0
+      name: tree_bgr_tile 1_0
       rect:
         serializedVersion: 2
         x: 3
@@ -122,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f42ba852436d15eb0800000000000000
-      internalID: -4732766213933190577
+      spriteID: 24ab4790b5630ce60800000000000000
+      internalID: 7980438304329087554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree_bgr_tile_1
+      name: tree_bgr_tile 1_1
       rect:
         serializedVersion: 2
         x: 95
@@ -144,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af5c3c899d7290280800000000000000
-      internalID: -9076679758464170502
+      spriteID: fe748a1048d673f90800000000000000
+      internalID: -6973985084229007377
       vertices: []
       indices: 
       edges: []
@@ -164,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tree_bgr_tile_0: -4732766213933190577
-      tree_bgr_tile_1: -9076679758464170502
+      tree_bgr_tile 1_0: 7980438304329087554
+      tree_bgr_tile 1_1: -6973985084229007377
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
