@@ -1,7 +1,5 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -10,14 +8,14 @@ public class TaserProjectile : MonoBehaviour
     public float bulletSpeed;
     public float freezeduration = 0f;
     public float lifetime = 3f;
-    public float knockback = 0f;
-
-    private NavMeshAgent frozenAgent;
+    public ParticleSystem vfx;
 
     void Start()
     {
         GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
-        Destroy(gameObject, lifetime);
+        Destroy(gameObject, lifetime + 0.5f);
+
+        RemoveEffect(0.5f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -39,13 +37,15 @@ public class TaserProjectile : MonoBehaviour
         {
             guardEnemy.Freeze(freezeduration);
         }
-        else
-        {
-            
-        }
-        Destroy(gameObject);
-        
+
+        Destroy(gameObject,0.5f);
+        vfx.Stop();
     }
 
-}
+    IEnumerator RemoveEffect(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
 
+        vfx.Stop();
+    }
+}
