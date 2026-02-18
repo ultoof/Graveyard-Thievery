@@ -1,9 +1,5 @@
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering.Universal;
 
 public class Flashlight : MonoBehaviour
 {
@@ -12,12 +8,16 @@ public class Flashlight : MonoBehaviour
     public GameObject circleLight;
     public GameObject player;
     public GameObject vfx;
+    public GameObject guard;
+    private GuardEnemy guardScript;
+
     private Animator animator;
 
     // Setup
     void Awake()
     {
         animator = player.GetComponent<Animator>();
+        guardScript = guard.GetComponent<GuardEnemy>();
     }
 
     // Update is called once per frame
@@ -34,10 +34,12 @@ public class Flashlight : MonoBehaviour
         {
             if (isOn)
             {
+                guardScript.viewDistance = 3f;
                 isOn = false;
             }
             else
             {
+                guardScript.viewDistance = 5f;
                 isOn = true;
 
                 // VFX

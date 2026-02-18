@@ -17,7 +17,6 @@ public class GuardEnemy : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
 
-
     void Start()
     {
         // Uncomment if you don't need to manualy overwrite rotation
