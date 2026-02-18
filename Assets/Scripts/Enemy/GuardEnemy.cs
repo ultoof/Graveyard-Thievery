@@ -7,7 +7,7 @@ public class GuardEnemy : MonoBehaviour {
     private GameObject player;
 
     public LayerMask obstacleLayerMasks;
-    public float viewDistance = 5f;
+    public float viewDistance;
     public GameObject Player;
 
     private void Awake()
