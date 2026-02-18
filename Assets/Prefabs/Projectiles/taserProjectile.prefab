@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaserProjectile
   bulletSpeed: 3
-  freezeduration: 1
+  freezeduration: 2
   lifetime: 3
   knockback: 0
 --- !u!58 &5914291839580765222

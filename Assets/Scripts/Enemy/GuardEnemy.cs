@@ -81,4 +81,17 @@ public class GuardEnemy : MonoBehaviour
         health.TakeDamage(1);
         Debug.Log("Attacked");
     }
+
+    //Coroutine fix on taser : 
+    public void Freeze(float duration)
+    {
+    StartCoroutine(FreezeRoutine(duration));
+    }
+
+    IEnumerator FreezeRoutine(float duration)
+    {
+        nav.isStopped = true;
+        yield return new WaitForSeconds(duration);
+        nav.isStopped = false;
+    }
 }
