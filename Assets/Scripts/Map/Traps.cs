@@ -6,13 +6,11 @@ public class Traps : MonoBehaviour
     public string collidingTag;
     public GameObject player;
     private float saveValue;
-    private Health health;
     private PlayerController playerController;
 
     void Awake()
     {
         //Get Components
-       health = player.GetComponent<Health>();
        playerController = player.GetComponent<PlayerController>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +24,6 @@ public class Traps : MonoBehaviour
 
         if (collision.gameObject.CompareTag(collidingTag))
         {
-            health.TakeDamage(20);
             playerController.speed = playerController.speed/2;
             playerController.movementRestriction = true;
         }
