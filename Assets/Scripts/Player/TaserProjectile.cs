@@ -8,9 +8,11 @@ using UnityEngine.AI;
 public class TaserProjectile : MonoBehaviour 
 {
     public float bulletSpeed;
+    public float freezeduration = 0f;
     public float lifetime = 3f;
     public float knockback = 0f;
-    private float placeholderValue;
+    private float placeholderValue = 0;
+    private float placeholderValueA = 0;
 
     void Start()
     {
@@ -25,41 +27,60 @@ public class TaserProjectile : MonoBehaviour
             return;
         }
 
-        NavMeshAgent navMeshAgent = collision.GameObject().GetComponent<NavMeshAgent>();
+        NavMeshAgent nav  = collision.gameObject.GetComponentInParent<NavMeshAgent>();
 
-        if (navMeshAgent)
+        if (nav)
         {
-            Debug.Log("Dab");
-            placeholderValue = navMeshAgent.speed;
-            navMeshAgent.speed = 0;
-            
-            StartCoroutine(DelayAction(3f,navMeshAgent));
-            if(knockback > 0)
-            {
-                Rigidbody2D rb = collision.gameObject.GetComponentInParent<Rigidbody2D>();
-                if(rb != null)
-                {
-                    rb.AddForce(GetComponent<Rigidbody2D>().linearVelocity.normalized * knockback);
-                }
-            }
-
+            nav.isStopped = true;
+            StartCoroutine(DelayAction(3f, nav));
         }
-        //If it hits another type of collider
         else
         {
             
         }
-
         Destroy(gameObject);
     }
 
+     IEnumerator DelayAction (float delayTime,NavMeshAgent nav)
+    {
+        yield return new WaitForSeconds(delayTime);
+        nav.isStopped = false;
+        Debug.Log("Its working");
 
-    IEnumerator DelayAction (float delayTime,NavMeshAgent navMeshAgent)
+    }
+}
+
+/*
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GameObject().CompareTag("Player"))
+        {
+            return;
+        }
+
+        Rigidbody2D rb = collision.gameObject.GetComponentInParent<Rigidbody2D>();
+        
+        if (rb)
+        {
+            Debug.Log("BROSEFSKI");
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            StartCoroutine(DelayAction(freezeduration,rb));
+        }
+        else //if it hits another collider
+        {
+            Debug.Log("FAHHHH "); 
+        }
+        Destroy(gameObject);
+
+
+    IEnumerator DelayAction (float delayTime,Rigidbody2D rb)
     {
         yield return new WaitForSeconds(delayTime);
 
-        navMeshAgent.speed = placeholderValue;
+        rb.constraints = RigidbodyConstraints2D.None;
     }
 
-
+    }
 }
+
+*/

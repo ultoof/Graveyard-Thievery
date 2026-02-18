@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fe1b7f165f27747be6e9a5e74fbe3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaserProjectile
-  bulletSpeed: 2
+  bulletSpeed: 3
+  freezeduration: 3
   lifetime: 3
   knockback: 0
 --- !u!58 &5914291839580765222
