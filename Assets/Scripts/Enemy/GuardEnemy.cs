@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,6 +13,7 @@ public class GuardEnemy : MonoBehaviour
     public bool attacking = false;
     public LayerMask obstacleLayerMasks;
     public float viewDistance;
+    public GameObject vfx;
 
 
     private void Awake()
@@ -46,8 +48,8 @@ public class GuardEnemy : MonoBehaviour
             float distance = Vector2.Distance(transform.position, player.transform.position);
             if (distance < 2)
             {
+                
                 attacking = true;
-
                 StartCoroutine(Attack(2.0f));
             }
             else if (distance < viewDistance)
@@ -71,6 +73,9 @@ public class GuardEnemy : MonoBehaviour
     IEnumerator Attack(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
+
+        GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
+        GameObject.Destroy(shootVFX, 2);
 
         attacking = false;
         health.TakeDamage(1);

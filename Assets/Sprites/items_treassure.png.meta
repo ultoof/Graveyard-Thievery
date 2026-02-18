@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: b158ff9888ac69142a89c02c324685ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5633291319163698517
+    second: items_treassure_0
+  - first:
+      213: 8128876418364609886
+    second: items_treassure_1
+  - first:
+      213: 8640589018714100054
+    second: items_treassure_2
+  - first:
+      213: 2459889220610832742
+    second: items_treassure_3
+  - first:
+      213: 405108254852762693
+    second: items_treassure_4
+  - first:
+      213: -5533200237239017573
+    second: items_treassure_5
+  - first:
+      213: -6603649901642723271
+    second: items_treassure_6
+  - first:
+      213: -1074506979888188015
+    second: items_treassure_7
+  - first:
+      213: 5029051335029940607
+    second: items_treassure_8
+  - first:
+      213: 6886573788126796607
+    second: items_treassure_9
+  - first:
+      213: 5963088240205247834
+    second: items_treassure_10
+  - first:
+      213: -5271693364002695613
+    second: items_treassure_11
+  - first:
+      213: 3357441861030594528
+    second: items_treassure_12
+  - first:
+      213: -742162277026764882
+    second: items_treassure_13
+  - first:
+      213: -7656497922162398338
+    second: items_treassure_14
+  - first:
+      213: 4909830221710455688
+    second: items_treassure_15
+  - first:
+      213: -4815525912752063079
+    second: items_treassure_16
+  - first:
+      213: -7344297917792020441
+    second: items_treassure_17
+  - first:
+      213: 6105196371535851419
+    second: items_treassure_18
+  - first:
+      213: 2659653330456081517
+    second: items_treassure_19
+  - first:
+      213: 5887300569726042542
+    second: items_treassure_20
+  - first:
+      213: -6534445633550815006
+    second: items_treassure_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: items_treassure_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 136
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d3b0bbb987d2e40800000000000000
+      internalID: 5633291319163698517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 159
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e551caba8029fc070800000000000000
+      internalID: 8128876418364609886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 141
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6515896cee989e770800000000000000
+      internalID: 8640589018714100054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 137
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669325d8638432220800000000000000
+      internalID: 2459889220610832742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_4
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 137
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cc31abfcb3f9500800000000000000
+      internalID: 405108254852762693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 114
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9fd24c43bf1633b0800000000000000
+      internalID: -5533200237239017573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 117
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930da8fe66f1b54a0800000000000000
+      internalID: -6603649901642723271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_7
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 110
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195361348959611f0800000000000000
+      internalID: -1074506979888188015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_8
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 106
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71e9ad4b87cac540800000000000000
+      internalID: 5029051335029940607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b50d8af56029f50800000000000000
+      internalID: 6886573788126796607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_10
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 81
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a553eb1292521c250800000000000000
+      internalID: 5963088240205247834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_11
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 79
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346d5d9e0de27d6b0800000000000000
+      internalID: -5271693364002695613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_12
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 78
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e741c88597089e20800000000000000
+      internalID: 3357441861030594528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_13
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 81
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7ef18575f43b5f0800000000000000
+      internalID: -742162277026764882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_14
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 80
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b6ef5a4b7aeb590800000000000000
+      internalID: -7656497922162398338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 51
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8837780c298332440800000000000000
+      internalID: 4909830221710455688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_16
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 43
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d79b332b0db2db0800000000000000
+      internalID: -4815525912752063079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_17
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 50
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7289d5d94ffc31a90800000000000000
+      internalID: -7344297917792020441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_18
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 47
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9fe561d0c30ab450800000000000000
+      internalID: 6105196371535851419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_19
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 50
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64f483dc9cf8e420800000000000000
+      internalID: 2659653330456081517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_20
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 49
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1c9780da4e3b150800000000000000
+      internalID: 5887300569726042542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: items_treassure_21
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 15
+        width: 38
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0f918315cf055a0800000000000000
+      internalID: -6534445633550815006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      items_treassure_0: 5633291319163698517
+      items_treassure_1: 8128876418364609886
+      items_treassure_10: 5963088240205247834
+      items_treassure_11: -5271693364002695613
+      items_treassure_12: 3357441861030594528
+      items_treassure_13: -742162277026764882
+      items_treassure_14: -7656497922162398338
+      items_treassure_15: 4909830221710455688
+      items_treassure_16: -4815525912752063079
+      items_treassure_17: -7344297917792020441
+      items_treassure_18: 6105196371535851419
+      items_treassure_19: 2659653330456081517
+      items_treassure_2: 8640589018714100054
+      items_treassure_20: 5887300569726042542
+      items_treassure_21: -6534445633550815006
+      items_treassure_3: 2459889220610832742
+      items_treassure_4: 405108254852762693
+      items_treassure_5: -5533200237239017573
+      items_treassure_6: -6603649901642723271
+      items_treassure_7: -1074506979888188015
+      items_treassure_8: 5029051335029940607
+      items_treassure_9: 6886573788126796607
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
