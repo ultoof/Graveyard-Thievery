@@ -45,7 +45,16 @@ public class GuardEnemy : MonoBehaviour {
             {
                 Debug.DrawLine(gameObject.transform.position, player.transform.position);
                 nav.destination = player.transform.position;
+                animator.SetBool("move", true);
             }
+            else
+            {
+                animator.SetBool("move", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("move", false);
         }
     }
 }

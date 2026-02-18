@@ -14,6 +14,7 @@ public class Camera_top_down_follow : MonoBehaviour
     void Start()
     {
         // Get start offset 
+        transform.position = player.position + new Vector3(0,0,-1);
         offset = transform.position - player.position;
     }
 
