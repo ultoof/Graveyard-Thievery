@@ -1,8 +1,10 @@
+using System.Data.SqlTypes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Pickup : MonoBehaviour
 {
+    public int money;
     private Collider2D boxCollider;
     bool inrange = false;
     private void Awake()
@@ -15,6 +17,8 @@ public class Pickup : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inrange = true;
+            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            playerController.money += money;
         }
     }
 
