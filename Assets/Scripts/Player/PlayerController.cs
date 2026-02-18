@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public int money = 0;
     public float speed = 4f;
     public float sprintMultiplier = 1.5f;
     public float crouchMultiplier = 0.8f;
