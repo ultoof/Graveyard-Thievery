@@ -1,4 +1,5 @@
-﻿﻿using UnityEngine;
+﻿﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
@@ -51,4 +52,18 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    // Dont touch this is fix for coroutine on bullet :
+    public void Freeze(float duration)
+    {
+        StartCoroutine(FreezeRoutine(duration));
+    }
+
+    IEnumerator FreezeRoutine(float duration)
+{
+    nav.isStopped = true;
+    yield return new WaitForSeconds(duration);
+    nav.isStopped = false;
+}
+    
 }

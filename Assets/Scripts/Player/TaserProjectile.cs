@@ -11,8 +11,6 @@ public class TaserProjectile : MonoBehaviour
     public float freezeduration = 0f;
     public float lifetime = 3f;
     public float knockback = 0f;
-    private float placeholderValue = 0;
-    private float placeholderValueA = 0;
 
     void Start()
     {
@@ -27,27 +25,19 @@ public class TaserProjectile : MonoBehaviour
             return;
         }
 
-        NavMeshAgent nav  = collision.gameObject.GetComponentInParent<NavMeshAgent>();
+        Enemy enemy = collision.GetComponentInParent<Enemy>();
 
-        if (nav)
+        if (enemy)
         {
-            nav.isStopped = true;
-            StartCoroutine(DelayAction(3f, nav));
+            enemy.Freeze(freezeduration);
         }
-        else
+        else //Do something if another collision
         {
             
         }
         Destroy(gameObject);
     }
 
-     IEnumerator DelayAction (float delayTime,NavMeshAgent nav)
-    {
-        yield return new WaitForSeconds(delayTime);
-        nav.isStopped = false;
-        Debug.Log("Its working");
-
-    }
 }
 
 /*
