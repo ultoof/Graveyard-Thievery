@@ -12,7 +12,7 @@ public class GuardEnemy : MonoBehaviour
     private Rigidbody2D rb;
 
     public bool attacking = false;
-    public bool stunned = false;
+    public int stunned = 0;
     public LayerMask obstacleLayerMasks;
     public float viewDistance;
     public GameObject vfx;
@@ -75,7 +75,7 @@ public class GuardEnemy : MonoBehaviour
 
         yield return new WaitForSeconds(delayTime);
 
-        if (!stunned)
+        if (stunned <= 0)
         {
             GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
             Destroy(shootVFX, 2);
@@ -94,10 +94,10 @@ public class GuardEnemy : MonoBehaviour
 
     IEnumerator FreezeRoutine(float duration)
     {
-        stunned = true;
+        stunned += 2;
         nav.isStopped = true;
         yield return new WaitForSeconds(duration);
         nav.isStopped = false;
-        stunned = false;
+        stunned -= 2;
     }
 }
