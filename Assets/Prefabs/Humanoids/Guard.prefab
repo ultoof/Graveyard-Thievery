@@ -281,4 +281,6 @@ MonoBehaviour:
   viewDistance: 3
   vfx: {fileID: 934889904139282266, guid: 10b322dbaac45d7498be0fdeaa781cf1, type: 3}
   guardPointFolder: {fileID: 0}
+  hitVFX: {fileID: 934889904139282266, guid: deec9714f24a1b14ba3dd30347b9cce2, type: 3}
+  deathVFX: {fileID: 934889904139282266, guid: f602c9fe45a3d7f489b9956ffd62a4d2, type: 3}
   guardPoints: []
