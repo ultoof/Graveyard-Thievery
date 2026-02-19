@@ -10,12 +10,15 @@ public class TaserProjectile : MonoBehaviour
     public float lifetime = 3f;
     public ParticleSystem vfx;
     public GameObject hitVFX;
+    public GameObject explosionVFX;
+    public LayerMask obstacleLayer;
+    private Vector2 origin;
 
     void Start()
     {
+        origin = transform.position;
         GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
         Destroy(gameObject, lifetime + 0.5f);
-
         RemoveEffect(0.5f);
     }
 
@@ -32,19 +35,36 @@ public class TaserProjectile : MonoBehaviour
         if (enemy)
         {
             enemy.Freeze(freezeduration);
+            GameObject clonedHitVFX = Instantiate(hitVFX, collision.transform.position, Quaternion.identity);
+            Destroy(clonedHitVFX, freezeduration + 0.5f);
+            StopHitVFX(freezeduration, clonedHitVFX.GetComponent<ParticleSystem>());
         }
 
         else if (guardEnemy)
         {
             guardEnemy.Freeze(freezeduration);
+            GameObject clonedHitVFX = Instantiate(hitVFX, collision.transform.position, Quaternion.identity);
+            Destroy(clonedHitVFX, freezeduration + 0.5f);
+            StopHitVFX(freezeduration, clonedHitVFX.GetComponent<ParticleSystem>());
         }
 
-        GameObject clonedHitVFX = Instantiate(hitVFX, collision.transform.position, Quaternion.identity);
+        RaycastHit2D ray = Physics2D.Linecast(origin,collision.transform.position,obstacleLayer);
 
-        Destroy(clonedHitVFX, freezeduration + 0.5f);
+        if (ray)
+        {
+            GameObject clonedExplosionVFX = Instantiate(explosionVFX, ray.point, Quaternion.identity);
+            Destroy(clonedExplosionVFX, 1);
+            Debug.Log("Ray");
+        }
+        else
+        {
+            GameObject clonedExplosionVFX = Instantiate(explosionVFX, collision.transform.position, Quaternion.identity);
+            Destroy(clonedExplosionVFX, 1);
+            Debug.Log("NoRay");
+        }
+
         Destroy(gameObject, 0.5f);
         vfx.Stop();
-        StopHitVFX(freezeduration, clonedHitVFX.GetComponent<ParticleSystem>());
     }
 
     IEnumerator RemoveEffect(float delayTime)

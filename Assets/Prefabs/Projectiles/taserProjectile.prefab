@@ -14587,6 +14587,10 @@ MonoBehaviour:
   lifetime: 2
   vfx: {fileID: 2871810903430465665}
   hitVFX: {fileID: 6270265595155027645, guid: d62915def559e6c469914c8b7ef35d46, type: 3}
+  explosionVFX: {fileID: 8312177464139825563, guid: 04ebb8c1bae560e40a15eeb48d5bacd6, type: 3}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!58 &5914291839580765222
 CircleCollider2D:
   m_ObjectHideFlags: 0
