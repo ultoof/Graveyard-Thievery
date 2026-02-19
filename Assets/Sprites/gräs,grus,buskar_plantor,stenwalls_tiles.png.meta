@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: eb92bcbe0a3336c429f6226988944ec8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4294716256062702773
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_0"
+  - first:
+      213: 403547951158659696
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_1"
+  - first:
+      213: -9010486990580113393
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_2"
+  - first:
+      213: -1632425270631842640
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_3"
+  - first:
+      213: -8461832479721443629
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_4"
+  - first:
+      213: -1280089514299533353
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_5"
+  - first:
+      213: -2478735504630888221
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_6"
+  - first:
+      213: 8995897599279439108
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_7"
+  - first:
+      213: 1959552480294331546
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_8"
+  - first:
+      213: -542796288313082856
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_9"
+  - first:
+      213: 3636170642150699165
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_10"
+  - first:
+      213: 3813972949174957874
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_11"
+  - first:
+      213: -4615521501606578284
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_12"
+  - first:
+      213: -1511786819348311750
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_13"
+  - first:
+      213: 2910109594396273825
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_14"
+  - first:
+      213: -5281586501658933471
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_15"
+  - first:
+      213: -8115153817530817209
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_16"
+  - first:
+      213: -3669643764872400820
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_17"
+  - first:
+      213: -4180628190875853750
+    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_18"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 415
+        width: 193
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b486b53ea5e99b30800000000000000
+      internalID: 4294716256062702773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_1"
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 384
+        width: 55
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a06a639b0b99500800000000000000
+      internalID: 403547951158659696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_2"
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 415
+        width: 34
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00a13952d154f280800000000000000
+      internalID: -9010486990580113393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_3"
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 415
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc3e958dd57859e0800000000000000
+      internalID: -1632425270631842640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_4"
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 384
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de27514138819a80800000000000000
+      internalID: -8461832479721443629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_5"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 320
+        width: 94
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d759737e553c3ee0800000000000000
+      internalID: -1280089514299533353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_6"
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 319
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8c3520133c99dd0800000000000000
+      internalID: -2478735504630888221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_7"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 355
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d17d84439d7dc70800000000000000
+      internalID: 8995897599279439108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_8"
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 354
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94eda2499ab13b10800000000000000
+      internalID: 1959552480294331546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_9"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 339
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81cb2b1d6a99778f0800000000000000
+      internalID: -542796288313082856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_10"
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 322
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90b81c0fe5467230800000000000000
+      internalID: 3636170642150699165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_11"
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 321
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237b582a034fde430800000000000000
+      internalID: 3813972949174957874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_12"
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 159
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497ff8bf5af52ffb0800000000000000
+      internalID: -4615521501606578284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_13"
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 159
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3150a8c5ed050be0800000000000000
+      internalID: -1511786819348311750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_14"
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 159
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac2277f149c26820800000000000000
+      internalID: 2910109594396273825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_15"
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 95
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1270f1e4f0904b6b0800000000000000
+      internalID: -5281586501658933471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_16"
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 95
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745ab60599e216f80800000000000000
+      internalID: -8115153817530817209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_17"
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 95
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40bd8e307ec21dc0800000000000000
+      internalID: -3669643764872400820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_18"
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 46
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c5cd07fcc6bf5c0800000000000000
+      internalID: -4180628190875853750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_0": 4294716256062702773
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_1": 403547951158659696
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_10": 3636170642150699165
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_11": 3813972949174957874
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_12": -4615521501606578284
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_13": -1511786819348311750
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_14": 2910109594396273825
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_15": -5281586501658933471
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_16": -8115153817530817209
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_17": -3669643764872400820
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_18": -4180628190875853750
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_2": -9010486990580113393
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_3": -1632425270631842640
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_4": -8461832479721443629
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_5": -1280089514299533353
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_6": -2478735504630888221
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_7": 8995897599279439108
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_8": 1959552480294331546
+      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_9": -542796288313082856
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

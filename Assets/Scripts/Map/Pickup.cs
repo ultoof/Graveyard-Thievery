@@ -1,11 +1,13 @@
 using System;
 using System.Data.SqlTypes;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Pickup : MonoBehaviour
 {
     public float money;
+    public GameObject vfx;
     private Collider2D boxCollider;
     private PlayerController playerController;
 
@@ -37,10 +39,11 @@ public class Pickup : MonoBehaviour
         {
             if (inrange == true)
             {
+                GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
                 playerController.money += Math.Clamp(money, 0, playerController.maxMoney);
                 Destroy(gameObject);
+                Destroy(clonedVFX, 1);
             }
         }
     }
-    
 }
