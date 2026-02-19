@@ -90,7 +90,7 @@ public class GuardEnemy : MonoBehaviour
     //Coroutine fix on taser : 
     public void Freeze(float duration)
     {
-    StartCoroutine(FreezeRoutine(duration));
+        StartCoroutine(FreezeRoutine(duration));
     }
 
     IEnumerator FreezeRoutine(float duration)
