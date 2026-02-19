@@ -5,10 +5,11 @@ using UnityEngine.AI;
 
 public class GuardEnemy : MonoBehaviour
 {
-    private NavMeshAgent nav;
+    public NavMeshAgent nav;
     private Animator animator;
     private GameObject player;
     private Health health;
+    private Rigidbody2D rb;
 
     public bool attacking = false;
     public LayerMask obstacleLayerMasks;
@@ -20,9 +21,9 @@ public class GuardEnemy : MonoBehaviour
     {
         // Get component references
         player = GameObject.Find("Player");
-        nav = GetComponentInParent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         health = player.GetComponent<Health>();
+        rb = GetComponentInParent<Rigidbody2D>();
     }
 
     void Start()
@@ -31,7 +32,6 @@ public class GuardEnemy : MonoBehaviour
         nav.updateRotation = false;
         nav.updateUpAxis = false;
     }
-
 
     void Update()
     {
@@ -48,8 +48,6 @@ public class GuardEnemy : MonoBehaviour
             float distance = Vector2.Distance(transform.position, player.transform.position);
             if (distance < 2)
             {
-                
-                attacking = true;
                 StartCoroutine(Attack(2.0f));
             }
             else if (distance < viewDistance)
@@ -72,14 +70,18 @@ public class GuardEnemy : MonoBehaviour
 
     IEnumerator Attack(float delayTime)
     {
+        attacking = true;
+        nav.isStopped = true;
+        Debug.Log(nav.isStopped);
+
         yield return new WaitForSeconds(delayTime);
 
         GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
-        GameObject.Destroy(shootVFX, 2);
-
-        attacking = false;
+        Destroy(shootVFX, 2);
         health.TakeDamage(1);
-        Debug.Log("Attacked");
+        attacking = false;
+        nav.isStopped = false;
+        Debug.Log(nav.isStopped);
     }
 
     //Coroutine fix on taser : 
