@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,6 +17,8 @@ public class GuardEnemy : MonoBehaviour
     public LayerMask obstacleLayerMasks;
     public float viewDistance;
     public GameObject vfx;
+    public GameObject guardPointFolder;
+    public Array guardPoints;
 
     private void Awake()
     {
@@ -23,6 +27,7 @@ public class GuardEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
         health = player.GetComponent<Health>();
         rb = GetComponentInParent<Rigidbody2D>();
+        guardPoints = guardPointFolder.GetComponentsInChildren<Transform>();
     }
 
     void Start()

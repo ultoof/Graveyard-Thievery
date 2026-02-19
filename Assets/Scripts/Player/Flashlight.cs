@@ -25,7 +25,7 @@ public class Flashlight : MonoBehaviour
     void Update()
     {
         //Transfer of data 
-        DataManager.instance.TransportValue = canFlash;
+        //DataManager.instance.TransportValue = canFlash;
 
         // Flashlight rotation
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - light.transform.position;
