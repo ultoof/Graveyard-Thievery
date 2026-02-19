@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
     public float crouchMultiplier = 0.8f;
     public bool movementRestriction = false;
     public int Stamina = 100;
+    public int key = 1;
     private int StaminaMod;
+
     
     
 
