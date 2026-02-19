@@ -16,6 +16,7 @@ public class Flashlight : MonoBehaviour
 
     void Start()
     {
+        if(DataManager.instance != null)
         canFlash = DataManager.instance.canFlash;
     }
 

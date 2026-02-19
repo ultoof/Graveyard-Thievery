@@ -16,6 +16,7 @@ public class Taser : MonoBehaviour
 
     void Start()
     {
+        if (DataManager.instance != null)
         canStun = DataManager.instance.canStun;
     }
 
