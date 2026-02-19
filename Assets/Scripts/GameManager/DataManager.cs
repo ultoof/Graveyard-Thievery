@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    private bool transportValue;
-    public bool TransportValue {get => transportValue; set => transportValue = value;}
-
+    
+    public bool canFlash;
+    public bool canStun;
+    public bool doubleJumpUnlocked = false;
     
 
     public static DataManager instance;
+
     void Awake()
     {
         if (instance == null)

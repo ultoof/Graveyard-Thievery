@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Flashlight : MonoBehaviour
 {
     bool isOn = false;
-    bool canFlash = true;
+    public bool canFlash = false;
     public GameObject light;
     public GameObject circleLight;
     public GameObject player;
@@ -13,6 +13,11 @@ public class Flashlight : MonoBehaviour
     private GuardEnemy guardScript; 
 
     private Animator animator;
+
+    void Start()
+    {
+        canFlash = DataManager.instance.canFlash;
+    }
 
     // Setup
     void Awake()

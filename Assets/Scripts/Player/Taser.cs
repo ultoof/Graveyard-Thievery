@@ -6,6 +6,7 @@ public class Taser : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int ammo = 5;
     public float shootingRate = 0.5f;
+    public bool canStun = false;
     public GameObject shootVFX;
     private ParticleSystem shootParticle;
 
@@ -13,10 +14,15 @@ public class Taser : MonoBehaviour
         shootParticle = shootVFX.GetComponent<ParticleSystem>();
     }
 
+    void Start()
+    {
+        canStun = DataManager.instance.canStun;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) && canStun == true)
         {
             if(ammo > 0)
             {
