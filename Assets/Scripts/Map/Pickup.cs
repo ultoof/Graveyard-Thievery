@@ -5,8 +5,10 @@ using UnityEngine.InputSystem;
 
 public class Pickup : MonoBehaviour
 {
-    public int money;
+    public float money;
     private Collider2D boxCollider;
+    private PlayerController playerController;
+
     bool inrange = false;
     private void Awake()
     {
@@ -17,10 +19,8 @@ public class Pickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player"))
         {
+            playerController = collision.gameObject.GetComponent<PlayerController>();
             inrange = true;
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            playerController.money += Math.Clamp(money, 0, playerController.maxMoney);
-
         }
     }
 
@@ -37,7 +37,7 @@ public class Pickup : MonoBehaviour
         {
             if (inrange == true)
             {
-
+                playerController.money += Math.Clamp(money, 0, playerController.maxMoney);
                 Destroy(gameObject);
             }
         }
