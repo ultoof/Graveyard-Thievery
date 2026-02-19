@@ -77,7 +77,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922c26197f5cc354c8f6fd1e65e67178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardEnemy
+  nav: {fileID: 4537303617939036154}
   attacking: 0
   obstacleLayerMasks:
     serializedVersion: 2
