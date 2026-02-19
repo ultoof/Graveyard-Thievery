@@ -1,13 +1,16 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public Image coinUI;
+    public TextMeshProUGUI coinText;
     public PlayerController playerController;
 
     void Update()
     {
         coinUI.fillAmount = playerController.money / playerController.maxMoney;
+        coinText.text = $"{coinUI.fillAmount*100}%";
     }
 }

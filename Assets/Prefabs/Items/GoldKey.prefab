@@ -105,8 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7097caf4a3a3ec347b5c255359e0599d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  money: 38
+  money: 0
+  displayName: Golden Key
   vfx: {fileID: 7874843034932983370, guid: 3c0ad721601b0c84a929c2d939976de1, type: 3}
+  stealText: {fileID: 0}
 --- !u!61 &4668728247674740906
 BoxCollider2D:
   m_ObjectHideFlags: 0

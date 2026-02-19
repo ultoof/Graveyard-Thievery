@@ -1,27 +1,22 @@
 using System;
-using System.Data.SqlTypes;
-using Unity.Mathematics;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Pickup : MonoBehaviour
 {
     public float money;
-    public GameObject vfx;
-    private Collider2D boxCollider;
-    private PlayerController playerController;
-
     bool inrange = false;
-    private void Awake()
-    {
-        // Get the Box Collider from the object. 
-        boxCollider = GetComponent<BoxCollider2D>();
-    }
+    public string displayName;
+    public GameObject vfx;
+    public TextMeshProUGUI stealText;
+    private PlayerController playerController;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player"))
         {
             playerController = collision.gameObject.GetComponent<PlayerController>();
+            stealText.text = $"Press E To Steal {displayName}";
             inrange = true;
         }
     }
@@ -30,6 +25,7 @@ public class Pickup : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inrange = false;
+            stealText.text = "";
         }
     }
 

@@ -106,7 +106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
   money: 5
+  displayName: Golden Teethed Jaw
   vfx: {fileID: 7874843034932983370, guid: 3c0ad721601b0c84a929c2d939976de1, type: 3}
+  stealText: {fileID: 0}
 --- !u!61 &1972967780356170220
 BoxCollider2D:
   m_ObjectHideFlags: 0
