@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -75,7 +74,9 @@ public class GuardEnemy : MonoBehaviour
 
         yield return new WaitForSeconds(delayTime);
 
-        if (stunned <= 0)
+        RaycastHit2D ray = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
+
+        if (stunned <= 0 && !ray)
         {
             GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
             Destroy(shootVFX, 2);
