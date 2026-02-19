@@ -211,7 +211,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainScene
+          m_StringArgument: MenuScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &26683446
@@ -560,8 +560,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -11.720001}
+  m_SizeDelta: {x: 0, y: 0.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434041776
 MonoBehaviour:
@@ -1861,7 +1861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataManager
   canFlash: 0
   canStun: 0
-  doubleJumpUnlocked: 0
 --- !u!4 &2003109549
 Transform:
   m_ObjectHideFlags: 0

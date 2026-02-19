@@ -10,6 +10,8 @@ public class Flashlight : MonoBehaviour
     public GameObject player;
     public GameObject vfx;
     public GameObject guard;
+    public GameObject iconVFX;
+    private ParticleSystem iconParticle;
     private GuardEnemy guardScript; 
 
     private Animator animator;
@@ -25,6 +27,7 @@ public class Flashlight : MonoBehaviour
     {
         animator = player.GetComponent<Animator>();
         guardScript = guard.GetComponent<GuardEnemy>();
+        iconParticle = iconVFX.GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -54,6 +57,7 @@ public class Flashlight : MonoBehaviour
 
                 // VFX
                 GameObject flashVFX = Instantiate(vfx, light.transform.position, Quaternion.identity);
+                iconParticle.Play();
                 Object.Destroy(flashVFX, 1);
                 animator.SetTrigger("light");
             }
