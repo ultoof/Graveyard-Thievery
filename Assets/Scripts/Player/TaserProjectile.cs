@@ -3,12 +3,13 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
-public class TaserProjectile : MonoBehaviour 
+public class TaserProjectile : MonoBehaviour
 {
     public float bulletSpeed;
     public float freezeduration = 0f;
     public float lifetime = 3f;
     public ParticleSystem vfx;
+    public GameObject hitVFX;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class TaserProjectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             return;
-        } 
+        }
 
         Enemy enemy = collision.gameObject.GetComponentInParent<Enemy>();
         GuardEnemy guardEnemy = collision.gameObject.GetComponentInParent<GuardEnemy>();
@@ -33,13 +34,17 @@ public class TaserProjectile : MonoBehaviour
             enemy.Freeze(freezeduration);
         }
 
-        else if(guardEnemy)
+        else if (guardEnemy)
         {
             guardEnemy.Freeze(freezeduration);
         }
 
-        Destroy(gameObject,0.5f);
+        GameObject clonedHitVFX = Instantiate(hitVFX, collision.transform.position, Quaternion.identity);
+
+        Destroy(clonedHitVFX, freezeduration + 0.5f);
+        Destroy(gameObject, 0.5f);
         vfx.Stop();
+        StopHitVFX(freezeduration, clonedHitVFX.GetComponent<ParticleSystem>());
     }
 
     IEnumerator RemoveEffect(float delayTime)
@@ -47,5 +52,12 @@ public class TaserProjectile : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
 
         vfx.Stop();
+    }
+
+    IEnumerator StopHitVFX(float delayTime, ParticleSystem particleSystem)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        particleSystem.Stop();
     }
 }

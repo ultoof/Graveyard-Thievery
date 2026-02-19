@@ -14586,6 +14586,7 @@ MonoBehaviour:
   freezeduration: 2
   lifetime: 2
   vfx: {fileID: 2871810903430465665}
+  hitVFX: {fileID: 6270265595155027645, guid: d62915def559e6c469914c8b7ef35d46, type: 3}
 --- !u!58 &5914291839580765222
 CircleCollider2D:
   m_ObjectHideFlags: 0
