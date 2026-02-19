@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 {
     public bool exposed = false; 
     public int money = 0;
+    public int maxMoney = 100;
     public float speed = 4f;
     public float sprintMultiplier = 1.5f;
     public float crouchMultiplier = 0.8f;

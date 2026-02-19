@@ -57,5 +57,8 @@ TagManager:
   - name: Humanoids
     uniqueID: 823951549
     locked: 0
+  - name: VFX
+    uniqueID: 3737649457
+    locked: 0
   m_RenderingLayers:
   - Default

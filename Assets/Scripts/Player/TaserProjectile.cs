@@ -1,65 +1,51 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
 public class TaserProjectile : MonoBehaviour 
 {
     public float bulletSpeed;
+    public float freezeduration = 0f;
     public float lifetime = 3f;
-    public float knockback = 0f;
-    private float placeholderValue;
+    public ParticleSystem vfx;
 
     void Start()
     {
         GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
-        Destroy(gameObject, lifetime);
+        Destroy(gameObject, lifetime + 0.5f);
+
+        RemoveEffect(0.5f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GameObject().CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             return;
-        }
+        } 
 
-        NavMeshAgent navMeshAgent = collision.GameObject().GetComponent<NavMeshAgent>();
+        Enemy enemy = collision.gameObject.GetComponentInParent<Enemy>();
+        GuardEnemy guardEnemy = collision.gameObject.GetComponentInParent<GuardEnemy>();
 
-        if (navMeshAgent)
+        if (enemy)
         {
-            Debug.Log("Dab");
-            placeholderValue = navMeshAgent.speed;
-            navMeshAgent.speed = 0;
-            
-            StartCoroutine(DelayAction(3f,navMeshAgent));
-            if(knockback > 0)
-            {
-                Rigidbody2D rb = collision.gameObject.GetComponentInParent<Rigidbody2D>();
-                if(rb != null)
-                {
-                    rb.AddForce(GetComponent<Rigidbody2D>().linearVelocity.normalized * knockback);
-                }
-            }
-
+            enemy.Freeze(freezeduration);
         }
-        //If it hits another type of collider
-        else
+
+        else if(guardEnemy)
         {
-            
+            guardEnemy.Freeze(freezeduration);
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject,0.5f);
+        vfx.Stop();
     }
 
-
-    IEnumerator DelayAction (float delayTime,NavMeshAgent navMeshAgent)
+    IEnumerator RemoveEffect(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
-        navMeshAgent.speed = placeholderValue;
+        vfx.Stop();
     }
-
-
 }

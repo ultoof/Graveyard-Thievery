@@ -75,7 +75,7 @@ NavMeshAgent:
   m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -275,3 +275,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   viewDistance: 3
+  vfx: {fileID: 934889904139282266, guid: 10b322dbaac45d7498be0fdeaa781cf1, type: 3}
