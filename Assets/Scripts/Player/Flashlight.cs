@@ -4,12 +4,13 @@ using UnityEngine.InputSystem;
 public class Flashlight : MonoBehaviour
 {
     bool isOn = false;
+    bool canFlash = true;
     public GameObject light;
     public GameObject circleLight;
     public GameObject player;
     public GameObject vfx;
     public GameObject guard;
-    private GuardEnemy guardScript;
+    private GuardEnemy guardScript; 
 
     private Animator animator;
 
@@ -23,6 +24,9 @@ public class Flashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Transfer of data 
+        //DataManager.instance.TransportValue = canFlash;
+
         // Flashlight rotation
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - light.transform.position;
         diff.Normalize();
@@ -30,7 +34,7 @@ public class Flashlight : MonoBehaviour
         light.transform.rotation = Quaternion.Lerp(light.transform.rotation,Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90),3f * Time.deltaTime);
 
         // Flashlight
-        if (Keyboard.current.fKey.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame && canFlash == true)
         {
             if (isOn)
             {

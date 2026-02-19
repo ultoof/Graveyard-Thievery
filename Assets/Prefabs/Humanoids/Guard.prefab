@@ -165,7 +165,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 823951549
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5010302190467743278, guid: a8a3f69010055424da080a99f34949cc, type: 3}
@@ -271,9 +271,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardEnemy
   nav: {fileID: 4537303617939036154}
+  currentPoint: 1
+  searching: 1
   attacking: 0
+  stunned: 0
   obstacleLayerMasks:
     serializedVersion: 2
     m_Bits: 8
   viewDistance: 3
   vfx: {fileID: 934889904139282266, guid: 10b322dbaac45d7498be0fdeaa781cf1, type: 3}
+  guardPointFolder: {fileID: 0}
+  guardPoints: []
