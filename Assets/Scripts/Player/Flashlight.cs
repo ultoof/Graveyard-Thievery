@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Flashlight : MonoBehaviour
 {
     bool isOn = false;
-    bool canFlash = false;
+    bool canFlash = true;
     public GameObject light;
     public GameObject circleLight;
     public GameObject player;
