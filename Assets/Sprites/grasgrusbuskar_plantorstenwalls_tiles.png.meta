@@ -1,65 +1,61 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 41de95d2c0d288e4196da8d865686993
-=======
-guid: ce00ee7bbd717ba4b90f31d7f70e6d0a
->>>>>>> 58c9a7aa26762bc52aec65a2b9c3c2372f7b835b
+guid: 112b8b9f13b12af45806fe5c15bfc692
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4294716256062702773
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_0"
+      213: -1655464160796617572
+    second: grasgrusbuskar_plantorstenwalls_tiles_0
   - first:
-      213: 403547951158659696
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_1"
+      213: -1450490908705045355
+    second: grasgrusbuskar_plantorstenwalls_tiles_1
   - first:
-      213: -9010486990580113393
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_2"
+      213: 1441084286541512584
+    second: grasgrusbuskar_plantorstenwalls_tiles_2
   - first:
-      213: -1632425270631842640
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_3"
+      213: -8761706674839206548
+    second: grasgrusbuskar_plantorstenwalls_tiles_3
   - first:
-      213: -8461832479721443629
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_4"
+      213: 6856231633812259585
+    second: grasgrusbuskar_plantorstenwalls_tiles_4
   - first:
-      213: -1280089514299533353
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_5"
+      213: -6789180181325972476
+    second: grasgrusbuskar_plantorstenwalls_tiles_5
   - first:
-      213: -2478735504630888221
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_6"
+      213: 787012024859180783
+    second: grasgrusbuskar_plantorstenwalls_tiles_6
   - first:
-      213: 8995897599279439108
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_7"
+      213: 5002783304906200502
+    second: grasgrusbuskar_plantorstenwalls_tiles_7
   - first:
-      213: 1959552480294331546
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_8"
+      213: -228400232565016929
+    second: grasgrusbuskar_plantorstenwalls_tiles_8
   - first:
-      213: -542796288313082856
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_9"
+      213: -5212369225828016972
+    second: grasgrusbuskar_plantorstenwalls_tiles_9
   - first:
-      213: 3636170642150699165
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_10"
+      213: -1219332308455824995
+    second: grasgrusbuskar_plantorstenwalls_tiles_10
   - first:
-      213: 3813972949174957874
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_11"
+      213: -4079540976708933179
+    second: grasgrusbuskar_plantorstenwalls_tiles_11
   - first:
-      213: -4615521501606578284
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_12"
+      213: -3261902238304533975
+    second: grasgrusbuskar_plantorstenwalls_tiles_12
   - first:
-      213: -1511786819348311750
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_13"
+      213: -1555192558915145165
+    second: grasgrusbuskar_plantorstenwalls_tiles_13
   - first:
-      213: 2910109594396273825
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_14"
+      213: -53604572853330401
+    second: grasgrusbuskar_plantorstenwalls_tiles_14
   - first:
-      213: -5281586501658933471
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_15"
+      213: 6281784629654230139
+    second: grasgrusbuskar_plantorstenwalls_tiles_15
   - first:
-      213: -8115153817530817209
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_16"
+      213: 7184541293736671689
+    second: grasgrusbuskar_plantorstenwalls_tiles_16
   - first:
-      213: -3669643764872400820
-    second: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_17"
+      213: 670796537169525103
+    second: grasgrusbuskar_plantorstenwalls_tiles_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -155,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_0"
+      name: grasgrusbuskar_plantorstenwalls_tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -170,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b486b53ea5e99b30800000000000000
-      internalID: 4294716256062702773
+      spriteID: c94d355ed1c9609e0800000000000000
+      internalID: -1655464160796617572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_1"
+      name: grasgrusbuskar_plantorstenwalls_tiles_1
       rect:
         serializedVersion: 2
         x: 207
@@ -192,14 +188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07a06a639b0b99500800000000000000
-      internalID: 403547951158659696
+      spriteID: 594c3bc1432dedbe0800000000000000
+      internalID: -1450490908705045355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_2"
+      name: grasgrusbuskar_plantorstenwalls_tiles_2
       rect:
         serializedVersion: 2
         x: 329
@@ -214,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f00a13952d154f280800000000000000
-      internalID: -9010486990580113393
+      spriteID: 88f34bef582cff310800000000000000
+      internalID: 1441084286541512584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_3"
+      name: grasgrusbuskar_plantorstenwalls_tiles_3
       rect:
         serializedVersion: 2
         x: 393
@@ -236,14 +232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bc3e958dd57859e0800000000000000
-      internalID: -1632425270631842640
+      spriteID: c654a04633a286680800000000000000
+      internalID: -8761706674839206548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_4"
+      name: grasgrusbuskar_plantorstenwalls_tiles_4
       rect:
         serializedVersion: 2
         x: 460
@@ -258,14 +254,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3de27514138819a80800000000000000
-      internalID: -8461832479721443629
+      spriteID: 1030d27585a362f50800000000000000
+      internalID: 6856231633812259585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_5"
+      name: grasgrusbuskar_plantorstenwalls_tiles_5
       rect:
         serializedVersion: 2
         x: 9
@@ -280,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d759737e553c3ee0800000000000000
-      internalID: -1280089514299533353
+      spriteID: 40c71ff789cf7c1a0800000000000000
+      internalID: -6789180181325972476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_6"
+      name: grasgrusbuskar_plantorstenwalls_tiles_6
       rect:
         serializedVersion: 2
         x: 70
@@ -302,14 +298,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e8c3520133c99dd0800000000000000
-      internalID: -2478735504630888221
+      spriteID: fee31bf44470cea00800000000000000
+      internalID: 787012024859180783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_7"
+      name: grasgrusbuskar_plantorstenwalls_tiles_7
       rect:
         serializedVersion: 2
         x: 332
@@ -324,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40d17d84439d7dc70800000000000000
-      internalID: 8995897599279439108
+      spriteID: 6b55031f8e47d6540800000000000000
+      internalID: 5002783304906200502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_8"
+      name: grasgrusbuskar_plantorstenwalls_tiles_8
       rect:
         serializedVersion: 2
         x: 397
@@ -346,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a94eda2499ab13b10800000000000000
-      internalID: 1959552480294331546
+      spriteID: f967857d23f84dcf0800000000000000
+      internalID: -228400232565016929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_9"
+      name: grasgrusbuskar_plantorstenwalls_tiles_9
       rect:
         serializedVersion: 2
         x: 459
@@ -368,14 +364,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81cb2b1d6a99778f0800000000000000
-      internalID: -542796288313082856
+      spriteID: 4bcd7503ec1f9a7b0800000000000000
+      internalID: -5212369225828016972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_10"
+      name: grasgrusbuskar_plantorstenwalls_tiles_10
       rect:
         serializedVersion: 2
         x: 2
@@ -390,14 +386,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d90b81c0fe5467230800000000000000
-      internalID: 3636170642150699165
+      spriteID: d91655bc9bf041fe0800000000000000
+      internalID: -1219332308455824995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_11"
+      name: grasgrusbuskar_plantorstenwalls_tiles_11
       rect:
         serializedVersion: 2
         x: 97
@@ -412,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 237b582a034fde430800000000000000
-      internalID: 3813972949174957874
+      spriteID: 5c92d94981f8267c0800000000000000
+      internalID: -4079540976708933179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_12"
+      name: grasgrusbuskar_plantorstenwalls_tiles_12
       rect:
         serializedVersion: 2
         x: 192
@@ -434,14 +430,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 497ff8bf5af52ffb0800000000000000
-      internalID: -4615521501606578284
+      spriteID: 9228ec152356bb2d0800000000000000
+      internalID: -3261902238304533975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_13"
+      name: grasgrusbuskar_plantorstenwalls_tiles_13
       rect:
         serializedVersion: 2
         x: 225
@@ -456,14 +452,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3150a8c5ed050be0800000000000000
-      internalID: -1511786819348311750
+      spriteID: 33238808b98da6ae0800000000000000
+      internalID: -1555192558915145165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_14"
+      name: grasgrusbuskar_plantorstenwalls_tiles_14
       rect:
         serializedVersion: 2
         x: 326
@@ -478,14 +474,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ac2277f149c26820800000000000000
-      internalID: 2910109594396273825
+      spriteID: f1e9dbcccee814ff0800000000000000
+      internalID: -53604572853330401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_15"
+      name: grasgrusbuskar_plantorstenwalls_tiles_15
       rect:
         serializedVersion: 2
         x: 1
@@ -500,14 +496,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1270f1e4f0904b6b0800000000000000
-      internalID: -5281586501658933471
+      spriteID: b749c0e96d16d2750800000000000000
+      internalID: 6281784629654230139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_16"
+      name: grasgrusbuskar_plantorstenwalls_tiles_16
       rect:
         serializedVersion: 2
         x: 193
@@ -522,14 +518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 745ab60599e216f80800000000000000
-      internalID: -8115153817530817209
+      spriteID: 9c9bc47cd3e94b360800000000000000
+      internalID: 7184541293736671689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_17"
+      name: grasgrusbuskar_plantorstenwalls_tiles_17
       rect:
         serializedVersion: 2
         x: 223
@@ -544,8 +540,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c40bd8e307ec21dc0800000000000000
-      internalID: -3669643764872400820
+      spriteID: f693d8285e52f4900800000000000000
+      internalID: 670796537169525103
       vertices: []
       indices: 
       edges: []
@@ -564,24 +560,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_0": 4294716256062702773
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_1": 403547951158659696
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_10": 3636170642150699165
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_11": 3813972949174957874
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_12": -4615521501606578284
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_13": -1511786819348311750
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_14": 2910109594396273825
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_15": -5281586501658933471
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_16": -8115153817530817209
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_17": -3669643764872400820
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_2": -9010486990580113393
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_3": -1632425270631842640
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_4": -8461832479721443629
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_5": -1280089514299533353
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_6": -2478735504630888221
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_7": 8995897599279439108
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_8": 1959552480294331546
-      "gra\u0308s,grus,buskar_plantor,stenwalls_tiles_9": -542796288313082856
+      grasgrusbuskar_plantorstenwalls_tiles_0: -1655464160796617572
+      grasgrusbuskar_plantorstenwalls_tiles_1: -1450490908705045355
+      grasgrusbuskar_plantorstenwalls_tiles_10: -1219332308455824995
+      grasgrusbuskar_plantorstenwalls_tiles_11: -4079540976708933179
+      grasgrusbuskar_plantorstenwalls_tiles_12: -3261902238304533975
+      grasgrusbuskar_plantorstenwalls_tiles_13: -1555192558915145165
+      grasgrusbuskar_plantorstenwalls_tiles_14: -53604572853330401
+      grasgrusbuskar_plantorstenwalls_tiles_15: 6281784629654230139
+      grasgrusbuskar_plantorstenwalls_tiles_16: 7184541293736671689
+      grasgrusbuskar_plantorstenwalls_tiles_17: 670796537169525103
+      grasgrusbuskar_plantorstenwalls_tiles_2: 1441084286541512584
+      grasgrusbuskar_plantorstenwalls_tiles_3: -8761706674839206548
+      grasgrusbuskar_plantorstenwalls_tiles_4: 6856231633812259585
+      grasgrusbuskar_plantorstenwalls_tiles_5: -6789180181325972476
+      grasgrusbuskar_plantorstenwalls_tiles_6: 787012024859180783
+      grasgrusbuskar_plantorstenwalls_tiles_7: 5002783304906200502
+      grasgrusbuskar_plantorstenwalls_tiles_8: -228400232565016929
+      grasgrusbuskar_plantorstenwalls_tiles_9: -5212369225828016972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
