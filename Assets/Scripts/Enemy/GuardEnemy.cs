@@ -11,6 +11,8 @@ public class GuardEnemy : MonoBehaviour
     private GameObject player;
     private Health health;
     private Rigidbody2D rb;
+    public int currentPoint = 1;
+    public bool searching = true;
 
     public bool attacking = false;
     public int stunned = 0;
@@ -18,7 +20,7 @@ public class GuardEnemy : MonoBehaviour
     public float viewDistance;
     public GameObject vfx;
     public GameObject guardPointFolder;
-    public Array guardPoints;
+    public Transform[] guardPoints;
 
     private void Awake()
     {
@@ -50,25 +52,47 @@ public class GuardEnemy : MonoBehaviour
         if (!hit && !attacking)
         {
             float distance = Vector2.Distance(transform.position, player.transform.position);
-            if (distance < 2)
+            if (distance < 1)
             {
                 StartCoroutine(Attack(2.0f));
+                searching = false;
             }
             else if (distance < viewDistance)
             {
                 Debug.DrawLine(gameObject.transform.position, player.transform.position);
                 nav.destination = player.transform.position;
                 animator.SetBool("move", true);
+                searching = false;
             }
-
             else
             {
-                animator.SetBool("move", false);
+                MoveToGuardPoint();
             }
         }
         else
         {
-            animator.SetBool("move", false);
+            MoveToGuardPoint();
+        }
+    }
+
+    void MoveToGuardPoint()
+    {
+        nav.destination = guardPoints[currentPoint].position;
+        animator.SetBool("move", true);
+        searching = true;
+
+        float pointDistance = Vector2.Distance(transform.position,guardPoints[currentPoint].position);
+
+        if (pointDistance <= 2)
+        {
+            if (currentPoint != guardPoints.Length - 1)
+            {
+                currentPoint++;
+            }
+            else
+            {
+                currentPoint = 1;
+            }
         }
     }
 
