@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     private GameObject player;
 
+    public bool stunned = false;
     public LayerMask obstacleLayerMasks;
     public float viewDistance = 5f;
     public float attackRange = 2f;
@@ -60,10 +61,11 @@ public class Enemy : MonoBehaviour
     }
 
     IEnumerator FreezeRoutine(float duration)
-{
-    nav.isStopped = true;
-    yield return new WaitForSeconds(duration);
-    nav.isStopped = false;
-}
-    
+    {
+        stunned = true;
+        nav.isStopped = true;
+        yield return new WaitForSeconds(duration);
+        nav.isStopped = false;
+        stunned = false;
+    }
 }
