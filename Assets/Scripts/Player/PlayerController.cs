@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool exposed = false; 
     public int money = 0;
     public int maxMoney = 100;
     public float speed = 4f;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public bool movementRestriction = false;
     public int Stamina = 100;
     private int StaminaMod;
+    
     
 
     private Vector2 moveDir; // used for WASD movement
