@@ -12,10 +12,10 @@ public class GuardEnemy : MonoBehaviour
     private Rigidbody2D rb;
 
     public bool attacking = false;
+    public int stunned = 0;
     public LayerMask obstacleLayerMasks;
     public float viewDistance;
     public GameObject vfx;
-
 
     private void Awake()
     {
@@ -72,16 +72,18 @@ public class GuardEnemy : MonoBehaviour
     {
         attacking = true;
         nav.isStopped = true;
-        Debug.Log(nav.isStopped);
 
         yield return new WaitForSeconds(delayTime);
 
-        GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
-        Destroy(shootVFX, 2);
-        health.TakeDamage(1);
+        if (stunned <= 0)
+        {
+            GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
+            Destroy(shootVFX, 2);
+            health.TakeDamage(1);
+        }
+
         attacking = false;
         nav.isStopped = false;
-        Debug.Log(nav.isStopped);
     }
 
     //Coroutine fix on taser : 
@@ -92,8 +94,10 @@ public class GuardEnemy : MonoBehaviour
 
     IEnumerator FreezeRoutine(float duration)
     {
+        stunned += 2;
         nav.isStopped = true;
         yield return new WaitForSeconds(duration);
         nav.isStopped = false;
+        stunned -= 2;
     }
 }
