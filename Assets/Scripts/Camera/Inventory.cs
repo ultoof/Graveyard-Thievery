@@ -9,6 +9,5 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         coinUI.fillAmount = playerController.money / playerController.maxMoney;
-        Debug.Log(playerController.money);
     }
 }

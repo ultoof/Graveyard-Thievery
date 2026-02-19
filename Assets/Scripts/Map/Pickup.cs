@@ -40,7 +40,7 @@ public class Pickup : MonoBehaviour
             if (inrange == true)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
-                playerController.money += Math.Clamp(money, 0, playerController.maxMoney);
+                playerController.money = Math.Clamp(playerController.money + money, 0, playerController.maxMoney);
                 Destroy(gameObject);
                 Destroy(clonedVFX, 1);
             }

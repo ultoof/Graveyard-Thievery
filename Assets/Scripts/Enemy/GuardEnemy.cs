@@ -57,7 +57,7 @@ public class GuardEnemy : MonoBehaviour
             if (!hit && !attacking)
             {
                 float distance = Vector2.Distance(transform.position, player.transform.position);
-                if (distance < 1)
+                if (distance < 1.5)
                 {
                     StartCoroutine(Attack(2.0f));
                     searching = false;
