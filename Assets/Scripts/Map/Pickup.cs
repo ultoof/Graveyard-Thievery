@@ -1,3 +1,4 @@
+using System;
 using System.Data.SqlTypes;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,7 +19,8 @@ public class Pickup : MonoBehaviour
         {
             inrange = true;
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            playerController.money += money;
+            playerController.money += Math.Clamp(money, 0, playerController.maxMoney);
+
         }
     }
 
