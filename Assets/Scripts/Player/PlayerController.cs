@@ -11,8 +11,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public bool exposed = false; 
-    public int money = 0;
-    public int maxMoney = 100;
+    public float money = 0f;
+    public float maxMoney = 100f;
     public float speed = 4f;
     public float sprintMultiplier = 1.5f;
     public float crouchMultiplier = 0.8f;
@@ -20,9 +20,6 @@ public class PlayerController : MonoBehaviour
     public int Stamina = 100;
     public int key = 1;
     private int StaminaMod;
-
-    
-    
 
     private Vector2 moveDir; // used for WASD movement
     public Vector2 lastDir;

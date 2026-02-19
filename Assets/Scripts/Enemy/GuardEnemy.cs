@@ -11,15 +11,18 @@ public class GuardEnemy : MonoBehaviour
     private GameObject player;
     private Health health;
     private Rigidbody2D rb;
+
     public int currentPoint = 1;
     public bool searching = true;
-
     public bool attacking = false;
+    public bool stoppedAtPoint = false;
     public int stunned = 0;
     public LayerMask obstacleLayerMasks;
     public float viewDistance;
     public GameObject vfx;
     public GameObject guardPointFolder;
+    public GameObject hitVFX;
+    public GameObject deathVFX;
     public Transform[] guardPoints;
 
     private void Awake()
@@ -41,57 +44,61 @@ public class GuardEnemy : MonoBehaviour
 
     void Update()
     {
-        // Send data to Animator
-        animator.SetFloat("xMove", nav.velocity.x);
-        animator.SetFloat("yMove", nav.velocity.y);
-
-        // Create a Linecast between this enemy and player
-        RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
-
-        // Linecast to target was succesful (did not hit anything on obstacleLayerMasks)
-        if (!hit && !attacking)
+        if (!stoppedAtPoint)
         {
-            float distance = Vector2.Distance(transform.position, player.transform.position);
-            if (distance < 1)
+            // Send data to Animator
+            animator.SetFloat("xMove", nav.velocity.x);
+            animator.SetFloat("yMove", nav.velocity.y);
+
+            // Create a Linecast between this enemy and player
+            RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
+
+            // Linecast to target was succesful (did not hit anything on obstacleLayerMasks)
+            if (!hit && !attacking)
             {
-                StartCoroutine(Attack(2.0f));
-                searching = false;
-            }
-            else if (distance < viewDistance)
-            {
-                Debug.DrawLine(gameObject.transform.position, player.transform.position);
-                nav.destination = player.transform.position;
-                animator.SetBool("move", true);
-                searching = false;
+                float distance = Vector2.Distance(transform.position, player.transform.position);
+                if (distance < 1)
+                {
+                    StartCoroutine(Attack(2.0f));
+                    searching = false;
+                }
+                else if (distance < viewDistance)
+                {
+                    Debug.DrawLine(gameObject.transform.position, player.transform.position);
+                    nav.destination = player.transform.position;
+                    animator.SetBool("move", true);
+                    searching = false;
+                }
+                else
+                {
+                    MoveToGuardPoint();
+                }
             }
             else
             {
                 MoveToGuardPoint();
             }
         }
-        else
+
+        void MoveToGuardPoint()
         {
-            MoveToGuardPoint();
-        }
-    }
+            nav.destination = guardPoints[currentPoint].position;
+            animator.SetBool("move", true);
+            searching = true;
 
-    void MoveToGuardPoint()
-    {
-        nav.destination = guardPoints[currentPoint].position;
-        animator.SetBool("move", true);
-        searching = true;
+            float pointDistance = Vector2.Distance(transform.position, guardPoints[currentPoint].position);
 
-        float pointDistance = Vector2.Distance(transform.position,guardPoints[currentPoint].position);
-
-        if (pointDistance <= 2)
-        {
-            if (currentPoint != guardPoints.Length - 1)
+            if (pointDistance <= 1)
             {
-                currentPoint++;
-            }
-            else
-            {
-                currentPoint = 1;
+                StartCoroutine(StopAtPoint(5f));
+                if (currentPoint != guardPoints.Length - 1)
+                {
+                    currentPoint++;
+                }
+                else
+                {
+                    currentPoint = 1;
+                }
             }
         }
     }
@@ -110,6 +117,18 @@ public class GuardEnemy : MonoBehaviour
             GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
             Destroy(shootVFX, 2);
             health.TakeDamage(1);
+
+            if (health.health >= 1)
+            {
+                GameObject hitVFXClone = Instantiate(hitVFX, player.transform.position, Quaternion.identity);
+                Destroy(hitVFXClone, 2);
+            }
+            else
+            {
+                GameObject hitVFXClone = Instantiate(deathVFX, player.transform.position, Quaternion.identity);
+                player.SetActive(false);
+                Destroy(hitVFXClone, 2);
+            }
         }
 
         attacking = false;
@@ -129,5 +148,14 @@ public class GuardEnemy : MonoBehaviour
         yield return new WaitForSeconds(duration);
         nav.isStopped = false;
         stunned -= 2;
+    }
+
+    IEnumerator StopAtPoint(float duration)
+    {
+        animator.SetBool("move", false);
+        stoppedAtPoint = true;
+
+        yield return new WaitForSeconds(duration);
+        stoppedAtPoint = false;
     }
 }

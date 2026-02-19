@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: f3eada4e41f88f94e84e8aee318ef8d6
-=======
-guid: 18a5907e2d978d74db2d4753ccb4d1ef
->>>>>>> 91d339e8c012e6c6b0609b64d523bdce340f0945
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -44,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -107,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ingameUI_COIN_JAR_0
+      name: Jar
       rect:
         serializedVersion: 2
         x: 36
@@ -115,7 +111,7 @@ TextureImporter:
         width: 26
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -129,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ingameUI_COIN_JAR_1
+      name: Coin
       rect:
         serializedVersion: 2
         x: 76
@@ -137,7 +133,7 @@ TextureImporter:
         width: 24
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -154,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3948f3acbcdb10640a71697b42316f63
     internalID: 0
     vertices: []
     indices: 
@@ -164,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ingameUI_COIN_JAR_0: -6178558174701457688
-      ingameUI_COIN_JAR_1: -7931426945260753423
+      Coin: -7931426945260753423
+      Jar: -6178558174701457688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
