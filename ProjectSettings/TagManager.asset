@@ -61,7 +61,11 @@ TagManager:
     uniqueID: 3737649457
     locked: 0
   - name: UI
+<<<<<<< HEAD
     uniqueID: 689521669
+=======
+    uniqueID: 3762659197
+>>>>>>> ace78a1f0e4af4377873bdc249e67153b3ac1883
     locked: 0
   m_RenderingLayers:
   - Default
