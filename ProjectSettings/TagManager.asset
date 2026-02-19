@@ -51,11 +51,11 @@ TagManager:
   - name: Foreground
     uniqueID: 3370562933
     locked: 0
-  - name: Obstacles
-    uniqueID: 345307691
-    locked: 0
   - name: Humanoids
     uniqueID: 823951549
+    locked: 0
+  - name: Obstacles
+    uniqueID: 345307691
     locked: 0
   - name: VFX
     uniqueID: 3737649457
