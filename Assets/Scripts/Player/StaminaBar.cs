@@ -9,6 +9,5 @@ public class StaminaBar : MonoBehaviour
     private void Update()
     {
         staminaBar.fillAmount = playerController.Stamina / 1000f;
-        Debug.Log(playerController.Stamina / 1000f);
     }
 }
