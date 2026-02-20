@@ -12,7 +12,8 @@ public class Flashlight : MonoBehaviour
     public GameObject guard;
     public GameObject iconVFX;
     private ParticleSystem iconParticle;
-    private GuardEnemy guardScript; 
+    private GuardEnemy guardScript;
+    private float defaultDist;
 
     private Animator animator;
 
@@ -28,6 +29,7 @@ public class Flashlight : MonoBehaviour
         animator = player.GetComponent<Animator>();
         guardScript = guard.GetComponent<GuardEnemy>();
         iconParticle = iconVFX.GetComponent<ParticleSystem>();
+        defaultDist = guardScript.viewDistance;
     }
 
     // Update is called once per frame
@@ -47,12 +49,12 @@ public class Flashlight : MonoBehaviour
         {
             if (isOn)
             {
-                guardScript.viewDistance = 3f;
+                guardScript.viewDistance = defaultDist;
                 isOn = false;
             }
             else
             {
-                guardScript.viewDistance = 5f;
+                guardScript.viewDistance = defaultDist * 2;
                 isOn = true;
 
                 // VFX
