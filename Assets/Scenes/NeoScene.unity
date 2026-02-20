@@ -825,6 +825,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1169935729}
+    - target: {fileID: 5109675330960167971, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 14.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109675330960167971, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 400.78
+      objectReference: {fileID: 0}
     - target: {fileID: 5645896986707359482, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_Camera
       value: 
