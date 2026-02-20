@@ -7,7 +7,7 @@ public class Upgrades : MonoBehaviour
 
     public void BuyUpgradeFlashlight()
     {
-        if(DataManager.instance.canFlash == false)
+        if(DataManager.instance.canFlash == false && DataManager.instance.money >= 50)
         {
             DataManager.instance.money -= 50;
             DataManager.instance.canFlash = true;  
@@ -15,7 +15,7 @@ public class Upgrades : MonoBehaviour
     }
     public void BuyUpgradeTaser()
     {
-        if(DataManager.instance.canStun == false)
+        if(DataManager.instance.canStun == false && DataManager.instance.money >= 50)
         {
             DataManager.instance.money -= 50;
             DataManager.instance.canStun = true;
@@ -23,7 +23,7 @@ public class Upgrades : MonoBehaviour
     }
     public void BuyUpgradeMaxMoneyIncrease()
     {
-        if(cap <= 4)
+        if(cap <= 4 && DataManager.instance.money >= 100)
         {
             DataManager.instance.money -= 100;
             DataManager.instance.maxMoney += 50;
