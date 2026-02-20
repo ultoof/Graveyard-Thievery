@@ -565,7 +565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataManager
   canFlash: 0
   canStun: 0
-  maxMoney: 0
+  maxMoney: 100
   money: 0
 --- !u!4 &519309159
 Transform:
