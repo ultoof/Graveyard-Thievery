@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        coinUI.fillAmount = playerController.money / playerController.maxMoney;
+        coinUI.fillAmount = math.round(playerController.money / playerController.maxMoney);
         coinText.text = $"{coinUI.fillAmount*100}%";
     }
 }
