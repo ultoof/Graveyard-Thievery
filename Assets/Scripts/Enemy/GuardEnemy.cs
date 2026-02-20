@@ -46,16 +46,14 @@ public class GuardEnemy : MonoBehaviour
     {
         if (!stoppedAtPoint)
         {
-            // Send data to Animator
-            animator.SetFloat("xMove", nav.velocity.x);
-            animator.SetFloat("yMove", nav.velocity.y);
-
             // Create a Linecast between this enemy and player
             RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
 
             // Linecast to target was succesful (did not hit anything on obstacleLayerMasks)
             if (!hit && !attacking)
             {
+                animator.SetFloat("xMove", nav.velocity.x);
+                animator.SetFloat("yMove", nav.velocity.y);
                 float distance = Vector2.Distance(transform.position, player.transform.position);
                 if (distance < 1.5)
                 {
@@ -107,6 +105,7 @@ public class GuardEnemy : MonoBehaviour
     {
         attacking = true;
         nav.isStopped = true;
+        animator.SetBool("shoot", true);
 
         yield return new WaitForSeconds(delayTime);
 
@@ -133,6 +132,7 @@ public class GuardEnemy : MonoBehaviour
 
         attacking = false;
         nav.isStopped = false;
+        animator.SetBool("shoot", false);
     }
 
     //Coroutine fix on taser : 
