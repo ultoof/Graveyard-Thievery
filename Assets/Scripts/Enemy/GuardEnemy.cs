@@ -46,6 +46,15 @@ public class GuardEnemy : MonoBehaviour
 
     void Update()
     {
+        if (!playerController.exposed)
+        {
+            nav.speed = 2;
+        }
+        else
+        {
+            nav.speed = 4;
+        }
+
         if (!stoppedAtPoint)
         {
             // Create a Linecast between this enemy and player
