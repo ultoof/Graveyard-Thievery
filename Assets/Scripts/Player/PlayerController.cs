@@ -37,7 +37,17 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         smokeEmitter = smokeVFX.GetComponent<ParticleSystem>();
         lastDir = Vector2.down; // Set to players starting direction
-        maxMoney = DataManager.instance.maxMoney;
+
+        if (DataManager.instance != null)
+        {
+            maxMoney = DataManager.instance.maxMoney;
+        }
+        else
+        {
+            maxMoney = 100f;
+        }
+
+        
     }
 
     void Update()
