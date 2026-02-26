@@ -12,6 +12,6 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         coinUI.fillAmount = playerController.money / playerController.maxMoney;
-        coinText.text = $"{coinUI.fillAmount*100}%";
+        coinText.text = $"{math.round(coinUI.fillAmount*100)}%";
     }
 }
