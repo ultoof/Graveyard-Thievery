@@ -424,8 +424,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.006550193, y: 0}
-  m_Size: {x: 0.17449689, y: 0.56}
+  m_Offset: {x: -0.006550193, y: -0.09953463}
+  m_Size: {x: 0.17449689, y: 0.36093068}
   m_Direction: 0
 --- !u!1 &2135875831211511518
 GameObject:
@@ -10074,9 +10074,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 345307691
-  m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingLayerID: 823951549
+  m_SortingLayer: 4
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -10161,7 +10161,7 @@ MonoBehaviour:
   m_Intensity: 10
   m_LightVolumeIntensity: 0.01
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000002bfa9414bd801c31
+  m_ApplyToSortingLayers: 000000002bfa9414bd801c3175b5e6c8
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
