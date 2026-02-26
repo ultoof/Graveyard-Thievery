@@ -8,7 +8,7 @@ public class CameraTrap : MonoBehaviour
         revealCollider = GetComponent<PolygonCollider2D>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -17,19 +17,12 @@ public class CameraTrap : MonoBehaviour
         }  
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             playerController.exposed = false; 
         }
-       
-    }
-
-    void Update()
-    {
-        
-        
     }
 }

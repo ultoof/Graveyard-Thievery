@@ -11,6 +11,7 @@ public class GuardEnemy : MonoBehaviour
     private GameObject player;
     private Health health;
     private Rigidbody2D rb;
+    private PlayerController playerController;
 
     public int currentPoint = 1;
     public bool searching = true;
@@ -29,6 +30,7 @@ public class GuardEnemy : MonoBehaviour
     {
         // Get component references
         player = GameObject.Find("Player");
+        playerController = player.GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         health = player.GetComponent<Health>();
         rb = GetComponentInParent<Rigidbody2D>();
@@ -50,7 +52,7 @@ public class GuardEnemy : MonoBehaviour
             RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
 
             // Linecast to target was succesful (did not hit anything on obstacleLayerMasks)
-            if (!hit && !attacking)
+            if (!hit && !attacking || playerController.exposed && !attacking)
             {
                 animator.SetFloat("xMove", nav.velocity.x);
                 animator.SetFloat("yMove", nav.velocity.y);
@@ -60,7 +62,7 @@ public class GuardEnemy : MonoBehaviour
                     StartCoroutine(Attack(2.0f));
                     searching = false;
                 }
-                else if (distance < viewDistance)
+                else if (distance < viewDistance || playerController.exposed && !attacking)
                 {
                     Debug.DrawLine(gameObject.transform.position, player.transform.position);
                     nav.destination = player.transform.position;
