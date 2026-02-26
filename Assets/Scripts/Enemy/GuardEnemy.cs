@@ -52,7 +52,7 @@ public class GuardEnemy : MonoBehaviour
         }
         else
         {
-            nav.speed = 4;
+            nav.speed = 3;
         }
 
         if (!stoppedAtPoint)
