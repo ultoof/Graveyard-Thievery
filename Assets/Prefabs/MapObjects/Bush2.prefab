@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856919061400716595}
   - component: {fileID: 5727932567714539084}
+  - component: {fileID: 7614895482937282072}
   m_Layer: 0
   m_Name: Bush2
   m_TagString: Untagged
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 345307691
-  m_SortingLayer: 5
+  m_SortingLayerID: 823951549
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 403547951158659696, guid: eb92bcbe0a3336c429f6226988944ec8, type: 3}
@@ -91,3 +92,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &7614895482937282072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57960044216754640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5a7e3211836be498d99d35c2b2893b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LayerControllerStatic
