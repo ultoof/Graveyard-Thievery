@@ -544,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6083243445025036031, guid: f1899096f9100cb45a6adaef8ff65c82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5016665
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 6083243445025036031, guid: f1899096f9100cb45a6adaef8ff65c82, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3669,6 +3669,10 @@ PrefabInstance:
     - target: {fileID: 8025334076152223004, guid: c0a6ee40dbb6be145a5b76de586d3c6e, type: 3}
       propertyPath: m_Name
       value: Grav1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397171845494216757, guid: c0a6ee40dbb6be145a5b76de586d3c6e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7405,6 +7409,10 @@ PrefabInstance:
     - target: {fileID: 8025334076152223004, guid: c0a6ee40dbb6be145a5b76de586d3c6e, type: 3}
       propertyPath: m_Name
       value: Grav1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8397171845494216757, guid: c0a6ee40dbb6be145a5b76de586d3c6e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
