@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1705249208782578229}
   - component: {fileID: 8316448649484488294}
   - component: {fileID: 7345451492591998545}
-  - component: {fileID: 5989641623486517770}
+  - component: {fileID: 651024200047418357}
   m_Layer: 0
   m_Name: tree_bgr_tile 1_0
   m_TagString: Untagged
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 345307691
-  m_SortingLayer: 5
+  m_SortingLayerID: 823951549
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7980438304329087554, guid: daac16c66382e94499be34821b5e282e, type: 3}
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.1718607, y: 0.22375917}
   m_EdgeRadius: 0
---- !u!114 &5989641623486517770
+--- !u!114 &651024200047418357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,6 +148,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6867551170810661482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1df105b716058af4f9c0ff3e3c4a3d8d, type: 3}
+  m_Script: {fileID: 11500000, guid: bc5a7e3211836be498d99d35c2b2893b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LayerController
+  m_EditorClassIdentifier: Assembly-CSharp::LayerControllerStatic
