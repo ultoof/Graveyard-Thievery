@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5626501929944610648}
   - component: {fileID: 995692935813992684}
-  - component: {fileID: -6726772299635369193}
   m_Layer: 0
   m_Name: Grass3
   m_TagString: Untagged
@@ -78,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 823951549
-  m_SortingLayer: 4
+  m_SortingLayerID: -924404363
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3636170642150699165, guid: eb92bcbe0a3336c429f6226988944ec8, type: 3}
@@ -92,15 +91,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &-6726772299635369193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7869980998801980206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc5a7e3211836be498d99d35c2b2893b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LayerControllerStatic
