@@ -7,8 +7,9 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent nav;
     private Animator animator;
     private GameObject player;
-    public Health health;
+    private bool cooldown = false;
 
+    public Health health;
     public int stunned = 2;
     public LayerMask obstacleLayerMasks;
     public float viewDistance = 5f;
@@ -21,7 +22,7 @@ public class Enemy : MonoBehaviour
         // Get component references
         nav = GetComponentInParent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        
+
     }
 
 
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    
+
     void Update()
     {
         // Send data to Animator
@@ -52,9 +53,10 @@ public class Enemy : MonoBehaviour
             {
                 Debug.DrawLine(gameObject.transform.position, player.transform.position);
                 nav.destination = player.transform.position;
-                if (Vector2.Distance(transform.position, player.transform.position) < 0.5)
+                if (Vector2.Distance(transform.position, player.transform.position) < 0.5 && cooldown == false)
                 {
-                    health.TakeDamage(1);
+                    StartCoroutine(Attack(1));
+                    
                 }
             }
         }
@@ -73,5 +75,13 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(duration);
         nav.isStopped = false;
         stunned += 2;
+    }
+    
+    IEnumerator Attack(float duration)
+    {
+        health.TakeDamage(1);
+        cooldown = true;
+        yield return new WaitForSeconds(duration);
+        cooldown = false;
     }
 }
