@@ -12,9 +12,16 @@ public class Pickup : MonoBehaviour
     public GameObject vfx;
     public TextMeshProUGUI stealText;
     private PlayerController playerController;
-    private float startingMoney = DataManager.instance.money;
+    private float startingMoney = 0;
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void Awake() {
+        if (DataManager.instance){
+            startingMoney = DataManager.instance.money;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.CompareTag("Player"))
         {
             playerController = collision.gameObject.GetComponent<PlayerController>();
