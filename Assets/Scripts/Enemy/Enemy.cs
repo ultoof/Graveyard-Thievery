@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent nav;
     private Animator animator;
     private GameObject player;
+    private Health health;
 
     public int stunned = 2;
     public LayerMask obstacleLayerMasks;
@@ -50,6 +51,10 @@ public class Enemy : MonoBehaviour
             {
                 Debug.DrawLine(gameObject.transform.position, player.transform.position);
                 nav.destination = player.transform.position;
+                if (Vector2.Distance(transform.position, player.transform.position) < 0.5)
+                {
+                    health.TakeDamage(1);
+                }
             }
         }
     }
