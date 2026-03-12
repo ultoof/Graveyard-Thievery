@@ -1,8 +1,7 @@
-using System;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Scripting.APIUpdating;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Health))]
@@ -24,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDir; // used for WASD movement
     public Vector2 lastDir;
     public GameObject smokeVFX;
+    public Transform flashlightPos;
     private Rigidbody2D rb;
     private Health health;
     private Animator animator;
@@ -67,6 +67,23 @@ public class PlayerController : MonoBehaviour
             lastDir = moveDir;
             animator.SetFloat("xMove", moveDir.x);
             animator.SetFloat("yMove", moveDir.y);
+
+            if (moveDir.y > 0.2)
+            {
+                flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);
+            }
+            else if (moveDir.y < -0.2)
+            {
+                flashlightPos.position = transform.position + new Vector3(-0.08f, -0.055f, 0f);
+            }
+            else if (moveDir.x > 0.2)
+            {
+                flashlightPos.position = transform.position + new Vector3(0.2f, 0f, 0f);
+            }
+            else if (moveDir.x < -0.2)
+            {
+                flashlightPos.position = transform.position + new Vector3(-0.2f, 0f, 0f);
+            }
         }
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
