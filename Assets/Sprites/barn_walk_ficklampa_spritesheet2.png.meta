@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 641579207578ec74bacdbf1397c02342
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3531652288002661890
+    second: barn_walk_ficklampa_spritesheet2_0
+  - first:
+      213: 2170296423608551246
+    second: barn_walk_ficklampa_spritesheet2_1
+  - first:
+      213: -834991844873162924
+    second: barn_walk_ficklampa_spritesheet2_2
+  - first:
+      213: 8978619644482858913
+    second: barn_walk_ficklampa_spritesheet2_3
+  - first:
+      213: -6108014028930580582
+    second: barn_walk_ficklampa_spritesheet2_4
+  - first:
+      213: -3535307794844394031
+    second: barn_walk_ficklampa_spritesheet2_5
+  - first:
+      213: 5798404996308101443
+    second: barn_walk_ficklampa_spritesheet2_6
+  - first:
+      213: -8737782869045741378
+    second: barn_walk_ficklampa_spritesheet2_7
+  - first:
+      213: -5456498911802879340
+    second: barn_walk_ficklampa_spritesheet2_8
+  - first:
+      213: 7620461833037777889
+    second: barn_walk_ficklampa_spritesheet2_9
+  - first:
+      213: -7571913992072602096
+    second: barn_walk_ficklampa_spritesheet2_10
+  - first:
+      213: 5894917146534764710
+    second: barn_walk_ficklampa_spritesheet2_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 135
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e18906b03f20130800000000000000
+      internalID: 3531652288002661890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 135
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e470d7a39117e1e10800000000000000
+      internalID: 2170296423608551246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 136
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45facff47538964f0800000000000000
+      internalID: -834991844873162924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 136
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afaeb2fef67a9c70800000000000000
+      internalID: 8978619644482858913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 71
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f7d723a99fb3ba0800000000000000
+      internalID: -6108014028930580582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_5
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 71
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd51ac9a4010fec0800000000000000
+      internalID: -3535307794844394031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_6
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 72
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3496bc47f92187050800000000000000
+      internalID: 5798404996308101443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 72
+        width: 39
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8f80e76c82db680800000000000000
+      internalID: -8737782869045741378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4921fa4462f9644b0800000000000000
+      internalID: -5456498911802879340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 7
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb83a689a151c960800000000000000
+      internalID: 7620461833037777889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_10
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 39
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ed3b887582be690800000000000000
+      internalID: -7571913992072602096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barn_walk_ficklampa_spritesheet2_11
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 8
+        width: 39
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0609389e3fec150800000000000000
+      internalID: 5894917146534764710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      barn_walk_ficklampa_spritesheet2_0: 3531652288002661890
+      barn_walk_ficklampa_spritesheet2_1: 2170296423608551246
+      barn_walk_ficklampa_spritesheet2_10: -7571913992072602096
+      barn_walk_ficklampa_spritesheet2_11: 5894917146534764710
+      barn_walk_ficklampa_spritesheet2_2: -834991844873162924
+      barn_walk_ficklampa_spritesheet2_3: 8978619644482858913
+      barn_walk_ficklampa_spritesheet2_4: -6108014028930580582
+      barn_walk_ficklampa_spritesheet2_5: -3535307794844394031
+      barn_walk_ficklampa_spritesheet2_6: 5798404996308101443
+      barn_walk_ficklampa_spritesheet2_7: -8737782869045741378
+      barn_walk_ficklampa_spritesheet2_8: -5456498911802879340
+      barn_walk_ficklampa_spritesheet2_9: 7620461833037777889
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
