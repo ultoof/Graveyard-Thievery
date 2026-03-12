@@ -11,6 +11,7 @@ public class Flashlight : MonoBehaviour
     public GameObject vfx;
     public GameObject guard;
     public GameObject iconVFX;
+    public GameObject flashlightPos;
     private ParticleSystem iconParticle;
     private GuardEnemy guardScript;
     private float defaultDist;
@@ -39,7 +40,8 @@ public class Flashlight : MonoBehaviour
         //DataManager.instance.TransportValue = canFlash;
 
         // Flashlight rotation
-        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - light.transform.position;
+        light.transform.position = flashlightPos.transform.position;
+        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - flashlightPos.transform.position;
         diff.Normalize();
 
         light.transform.rotation = Quaternion.Lerp(light.transform.rotation,Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90),3f * Time.deltaTime);
