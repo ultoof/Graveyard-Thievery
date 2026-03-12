@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent nav;
     private Animator animator;
     private GameObject player;
-    private Health health;
+    public Health health;
 
     public int stunned = 2;
     public LayerMask obstacleLayerMasks;
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
         // Get component references
         nav = GetComponentInParent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        
     }
 
 
