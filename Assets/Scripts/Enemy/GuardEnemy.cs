@@ -78,6 +78,7 @@ public class GuardEnemy : MonoBehaviour
                     animator.SetBool("move", true);
                     searching = false;
                 }
+                // 
                 else
                 {
                     MoveToGuardPoint();
