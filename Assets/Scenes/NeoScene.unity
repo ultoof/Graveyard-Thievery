@@ -5622,11 +5622,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1112920397 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5667865459362105783, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
-  m_PrefabInstance: {fileID: 2151584045301234169}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1169935724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5347832986690659658, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
@@ -6631,10 +6626,6 @@ PrefabInstance:
       propertyPath: guard
       value: 
       objectReference: {fileID: 1856403912}
-    - target: {fileID: 4813294397706202255, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
-      propertyPath: flashlightPos
-      value: 
-      objectReference: {fileID: 1112920397}
     - target: {fileID: 5347832986690659658, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.199
@@ -6675,8 +6666,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7209526000279237753, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
