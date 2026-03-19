@@ -68,19 +68,19 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("xMove", moveDir.x);
             animator.SetFloat("yMove", moveDir.y);
 
-            if (moveDir.y > 0.2)
+            if (moveDir.y > 0.3)
             {
                 flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);
             }
-            else if (moveDir.y < -0.2)
+            else if (moveDir.y < -0.3)
             {
                 flashlightPos.position = transform.position + new Vector3(-0.08f, -0.055f, 0f);
             }
-            else if (moveDir.x > 0.2)
+            else if (moveDir.x > 0.3)
             {
                 flashlightPos.position = transform.position + new Vector3(0.2f, 0f, 0f);
             }
-            else if (moveDir.x < -0.2)
+            else if (moveDir.x < -0.3)
             {
                 flashlightPos.position = transform.position + new Vector3(-0.2f, 0f, 0f);
             }

@@ -6333,6 +6333,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1856403912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3697979342545213177, guid: 24315e5c8138aa94fbb1251a2d7aeeb2, type: 3}
+  m_PrefabInstance: {fileID: 602249774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1971886606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6394,11 +6399,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee728e0214442f643bf5a606eee3c4a7, type: 3}
---- !u!1 &2021709797 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 734684075058659768, guid: 24315e5c8138aa94fbb1251a2d7aeeb2, type: 3}
-  m_PrefabInstance: {fileID: 602249774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2131814462
 GameObject:
   m_ObjectHideFlags: 0
@@ -6630,7 +6630,7 @@ PrefabInstance:
     - target: {fileID: 3541854834116286565, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
       propertyPath: guard
       value: 
-      objectReference: {fileID: 2021709797}
+      objectReference: {fileID: 1856403912}
     - target: {fileID: 4813294397706202255, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
       propertyPath: flashlightPos
       value: 
