@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Soul : MonoBehaviour
 {
-        public bool soul = false;
+
         bool inrange = false;
         public string displayName;
         public GameObject vfx;
@@ -23,12 +23,13 @@ public class Soul : MonoBehaviour
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                playerController = collision.gameObject.GetComponent<PlayerController>();
-                stealText.text = $"Press E To Steal {displayName}";
-                inrange = true;
-            }
+          if (collision.gameObject.CompareTag("Player"))
+          {
+            playerController = collision.gameObject.GetComponent<PlayerController>();
+            stealText.text = $"Press E To Steal {displayName}";
+            inrange = true;
+            
+          }
         }
 
         private void OnTriggerExit2D(Collider2D collision) {
@@ -46,7 +47,7 @@ public class Soul : MonoBehaviour
             if (inrange == true)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
-                soul = true;
+                playerController.soul = true;
                 Destroy(gameObject);
                 Destroy(clonedVFX);
             }

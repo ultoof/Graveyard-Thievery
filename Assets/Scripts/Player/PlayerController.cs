@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public bool movementRestriction = false;
     public int Stamina = 100;
     public int key = 1;
+    public bool soul = false;
     private int StaminaMod;
 
     private Vector2 moveDir; // used for WASD movement
