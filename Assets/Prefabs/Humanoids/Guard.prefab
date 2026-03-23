@@ -274,11 +274,12 @@ MonoBehaviour:
   currentPoint: 1
   searching: 1
   attacking: 0
+  stoppedAtPoint: 0
   stunned: 0
   obstacleLayerMasks:
     serializedVersion: 2
     m_Bits: 8
-  viewDistance: 3
+  viewDistance: 10
   vfx: {fileID: 934889904139282266, guid: 10b322dbaac45d7498be0fdeaa781cf1, type: 3}
   guardPointFolder: {fileID: 0}
   hitVFX: {fileID: 934889904139282266, guid: deec9714f24a1b14ba3dd30347b9cce2, type: 3}

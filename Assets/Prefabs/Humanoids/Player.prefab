@@ -95,7 +95,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 823951549
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_MaskInteraction: 0
   m_Sprite: {fileID: -295083593, guid: a8a3f69010055424da080a99f34949cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   exposed: 0
+  difficulty: 0
   money: 0
   maxMoney: 100
   speed: 1.8
@@ -289,6 +290,7 @@ MonoBehaviour:
   movementRestriction: 0
   Stamina: 1000
   key: 0
+  soul: 0
   lastDir: {x: 0, y: 0}
   smokeVFX: {fileID: 2328991299488207323}
   flashlightPos: {fileID: 5667865459362105783}
@@ -10195,7 +10197,7 @@ MonoBehaviour:
   m_Intensity: 10
   m_LightVolumeIntensity: 0.01
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000002bfa9414bd801c3175b5e6c8
+  m_ApplyToSortingLayers: 000000006bd90c44bb66927675b5e6c8bd801c312bfa94143101c8de7d9f45e0
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
