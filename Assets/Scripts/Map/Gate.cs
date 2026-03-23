@@ -1,0 +1,39 @@
+using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
+public class Gate : MonoBehaviour
+{
+    // Properties
+    public bool inrange = false;
+    public bool isOpen = false;
+    public BoxCollider2D trigger;
+    public BoxCollider2D restriction;
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerController playerController = collision.GetComponent<PlayerController>();
+            if (Keyboard.current.eKey.isPressed)
+            {
+                isOpen = true;
+                restriction.enabled = false;
+                trigger.enabled = false;
+                spriteRenderer.enabled = false;
+                SceneManager.LoadScene("MenuScene");
+            }
+        }
+    }
+
+   
+
+}
+
