@@ -8,14 +8,14 @@ public class Border : MonoBehaviour
 
     private void Awake()
     {
-        playerController = gameObject.GetComponent<PlayerController>();
         border = gameObject.GetComponent<BoxCollider2D>();
     }
 
-    private void Update() {
-        if (playerController.difficulty > difficulty)
+    void Start()
+    {
+        if (playerController.difficulty >= difficulty)
         {
-            difficulty++;
+            border.enabled = false;
         }
     }
 
