@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     private GameObject player;
     private bool cooldown = false;
 
+    public GameObject deathVFX;
+    public GameObject hitVFX;
     public Health health;
     public int stunned = 2;
     public LayerMask obstacleLayerMasks;
@@ -56,6 +58,7 @@ public class Enemy : MonoBehaviour
                 if (Vector2.Distance(transform.position, player.transform.position) < 0.5 && cooldown == false)
                 {
                     StartCoroutine(Attack(1));
+
                     
                 }
             }
@@ -81,6 +84,17 @@ public class Enemy : MonoBehaviour
     {
         health.TakeDamage(1);
         cooldown = true;
+         if (health.health >= 1)
+            {
+                GameObject hitVFXClone = Instantiate(hitVFX, player.transform.position, Quaternion.identity);
+                Destroy(hitVFXClone, 2);
+            }
+            else
+            {
+                GameObject hitVFXClone = Instantiate(deathVFX, player.transform.position, Quaternion.identity);
+                player.SetActive(false);
+                Destroy(hitVFXClone, 2);
+            }
         yield return new WaitForSeconds(duration);
         cooldown = false;
     }
