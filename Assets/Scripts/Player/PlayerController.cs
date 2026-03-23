@@ -131,19 +131,19 @@ public class PlayerController : MonoBehaviour
     public void updateFlashlight(string dir)
     {
         Debug.Log(dir);
-            if (dir == "Back")
+            if (lastDir.y > 0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y > 0.2)
             {
                 flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);
             }
-            else if (dir == "Front")
+            else if (lastDir.y < -0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y < -0.2)
             {
                 flashlightPos.position = transform.position + new Vector3(-0.08f, -0.055f, 0f);
             }
-            else if (dir == "Right")
+            else if (lastDir.x > 0.8)
             {
                 flashlightPos.position = transform.position + new Vector3(0.2f, 0f, 0f);
             }
-            else if (dir == "Left")
+            else if (lastDir.x < -0.8)
             {
                 flashlightPos.position = transform.position + new Vector3(-0.2f, 0f, 0f);
             }
