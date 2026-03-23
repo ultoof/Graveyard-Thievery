@@ -49,7 +49,7 @@ public class Soul : MonoBehaviour
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
                 playerController.soul = true;
                 Destroy(gameObject);
-                Destroy(clonedVFX);
+                Destroy(clonedVFX,2);
             }
         }
     }
