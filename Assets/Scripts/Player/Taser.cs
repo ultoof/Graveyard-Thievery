@@ -3,10 +3,9 @@ using UnityEngine;
 public class Taser : MonoBehaviour
 {
     public GameObject taserProjectilePrefab;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int ammo = 5;
     public float shootingRate = 0.5f;
-    public bool canStun = false;
+    public bool canStun = true;
     public GameObject shootVFX;
     private ParticleSystem shootParticle;
 
@@ -16,14 +15,14 @@ public class Taser : MonoBehaviour
 
     void Start()
     {
-        if (DataManager.instance != null)
-        canStun = DataManager.instance.canStun;
+        //if (DataManager.instance != null)
+        //canStun = DataManager.instance.canStun;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && canStun == true)
+        if (Input.GetKeyDown(KeyCode.T) /*&& canStun == true*/)
         {
             if(ammo > 0)
             {
