@@ -9,7 +9,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool exposed = false; 
+    public bool exposed = false;
     public float money = 0f;
     public float maxMoney = 100f;
     public float speed = 4f;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     private Health health;
     private Animator animator;
     private ParticleSystem smokeEmitter;
-    
+
     void Awake()
     {
         // Get components
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             maxMoney = 100f;
         }
 
-        
+
     }
 
     void Update()
@@ -67,23 +67,6 @@ public class PlayerController : MonoBehaviour
             lastDir = moveDir;
             animator.SetFloat("xMove", moveDir.x);
             animator.SetFloat("yMove", moveDir.y);
-
-            if (moveDir.y > 0.2)
-            {
-                flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);
-            }
-            else if (moveDir.y < -0.2)
-            {
-                flashlightPos.position = transform.position + new Vector3(-0.08f, -0.055f, 0f);
-            }
-            else if (moveDir.x > 0.22)
-            {
-                flashlightPos.position = transform.position + new Vector3(0.2f, 0f, 0f);
-            }
-            else if (moveDir.x < -0.22)
-            {
-                flashlightPos.position = transform.position + new Vector3(-0.2f, 0f, 0f);
-            }
         }
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
@@ -142,5 +125,26 @@ public class PlayerController : MonoBehaviour
             StaminaMod = 1;
         }
         Stamina = math.clamp(Stamina + StaminaMod, -100, 1000);
+    }
+
+    public void updateFlashlight(string dir)
+    {
+        Debug.Log(dir);
+            if (dir == "Back")
+            {
+                flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);
+            }
+            else if (dir == "Front")
+            {
+                flashlightPos.position = transform.position + new Vector3(-0.08f, -0.055f, 0f);
+            }
+            else if (dir == "Right")
+            {
+                flashlightPos.position = transform.position + new Vector3(0.2f, 0f, 0f);
+            }
+            else if (dir == "Left")
+            {
+                flashlightPos.position = transform.position + new Vector3(-0.2f, 0f, 0f);
+            }
     }
 }

@@ -46,9 +46,14 @@ public class Pickup : MonoBehaviour
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
                 playerController.money = math.round(Math.Clamp(playerController.money + money, 0, playerController.maxMoney));
-                DataManager.instance.money = startingMoney + playerController.money;
+                //DataManager.instance.money = startingMoney + playerController.money;
                 Destroy(gameObject);
                 Destroy(clonedVFX, 1);
+
+                if (gameObject.name == "GoldKey")
+                {
+                    playerController.key++;
+                }
             }
         }
     }
