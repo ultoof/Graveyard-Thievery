@@ -1,0 +1,55 @@
+using UnityEngine;
+using System;
+using TMPro;
+using Unity.Mathematics;
+using UnityEngine.InputSystem;
+
+public class Soul : MonoBehaviour
+{
+        public bool soul = false;
+        bool inrange = false;
+        public string displayName;
+        public GameObject vfx;
+        public TextMeshProUGUI stealText;
+        private PlayerController playerController;
+        private float startingMoney = 0;
+
+        private void Awake()
+        {
+            if (DataManager.instance){
+               startingMoney = DataManager.instance.money;
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                playerController = collision.gameObject.GetComponent<PlayerController>();
+                stealText.text = $"Press E To Steal {displayName}";
+                inrange = true;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision) {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                inrange = false;
+                stealText.text = "";
+            }
+        }
+
+    void Update()
+    {
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            if (inrange == true)
+            {
+                GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
+                soul = true;
+                Destroy(gameObject);
+                Destroy(clonedVFX);
+            }
+        }
+    }
+}
