@@ -10,6 +10,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class PlayerController : MonoBehaviour
 {
     public bool exposed = false;
+    public int difficulty = 0;
     public float money = 0f;
     public float maxMoney = 100f;
     public float speed = 4f;
