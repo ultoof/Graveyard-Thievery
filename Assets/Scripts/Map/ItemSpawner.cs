@@ -17,7 +17,7 @@ public class ItemSpawner : MonoBehaviour
 
     void Start()
     {
-        float rng = UnityEngine.Random.Range(1, 100);
+        float rng = UnityEngine.Random.Range(0.1f, 100f);
         foreach (Pickup pickup in spawnableItems)
         {
             if (pickup.spawnWeight >= rng)

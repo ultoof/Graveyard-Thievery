@@ -11,7 +11,7 @@ public class Pickup : MonoBehaviour
     public string displayName;
     public GameObject vfx;
     public TextMeshProUGUI stealText;
-    public int spawnWeight;
+    public float spawnWeight;
     private PlayerController playerController;
     private float startingMoney = 0;
     private float maxMoney = 100;
