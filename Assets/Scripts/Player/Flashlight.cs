@@ -68,6 +68,7 @@ public class Flashlight : MonoBehaviour
                 animator.SetBool("flashlight", true);
             }
             light.SetActive(isOn);
+            light.GetComponent<AudioSource>().Play();
         }
     }
 }
