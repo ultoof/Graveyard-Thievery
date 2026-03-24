@@ -6973,6 +6973,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3228690725341281064, guid: 9435485a802d0024d890547843a1baac, type: 3}
+      propertyPath: difficulty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228690725341281064, guid: 9435485a802d0024d890547843a1baac, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1174856318}

@@ -31,6 +31,12 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private ParticleSystem smokeEmitter;
 
+    void Start()
+    {
+        if (DataManager.instance != null)
+            difficulty = DataManager.instance.difficulty;
+    }
+
     void Awake()
     {
         // Get components
