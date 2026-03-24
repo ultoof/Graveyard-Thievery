@@ -2,21 +2,15 @@ using UnityEngine;
 
 public class Border : MonoBehaviour
 {
-    public int difficulty = 0;
-    public BoxCollider2D border;
-    public PlayerController playerController;
+    public int difficulty;
+    private int playerDifficulty = DataManager.instance.difficulty;
 
-    private void Awake()
+    void Awake()
     {
-        border = gameObject.GetComponent<BoxCollider2D>();
-    }
-
-    void Start()
-    {
-        if (playerController.difficulty >= difficulty)
+        if (playerDifficulty >= difficulty)
         {
-            border.enabled = false;
+            Destroy(gameObject);  
+            Debug.Log("VIGGO LOVES FEMBOYS = TRUE");
         }
     }
-
 }
