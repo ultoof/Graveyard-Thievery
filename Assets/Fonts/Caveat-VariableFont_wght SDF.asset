@@ -106,10 +106,6 @@ MonoBehaviour:
   m_SourceFontFilePath: 
   m_AtlasPopulationMode: 1
   InternalDynamicOS: 0
-<<<<<<< HEAD
-  m_GlyphTable: []
-  m_CharacterTable: []
-=======
   m_GlyphTable:
   - m_Index: 861
     m_Metrics:

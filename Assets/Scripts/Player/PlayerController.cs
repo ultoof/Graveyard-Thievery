@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             maxMoney = 100f;
+            
         }
 
 
@@ -78,6 +79,8 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
+
+        if(DataManager.instance!= null)DataManager.instance.money = money;
     }
 
     void FixedUpdate()
