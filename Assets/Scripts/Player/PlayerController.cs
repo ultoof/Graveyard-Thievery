@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
         if (health.isDead)
         {
             Debug.Log("GGs");
-            CheckIfGameOver();
             return;
         }
         // Get movement by WASD
@@ -97,7 +96,6 @@ public class PlayerController : MonoBehaviour
         if (health.isDead)
         {
             Debug.Log("Neo gillar lowkey oiled män");
-            CheckIfGameOver();
             return;
         }
 
@@ -175,14 +173,6 @@ public class PlayerController : MonoBehaviour
     {
         audioSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
         audioSource.Play();
-    }
-
-    public void CheckIfGameOver()
-    {
-        if (health.isDead == true)
-        {
-            gameOverPanel.SetActive(true);
-        }
     }
     public void CamLightOn()
     {
