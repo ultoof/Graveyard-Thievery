@@ -126,7 +126,7 @@ public class GuardEnemy : MonoBehaviour
         if (stunned <= 0 && !ray)
         {
             GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
-            Destroy(shootVFX, 2);
+            Destroy(shootVFX, 4);
             health.TakeDamage(1);
 
             if (health.health >= 1)
