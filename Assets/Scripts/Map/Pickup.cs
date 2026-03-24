@@ -13,10 +13,14 @@ public class Pickup : MonoBehaviour
     public TextMeshProUGUI stealText;
     private PlayerController playerController;
     private float startingMoney = 0;
+    private float maxMoney = 100;
 
-    private void Awake() {
-        if (DataManager.instance){
+    private void Awake()
+    {
+        if (DataManager.instance)
+        {
             startingMoney = DataManager.instance.money;
+            maxMoney = DataManager.instance.maxMoney;
         }
     }
 
@@ -42,7 +46,7 @@ public class Pickup : MonoBehaviour
     {
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
-            if (inrange == true)
+            if (inrange == true && playerController.money < maxMoney)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
                 playerController.money = math.round(Math.Clamp(playerController.money + money, 0, playerController.maxMoney));

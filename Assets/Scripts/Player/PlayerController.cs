@@ -1,7 +1,6 @@
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Scripting.APIUpdating;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Health))]
@@ -30,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private Health health;
     private Animator animator;
     private ParticleSystem smokeEmitter;
+    private AudioSource audioSource;
 
     void Start()
     {
@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         health = GetComponent<Health>();
         animator = GetComponent<Animator>();
         smokeEmitter = smokeVFX.GetComponent<ParticleSystem>();
+        audioSource = GetComponent<AudioSource>();
         lastDir = Vector2.down; // Set to players starting direction
 
         if (DataManager.instance != null)
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             maxMoney = 100f;
+            
         }
 
 
@@ -78,6 +80,8 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
+
+        if(DataManager.instance!= null)DataManager.instance.money = money;
     }
 
     void FixedUpdate()
@@ -138,21 +142,27 @@ public class PlayerController : MonoBehaviour
     public void updateFlashlight(string dir)
     {
         Debug.Log(dir);
-            if (lastDir.y > 0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y > 0.05)
-            {
-                flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);
-            }
-            else if (lastDir.y < -0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y < -0.05)
-            {
-                flashlightPos.position = transform.position + new Vector3(-0.08f, -0.055f, 0f);
-            }
-            else if (lastDir.x > 0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x > 0.05)
-            {
-                flashlightPos.position = transform.position + new Vector3(0.2f, 0f, 0f);
-            }
-            else if (lastDir.x < -0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x < -0.05)
-            {
-                flashlightPos.position = transform.position + new Vector3(-0.2f, 0f, 0f);
-            }
+        if (lastDir.y > 0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y > 0.05)
+        {
+            flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);
+        }
+        else if (lastDir.y < -0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y < -0.05)
+        {
+            flashlightPos.position = transform.position + new Vector3(-0.08f, -0.055f, 0f);
+        }
+        else if (lastDir.x > 0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x > 0.05)
+        {
+            flashlightPos.position = transform.position + new Vector3(0.2f, 0f, 0f);
+        }
+        else if (lastDir.x < -0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x < -0.05)
+        {
+            flashlightPos.position = transform.position + new Vector3(-0.2f, 0f, 0f);
+        }
+    }
+
+    public void FootStep()
+    {
+        audioSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
+        audioSource.Play();
     }
 }
