@@ -57,7 +57,7 @@ public class GuardEnemy : MonoBehaviour
             nav.speed = 3;
         }
 
-        if (!stoppedAtPoint)
+        if (!stoppedAtPoint && health.health > 0)
         {
             // Create a Linecast between this enemy and player
             RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);

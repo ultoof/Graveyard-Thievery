@@ -1,6 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Health))]
@@ -26,11 +27,13 @@ public class PlayerController : MonoBehaviour
     public GameObject smokeVFX;
     public Transform flashlightPos;
     public GameObject gameOverPanel;
+    public Light2D cameraLight;
     private Rigidbody2D rb;
     private Health health;
     private Animator animator;
     private ParticleSystem smokeEmitter;
     private AudioSource audioSource;
+    public ParticleSystem detectedEmitter;
 
     void Start()
     {
@@ -180,5 +183,14 @@ public class PlayerController : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
         }
+    }
+    public void CamLightOn()
+    {
+        cameraLight.enabled = true;
+        detectedEmitter.Play();
+    }
+    public void CamLightOff()
+    {
+        cameraLight.enabled = false;
     }
 }
