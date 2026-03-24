@@ -1,6 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Health))]
@@ -25,11 +26,14 @@ public class PlayerController : MonoBehaviour
     public Vector2 lastDir;
     public GameObject smokeVFX;
     public Transform flashlightPos;
+    public GameObject gameOverPanel;
+    public Light2D cameraLight;
     private Rigidbody2D rb;
     private Health health;
     private Animator animator;
     private ParticleSystem smokeEmitter;
     private AudioSource audioSource;
+    public ParticleSystem detectedEmitter;
 
     void Start()
     {
@@ -54,7 +58,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             maxMoney = 100f;
-            
+
         }
 
 
@@ -63,8 +67,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (health.isDead)
+        {
+            Debug.Log("GGs");
+            CheckIfGameOver();
             return;
-
+        }
         // Get movement by WASD
         moveDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         // Normalize Vector
@@ -81,61 +88,65 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
 
-        if(DataManager.instance!= null)DataManager.instance.money = money;
+        if (DataManager.instance != null) DataManager.instance.money = money;
     }
 
     void FixedUpdate()
     {
 
         if (health.isDead)
+        {
+            Debug.Log("Neo gillar lowkey oiled män");
+            CheckIfGameOver();
             return;
+        }
 
         // Move with WASD
-        // When shift key is pressed = increased movment speed(sprint set true, shift set false) : higher detection
-        // When ctrl key is pressed = reduced movement speed(shift set true, sprint set false) : lower detection
-        // The animator is sent a bool  true when the player is shifting and running and it is set to false when they are running or in a different state
+            // When shift key is pressed = increased movment speed(sprint set true, shift set false) : higher detection
+            // When ctrl key is pressed = reduced movement speed(shift set true, sprint set false) : lower detection
+            // The animator is sent a bool  true when the player is shifting and running and it is set to false when they are running or in a different state
 
-        if (Keyboard.current.shiftKey.isPressed && movementRestriction == false)
-        {
-            if (Stamina > 0)
+            if (Keyboard.current.shiftKey.isPressed && movementRestriction == false)
             {
-                rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
-                animator.SetBool("sprint", true);
-                animator.SetBool("crouch", false);
+                if (Stamina > 0)
+                {
+                    rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
+                    animator.SetBool("sprint", true);
+                    animator.SetBool("crouch", false);
+                    animator.SetBool("slowed", false);
+                    smokeEmitter.Play();
+                    StaminaMod = -5;
+                }
+                else
+                {
+                    // Slows movement if attempt to sprint when no stamina
+                    rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
+                    animator.SetBool("crouch", false);
+                    animator.SetBool("sprint", false);
+                    animator.SetBool("slowed", true);
+                    smokeEmitter.Stop();
+                    StaminaMod = -100;
+                }
+
+            }
+            else if (Keyboard.current.ctrlKey.isPressed && movementRestriction == false)
+            {
+                rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
+                animator.SetBool("crouch", true);
+                animator.SetBool("sprint", false);
                 animator.SetBool("slowed", false);
-                smokeEmitter.Play();
-                StaminaMod = -5;
+                smokeEmitter.Stop();
+                StaminaMod = 5;
             }
             else
             {
-                // Slows movement if attempt to sprint when no stamina
-                rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
-                animator.SetBool("crouch", false);
+                rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
                 animator.SetBool("sprint", false);
-                animator.SetBool("slowed", true);
+                animator.SetBool("crouch", false);
+                animator.SetBool("slowed", false);
                 smokeEmitter.Stop();
-                StaminaMod = -100;
+                StaminaMod = 1;
             }
-
-        }
-        else if (Keyboard.current.ctrlKey.isPressed && movementRestriction == false)
-        {
-            rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
-            animator.SetBool("crouch", true);
-            animator.SetBool("sprint", false);
-            animator.SetBool("slowed", false);
-            smokeEmitter.Stop();
-            StaminaMod = 5;
-        }
-        else
-        {
-            rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
-            animator.SetBool("sprint", false);
-            animator.SetBool("crouch", false);
-            animator.SetBool("slowed", false);
-            smokeEmitter.Stop();
-            StaminaMod = 1;
-        }
         Stamina = math.clamp(Stamina + StaminaMod, -100, 1000);
     }
 
@@ -164,5 +175,22 @@ public class PlayerController : MonoBehaviour
     {
         audioSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
         audioSource.Play();
+    }
+
+    public void CheckIfGameOver()
+    {
+        if (health.isDead == true)
+        {
+            gameOverPanel.SetActive(true);
+        }
+    }
+    public void CamLightOn()
+    {
+        cameraLight.enabled = true;
+        detectedEmitter.Play();
+    }
+    public void CamLightOff()
+    {
+        cameraLight.enabled = false;
     }
 }

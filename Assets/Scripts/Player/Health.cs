@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class Health : MonoBehaviour
 {
@@ -13,9 +14,10 @@ public class Health : MonoBehaviour
     {
         health = math.clamp(health - damage, 0, maxHealth);
 
-        if (health == 0)
+        if (health <= 0)
         {
             isDead = true;
+            Debug.Log("Bro is popped");
         }
     }
 }

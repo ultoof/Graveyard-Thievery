@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CameraTrap : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class CameraTrap : MonoBehaviour
         {
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             playerController.exposed = true;
+            playerController.CamLightOn();
         }  
     }
 
@@ -22,7 +24,8 @@ public class CameraTrap : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            playerController.exposed = false; 
+            playerController.exposed = false;
+            playerController.CamLightOff();
         }
     }
 }
