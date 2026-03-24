@@ -1,6 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Health))]
@@ -25,11 +26,13 @@ public class PlayerController : MonoBehaviour
     public Vector2 lastDir;
     public GameObject smokeVFX;
     public Transform flashlightPos;
+    public Light2D cameraLight;
     private Rigidbody2D rb;
     private Health health;
     private Animator animator;
     private ParticleSystem smokeEmitter;
     private AudioSource audioSource;
+    public ParticleSystem detectedEmitter;
 
     void Start()
     {
@@ -54,7 +57,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             maxMoney = 100f;
-            
+
         }
 
 
@@ -81,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
 
-        if(DataManager.instance!= null)DataManager.instance.money = money;
+        if (DataManager.instance != null) DataManager.instance.money = money;
     }
 
     void FixedUpdate()
@@ -164,5 +167,15 @@ public class PlayerController : MonoBehaviour
     {
         audioSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
         audioSource.Play();
+    }
+
+    public void CamLightOn()
+    {
+        cameraLight.enabled = true;
+        detectedEmitter.Play();
+    }
+    public void CamLightOff()
+    {
+        cameraLight.enabled = false;
     }
 }
