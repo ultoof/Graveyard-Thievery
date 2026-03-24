@@ -47,7 +47,7 @@ public class Pickup : MonoBehaviour
     {
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
-            if (inrange == true && playerController.money < maxMoney)
+            if (inrange == true && playerController.money < maxMoney || money <= 0)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
                 playerController.money = math.round(Math.Clamp(playerController.money + money, 0, playerController.maxMoney));
