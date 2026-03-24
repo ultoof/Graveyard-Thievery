@@ -12,6 +12,7 @@ public class GuardEnemy : MonoBehaviour
     private Health health;
     private Rigidbody2D rb;
     private PlayerController playerController;
+    private AudioSource audioSource;
 
     public int currentPoint = 1;
     public bool searching = true;
@@ -35,6 +36,7 @@ public class GuardEnemy : MonoBehaviour
         health = player.GetComponent<Health>();
         rb = GetComponentInParent<Rigidbody2D>();
         guardPoints = guardPointFolder.GetComponentsInChildren<Transform>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -151,6 +153,11 @@ public class GuardEnemy : MonoBehaviour
     public void Freeze(float duration)
     {
         StartCoroutine(FreezeRoutine(duration));
+    }
+
+    public void StepSound()
+    {
+        audioSource.Play();
     }
 
     IEnumerator FreezeRoutine(float duration)
