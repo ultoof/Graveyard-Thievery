@@ -53,15 +53,15 @@ public class TaserProjectile : MonoBehaviour
         if (ray)
         {
             GameObject clonedExplosionVFX = Instantiate(explosionVFX, ray.point, Quaternion.identity);
-            Destroy(clonedExplosionVFX, 1);
+            Destroy(clonedExplosionVFX, 4);
         }
         else
         {
             GameObject clonedExplosionVFX = Instantiate(explosionVFX, collision.transform.position, Quaternion.identity);
-            Destroy(clonedExplosionVFX, 1);
+            Destroy(clonedExplosionVFX, 4);
         }
 
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 4f);
         vfx.Stop();
     }
 

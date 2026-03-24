@@ -48,7 +48,7 @@ public class Pickup : MonoBehaviour
                 playerController.money = math.round(Math.Clamp(playerController.money + money, 0, playerController.maxMoney));
                 //DataManager.instance.money = startingMoney + playerController.money;
                 Destroy(gameObject);
-                Destroy(clonedVFX, 1);
+                Destroy(clonedVFX, 4);
 
                 if (gameObject.name == "GoldKey")
                 {

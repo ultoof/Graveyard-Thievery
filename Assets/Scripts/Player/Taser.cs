@@ -24,13 +24,14 @@ public class Taser : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T) /*&& canStun == true*/)
         {
-            if(ammo > 0)
+            if (ammo > 0)
             {
-                ammo --; 
+                ammo--;
                 shootParticle.Play();
+                shootVFX.GetComponent<AudioSource>().Play();
 
                 // Aim
-                GameObject taserProjectile = Instantiate(taserProjectilePrefab,transform.position,Quaternion.identity);
+                GameObject taserProjectile = Instantiate(taserProjectilePrefab, transform.position, Quaternion.identity);
                 Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - taserProjectile.transform.position;
                 diff.Normalize();
                 taserProjectile.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90);

@@ -12,6 +12,7 @@ public class GuardEnemy : MonoBehaviour
     private Health health;
     private Rigidbody2D rb;
     private PlayerController playerController;
+    private AudioSource audioSource;
 
     public int currentPoint = 1;
     public bool searching = true;
@@ -35,6 +36,7 @@ public class GuardEnemy : MonoBehaviour
         health = player.GetComponent<Health>();
         rb = GetComponentInParent<Rigidbody2D>();
         guardPoints = guardPointFolder.GetComponentsInChildren<Transform>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -126,7 +128,7 @@ public class GuardEnemy : MonoBehaviour
         if (stunned <= 0 && !ray)
         {
             GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
-            Destroy(shootVFX, 2);
+            Destroy(shootVFX, 4);
             health.TakeDamage(1);
 
             if (health.health >= 1)
@@ -151,6 +153,11 @@ public class GuardEnemy : MonoBehaviour
     public void Freeze(float duration)
     {
         StartCoroutine(FreezeRoutine(duration));
+    }
+
+    public void StepSound()
+    {
+        audioSource.Play();
     }
 
     IEnumerator FreezeRoutine(float duration)
