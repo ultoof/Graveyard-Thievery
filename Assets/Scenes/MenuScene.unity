@@ -601,6 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataManager
   difficulty: 0
   canFlash: 0
+  tutorial: 0
   canStun: 0
   maxMoney: 100
   money: 0
@@ -700,6 +701,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 624165739}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
+      m_Calls: []
+=======
       m_Calls:
       - m_Target: {fileID: 1723974426}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
@@ -713,6 +717,7 @@ MonoBehaviour:
           m_StringArgument: CreditScene
           m_BoolArgument: 0
         m_CallState: 2
+>>>>>>> 28bf18f1575e9cf6c77160837fcf45f18b18fbb4
 --- !u!114 &624165739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,8 +1217,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1723974426}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

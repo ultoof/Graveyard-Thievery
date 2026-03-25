@@ -5,10 +5,10 @@ public class DataManager : MonoBehaviour
 {
     public int difficulty = 0;
     public bool canFlash;
+    public bool tutorial = false;
     public bool canStun;
     public float maxMoney;
     public float money;
-    
 
     public static DataManager instance;
 

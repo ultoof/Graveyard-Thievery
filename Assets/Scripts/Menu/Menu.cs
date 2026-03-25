@@ -20,4 +20,16 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void StartGame()
+    {
+        if (DataManager.instance.tutorial == false)
+        {
+            SceneManager.LoadScene("TutorialScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("MainScene");
+        }
+    }
 }

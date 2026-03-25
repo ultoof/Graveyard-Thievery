@@ -64,5 +64,8 @@ TagManager:
   - name: UI
     uniqueID: 3762659197
     locked: 0
+  - name: Cutscene
+    uniqueID: 4035330315
+    locked: 0
   m_RenderingLayers:
   - Default
