@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 35533923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 0.91, z: -10}
+  m_LocalPosition: {x: 0.11, y: 10.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -473,7 +473,7 @@ Transform:
   m_GameObject: {fileID: 57722802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.3, y: -2.5, z: 0}
+  m_LocalPosition: {x: 7.3, y: 6.79, z: 0}
   m_LocalScale: {x: 16.385, y: 16.385, z: 16.385}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -564,7 +564,7 @@ Transform:
   m_GameObject: {fileID: 383795350}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.7, y: 1, z: 0}
+  m_LocalPosition: {x: -10.7, y: 10.29, z: 0}
   m_LocalScale: {x: 8.888133, y: 8.888133, z: 8.888133}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -601,6 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataManager
   difficulty: 0
   canFlash: 0
+  tutorial: 0
   canStun: 0
   maxMoney: 100
   money: 0
@@ -613,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 519309157}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.60075, y: 0.8304, z: 0}
+  m_LocalPosition: {x: -2.60075, y: 10.120399, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -700,6 +701,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 624165739}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
+      m_Calls: []
+=======
       m_Calls:
       - m_Target: {fileID: 1723974426}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
@@ -713,6 +717,7 @@ MonoBehaviour:
           m_StringArgument: CreditScene
           m_BoolArgument: 0
         m_CallState: 2
+>>>>>>> 28bf18f1575e9cf6c77160837fcf45f18b18fbb4
 --- !u!114 &624165739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,8 +1217,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1723974426}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1298,7 +1303,7 @@ Transform:
   m_GameObject: {fileID: 1723974425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1154, y: -0.41173, z: 0}
+  m_LocalPosition: {x: 2.1154, y: 8.87827, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1377,7 +1382,7 @@ Transform:
   m_GameObject: {fileID: 1749541516}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 9.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
