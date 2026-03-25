@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 
 public class Door : MonoBehaviour
 {
+    //Properties : 
     public bool isOpen = false;
     public bool needKey = true;
     public BoxCollider2D trigger;
@@ -16,16 +17,19 @@ public class Door : MonoBehaviour
     public TextMeshProUGUI informingMessage;
     private SpriteRenderer spriteRenderer;
 
-    private void Awake() {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    //Methods
+    private void Awake() 
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>(); // Assign sprite render at awake for future uses
     }
 
-    void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision) //When a trigger collision occurs with current gameobject
     {
-        if (collision.CompareTag("Player"))
-            {PlayerController playerController = collision.GetComponent<PlayerController>();
-            if (Keyboard.current.eKey.isPressed && playerController.key > 0 && needKey == true)
+        if (collision.CompareTag("Player")) // When its specifically a player colliding with the trigger collider
+            {PlayerController playerController = collision.GetComponent<PlayerController>(); //We collect the playercontroller from the collision : in this case the player
+            if (Keyboard.current.eKey.isPressed && playerController.key > 0 && needKey == true) // Checking for input, key amount and need for key 
             {
+                //Disables : the restiction and the trigger, for fps. Also disables the sprite renderer
                 isOpen = true;
                 playerController.key--;
                 restriction.enabled = false;
