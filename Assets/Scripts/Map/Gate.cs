@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Gate : MonoBehaviour
 {
     // Properties
+    public string sceneLoad; 
     public bool inrange = false;
     public bool isOpen = false;
     public BoxCollider2D trigger;
@@ -26,9 +27,7 @@ public class Gate : MonoBehaviour
             {
                 isOpen = true;
                 restriction.enabled = false;
-                trigger.enabled = false;
-                spriteRenderer.enabled = false;
-                SceneManager.LoadScene("MenuScene");
+                SceneManager.LoadScene(sceneLoad);
             }
         }
     }

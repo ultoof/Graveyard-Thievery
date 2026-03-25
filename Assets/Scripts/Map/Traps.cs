@@ -4,6 +4,7 @@ using UnityEngine;
 public class Traps : MonoBehaviour
 {
     public string collidingTag;
+    public bool lockPlayer = false;
     public GameObject player;
     private float saveValue;
     private PlayerController playerController;
@@ -11,7 +12,7 @@ public class Traps : MonoBehaviour
     void Awake()
     {
         //Get Components
-       playerController = player.GetComponent<PlayerController>();
+       playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,11 @@ public class Traps : MonoBehaviour
         {
             playerController.speed = playerController.speed/2;
             playerController.movementRestriction = true;
+        }
+        else if (collision.gameObject.CompareTag(collidingTag) && lockPlayer == true)
+        {
+            playerController.speed = 0; 
+            playerController.movementRestriction = true; 
         }
     }
 
