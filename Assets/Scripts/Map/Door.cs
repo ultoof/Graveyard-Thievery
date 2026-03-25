@@ -39,6 +39,7 @@ public class Door : MonoBehaviour
                 isOpen = true;
                 restriction.enabled = false; 
                 trigger.enabled = false;
+                spriteRenderer.enabled = false;
                 informingMessage.text = "Door is now open";
                 StartCoroutine(DoSomethingAfterDelay(3F));
             }

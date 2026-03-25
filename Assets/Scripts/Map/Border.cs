@@ -17,8 +17,8 @@ public class Border : MonoBehaviour
         }
     }
 
-    //ts is just if we want a text to popup when the player arrives at the border
-    /*
+
+
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -26,5 +26,4 @@ public class Border : MonoBehaviour
             warningText.text = "";
         }
     }
-    */
 }
