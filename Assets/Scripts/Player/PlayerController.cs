@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour
     {
         if (health.isDead)
         {
-            Debug.Log("GGs");
             return;
         }
         // Get movement by WASD
@@ -95,7 +94,6 @@ public class PlayerController : MonoBehaviour
 
         if (health.isDead)
         {
-            Debug.Log("Neo gillar lowkey oiled män");
             return;
         }
 
@@ -150,7 +148,6 @@ public class PlayerController : MonoBehaviour
 
     public void updateFlashlight(string dir)
     {
-        Debug.Log(dir);
         if (lastDir.y > 0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y > 0.05)
         {
             flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);

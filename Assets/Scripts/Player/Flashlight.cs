@@ -15,6 +15,7 @@ public class Flashlight : MonoBehaviour
     private ParticleSystem iconParticle;
     private GuardEnemy guardScript;
     private float defaultDist;
+    private PlayerController playerController;
 
     private Animator animator;
 
@@ -31,6 +32,7 @@ public class Flashlight : MonoBehaviour
         guardScript = guard.GetComponent<GuardEnemy>();
         iconParticle = iconVFX.GetComponent<ParticleSystem>();
         defaultDist = guardScript.viewDistance;
+        playerController = player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -69,6 +71,7 @@ public class Flashlight : MonoBehaviour
             }
             light.SetActive(isOn);
             light.GetComponent<AudioSource>().Play();
+            playerController.updateFlashlight("idk");
         }
     }
 }
