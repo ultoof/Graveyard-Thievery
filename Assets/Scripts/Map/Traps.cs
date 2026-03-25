@@ -28,6 +28,11 @@ public class Traps : MonoBehaviour
             playerController.speed = playerController.speed/2;
             playerController.movementRestriction = true;
         }
+        else if (collision.gameObject.CompareTag(collidingTag) && lockPlayer == true)
+        {
+            playerController.speed = 0; 
+            playerController.movementRestriction = true; 
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
