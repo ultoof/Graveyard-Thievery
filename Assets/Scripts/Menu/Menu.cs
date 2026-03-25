@@ -6,15 +6,14 @@ public class Menu : MonoBehaviour
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Debug.Log("K");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ChangeScene(string sceneName)
     {
-        Debug.Log("J");
+        Debug.Log("L");
         SceneManager.LoadScene(sceneName);
-        Debug.Log("Halloj");
     }
 
     public void QuitGame()
