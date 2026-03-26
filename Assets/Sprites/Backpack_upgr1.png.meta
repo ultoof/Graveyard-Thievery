@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f508354c4aae0e4290d9f5d1f3901b8
+guid: e5203b29aa13fcb4eae63c7c41803e90
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6195420898404957940
-    second: backpack_upgr_0
+      213: -7536949086902053643
+    second: Backpack_upgr1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backpack_upgr_0
+      name: Backpack_upgr1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fe757b7b7e8af550800000000000000
-      internalID: 6195420898404957940
+      spriteID: 5f49ff8ecb0676790800000000000000
+      internalID: -7536949086902053643
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      backpack_upgr_0: 6195420898404957940
+      Backpack_upgr1_0: -7536949086902053643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
