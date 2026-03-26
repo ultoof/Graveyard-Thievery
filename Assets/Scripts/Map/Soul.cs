@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Soul : MonoBehaviour
 {
-
+        // Properties 
         bool inrange = false;
         public string displayName;
         public GameObject vfx;
@@ -17,22 +17,22 @@ public class Soul : MonoBehaviour
         private void Awake()
         {
             if (DataManager.instance){
-               startingMoney = DataManager.instance.money;
+               startingMoney = DataManager.instance.money; // The starting money 
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter2D(Collider2D collision) // If the player enters the radius
         {
           if (collision.gameObject.CompareTag("Player"))
           {
-            playerController = collision.gameObject.GetComponent<PlayerController>();
-            stealText.text = $"Press E To Steal {displayName}";
+            playerController = collision.gameObject.GetComponent<PlayerController>(); // Gets the collider from player
+            stealText.text = $"Press E To Steal {displayName}"; // Shows the text to steal
             inrange = true;
             
           }
         }
 
-        private void OnTriggerExit2D(Collider2D collision) {
+        private void OnTriggerExit2D(Collider2D collision) { // when the player leaves the pickup radius
             if (collision.gameObject.CompareTag("Player"))
             {
                 inrange = false;
@@ -42,13 +42,13 @@ public class Soul : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current.eKey.wasPressedThisFrame) // Checks if E is pressed down 
         {
             if (inrange == true)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
                 playerController.soul = true;
-                Destroy(gameObject);
+                Destroy(gameObject); // MAkes the item dissapear 
                 Destroy(clonedVFX,2);
             }
         }

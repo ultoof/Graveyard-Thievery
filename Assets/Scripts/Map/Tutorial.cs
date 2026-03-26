@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
+    // Properties 
     public Sprite[] cutsceneSprites;
     public String[] tutorialText;
     public TextMeshProUGUI text;
@@ -20,18 +21,19 @@ public class Tutorial : MonoBehaviour
 
     void Awake()
     {
+        // Turns of uppgrades 
         flashlight.canFlash = false;
         taser.canStun = false;
         canvas.enabled = false;
     }
 
-    public void AdvanceCutscene()
+    public void AdvanceCutscene() // Plays the cutscene
     {
         currentScene++;
 
         if (currentScene <= 13)
         {
-            image.sprite = cutsceneSprites[currentScene];
+            image.sprite = cutsceneSprites[currentScene]; // Plays thrue the cutscene
         }
         else
         {
@@ -40,7 +42,7 @@ public class Tutorial : MonoBehaviour
         }
     }
 
-    public void AdvanceText()
+    public void AdvanceText() // Text for the tutorial
     {
         textScene++;
         if (textScene <= 11)
@@ -52,7 +54,7 @@ public class Tutorial : MonoBehaviour
             text.enabled = false;
             button.enabled = false;
             DataManager.instance.tutorial = true;
-            SceneManager.LoadSceneAsync("MenuScene");
+            SceneManager.LoadSceneAsync("MenuScene"); // Sends you back to hte menu when you are done with the tutorial.
         }
     }
 }
