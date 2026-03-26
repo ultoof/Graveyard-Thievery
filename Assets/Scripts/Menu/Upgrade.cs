@@ -5,34 +5,34 @@ using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour 
 {
-    bool upradeEnabled = false;
+    bool upgradeEnabled = false;
+    bool playerInRange;
     public TextMeshProUGUI upgradePrompt;
-    public GameObject flashMe;
-    public GameObject stunMe;
-    public GameObject bagMe;
-    public GameObject difficultyMe;
+    public GameObject ButtonHolder;
+
+    void Start()
+    {
+        upgradePrompt.text = "Press E to open the upgrade menu";
+    }
+    void Update()
+    {
+        if(playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            SetUpgradeMenu(!upgradeEnabled);
+        }
+    }
+
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            if (Keyboard.current.eKey.isPressed)
-            {
-                upradeEnabled = true;
-            }
-
-            if (upradeEnabled)
-            {
-                upgradePrompt.text = "";
-                flashMe.SetActive(true);
-                stunMe.SetActive(true);
-                bagMe.SetActive(true);
-                difficultyMe.SetActive(true);
-            }
-            else
-            {
-                upgradePrompt.text = "Press E to open the upgrade menu";
-            }
-        }
+        playerInRange = true;
     }
+
+    void SetUpgradeMenu(bool state)
+    {
+        upgradeEnabled = state;
+        ButtonHolder.SetActive(state);
+        upgradePrompt.text = state ? "" : "Press E to open the upgrade menu";
+    }
+
 }
