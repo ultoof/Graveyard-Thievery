@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
     guid: 49939fee9357d8042b0686b0c34974b6
+  - enabled: 1
+    path: Assets/Scenes/AlleyWayScene.unity
+    guid: 5955a30bf5ecdd7458c923c0434713a2
+  - enabled: 1
+    path: Assets/Scenes/TimmyBaseScene.unity
+    guid: c3271c8ff84813a45b02233b0a392bf3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
