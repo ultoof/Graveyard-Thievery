@@ -5,8 +5,9 @@ public class Traps : MonoBehaviour
 {
     public string collidingTag;
     public bool lockPlayer = false;
-    public GameObject player;
+    public GameObject HiddedSprite;
     private float saveValue;
+
     private PlayerController playerController;
 
     void Awake()
@@ -31,7 +32,8 @@ public class Traps : MonoBehaviour
         else if (collision.gameObject.CompareTag(collidingTag) && lockPlayer == true)
         {
             playerController.speed = 0; 
-            playerController.movementRestriction = true; 
+            playerController.movementRestriction = true;
+            HiddedSprite.SetActive(true);
         }
     }
 

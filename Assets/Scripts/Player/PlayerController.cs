@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
             // When ctrl key is pressed = reduced movement speed(shift set true, sprint set false) : lower detection
             // The animator is sent a bool  true when the player is shifting and running and it is set to false when they are running or in a different state
 
-            if (Keyboard.current.shiftKey.isPressed && movementRestriction == false)
+            if (Keyboard.current.shiftKey.isPressed && movementRestriction == false && animator.GetBool("move") == true) // Fixed it so that when standing still u cant sprint.
             {
                 if (Stamina > 0)
                 {
@@ -136,6 +136,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                //This is just normal movement 
                 rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
                 animator.SetBool("sprint", false);
                 animator.SetBool("crouch", false);
