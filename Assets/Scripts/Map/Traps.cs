@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Traps : MonoBehaviour
 {
+    // Properties
     public string collidingTag;
     public bool lockPlayer = false;
     public GameObject HiddedSprite;
@@ -13,7 +14,7 @@ public class Traps : MonoBehaviour
     void Awake()
     {
         //Get Components
-       playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+       playerController = GameObject.Find("Player").GetComponent<PlayerController>(); // Gets these components
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,12 +22,12 @@ public class Traps : MonoBehaviour
        saveValue = playerController.speed; 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // If player enter radius 
     {
 
         if (collision.gameObject.CompareTag(collidingTag))
         {
-            playerController.speed = playerController.speed/2;
+            playerController.speed = playerController.speed/2; // Makes the player slower 
             playerController.movementRestriction = true;
         }
         else if (collision.gameObject.CompareTag(collidingTag) && lockPlayer == true)
@@ -37,11 +38,11 @@ public class Traps : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision) // When the players leaves the radius 
     {
         if (collision.gameObject.CompareTag(collidingTag))
         {
-            playerController.speed = saveValue;
+            playerController.speed = saveValue; // Makes him normal speed
             playerController.movementRestriction = false;
         }
     }
