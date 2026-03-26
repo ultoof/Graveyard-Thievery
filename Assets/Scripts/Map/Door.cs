@@ -16,11 +16,13 @@ public class Door : MonoBehaviour
     public BoxCollider2D restriction;
     public TextMeshProUGUI informingMessage;
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
 
     //Methods
-    private void Awake() 
+    private void Awake()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>(); // Assign sprite render at awake for future uses
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerStay2D(Collider2D collision) //When a trigger collision occurs with current gameobject
@@ -36,6 +38,7 @@ public class Door : MonoBehaviour
                 trigger.enabled = false;
                 spriteRenderer.enabled = false;
                 informingMessage.text = "Door is now open";
+                audioSource.Play();
                 StartCoroutine(DoSomethingAfterDelay(3F));
             }
             else if(Keyboard.current.eKey.isPressed && needKey == false)
@@ -45,6 +48,7 @@ public class Door : MonoBehaviour
                 trigger.enabled = false;
                 spriteRenderer.enabled = false;
                 informingMessage.text = "Door is now open";
+                audioSource.Play();
                 StartCoroutine(DoSomethingAfterDelay(3F));
             }
             else if(Keyboard.current.eKey.isPressed && playerController.key <= 0)
