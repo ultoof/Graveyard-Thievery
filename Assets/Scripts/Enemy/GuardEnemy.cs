@@ -95,6 +95,8 @@ public class GuardEnemy : MonoBehaviour
         void MoveToGuardPoint()
         {
             nav.destination = guardPoints[currentPoint].position;
+            animator.SetFloat("xMove", nav.velocity.x);
+            animator.SetFloat("yMove", nav.velocity.y);
             animator.SetBool("move", true);
             searching = true;
 
