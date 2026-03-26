@@ -5376,7 +5376,7 @@ PrefabInstance:
       objectReference: {fileID: 187065480}
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontSize
-      value: 25.7
+      value: 22.75
       objectReference: {fileID: 0}
     - target: {fileID: 5645896986707359482, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_Camera
@@ -81797,11 +81797,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1705249208782578229, guid: c2a9ada97c5772349b4a3ec03c293f0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.16
+      value: 8.576
       objectReference: {fileID: 0}
     - target: {fileID: 1705249208782578229, guid: c2a9ada97c5772349b4a3ec03c293f0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.02
+      value: -1.328
       objectReference: {fileID: 0}
     - target: {fileID: 1705249208782578229, guid: c2a9ada97c5772349b4a3ec03c293f0c, type: 3}
       propertyPath: m_LocalPosition.z
