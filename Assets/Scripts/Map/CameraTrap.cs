@@ -1,12 +1,13 @@
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class CameraTrap : MonoBehaviour
 {
     private Collider2D revealCollider;
+    private AudioSource audioSource;
     private void Awake()
     {
         revealCollider = GetComponent<PolygonCollider2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +17,7 @@ public class CameraTrap : MonoBehaviour
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             playerController.exposed = true;
             playerController.CamLightOn();
+            audioSource.Play();
         }  
     }
 
