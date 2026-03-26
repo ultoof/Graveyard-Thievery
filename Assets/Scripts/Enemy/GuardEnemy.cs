@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class GuardEnemy : MonoBehaviour
 {
+    // Properties
     public NavMeshAgent nav;
     private Animator animator;
     private GameObject player;
@@ -48,16 +49,16 @@ public class GuardEnemy : MonoBehaviour
 
     void Update()
     {
-        if (!playerController.exposed)
+        if (!playerController.exposed) // The player isn't exposed
         {
             nav.speed = 2;
         }
         else
         {
-            nav.speed = 3;
+            nav.speed = 3; // The player is exposed.
         }
 
-        if (!stoppedAtPoint && health.health > 0)
+        if (!stoppedAtPoint && health.health > 0) // Checks if the player is still alive and the guard isn't at a guard point.
         {
             // Create a Linecast between this enemy and player
             RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
@@ -68,13 +69,14 @@ public class GuardEnemy : MonoBehaviour
                 animator.SetFloat("xMove", nav.velocity.x);
                 animator.SetFloat("yMove", nav.velocity.y);
                 float distance = Vector2.Distance(transform.position, player.transform.position);
-                if (distance < 1.5)
+                if (distance < 1.5) // Checks if player is in attacking range
                 {
                     StartCoroutine(Attack(2.0f));
                     searching = false;
                 }
                 else if (distance < viewDistance || playerController.exposed && !attacking)
                 {
+                    // If the player is in view distance but also isn't getting attacked
                     Debug.DrawLine(gameObject.transform.position, player.transform.position);
                     nav.destination = player.transform.position;
                     animator.SetBool("move", true);
@@ -83,8 +85,8 @@ public class GuardEnemy : MonoBehaviour
                 // 
                 else
                 {
-                    MoveToGuardPoint();
-                }
+                    MoveToGuardPoint(); // Moves to the assigned guard points
+                } 
             }
             else
             {
@@ -92,7 +94,7 @@ public class GuardEnemy : MonoBehaviour
             }
         }
 
-        void MoveToGuardPoint()
+        void MoveToGuardPoint() // The assigned guard points is where the guard goes when it can't detect the player.
         {
             nav.destination = guardPoints[currentPoint].position;
             animator.SetFloat("xMove", nav.velocity.x);
@@ -104,7 +106,7 @@ public class GuardEnemy : MonoBehaviour
 
             if (pointDistance <= 1)
             {
-                StartCoroutine(StopAtPoint(5f));
+                StartCoroutine(StopAtPoint(5f)); // stops at a point for a 5 sec(can be adjusted).
                 if (currentPoint != guardPoints.Length - 1)
                 {
                     currentPoint++;
@@ -117,21 +119,21 @@ public class GuardEnemy : MonoBehaviour
         }
     }
 
-    IEnumerator Attack(float delayTime)
+    IEnumerator Attack(float delayTime) // The attack funktion
     {
         attacking = true;
         nav.isStopped = true;
         animator.SetBool("shoot", true);
 
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSeconds(delayTime); // Just to delay its attack speed.
 
         RaycastHit2D ray = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
 
-        if (stunned <= 0 && !ray)
+        if (stunned <= 0 && !ray) // If the player stuns the guard. 
         {
-            GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity);
+            GameObject shootVFX = Instantiate(vfx, transform.position, Quaternion.identity); // Spawns the vfx
             Destroy(shootVFX, 4);
-            health.TakeDamage(1);
+            health.TakeDamage(1); // Deal damage
 
             if (health.health >= 1)
             {
@@ -148,7 +150,7 @@ public class GuardEnemy : MonoBehaviour
 
         attacking = false;
         nav.isStopped = false;
-        animator.SetBool("shoot", false);
+        animator.SetBool("shoot", false); // Stops shooting 
     }
 
     //Coroutine fix on taser : 
@@ -157,12 +159,12 @@ public class GuardEnemy : MonoBehaviour
         StartCoroutine(FreezeRoutine(duration));
     }
 
-    public void StepSound()
+    public void StepSound() // Plays a sound.
     {
         audioSource.Play();
     }
 
-    IEnumerator FreezeRoutine(float duration)
+    IEnumerator FreezeRoutine(float duration) // The stun funktion. Makes the guard stop for a few sec.
     {
         stunned += 2;
         nav.isStopped = true;
@@ -171,7 +173,7 @@ public class GuardEnemy : MonoBehaviour
         stunned -= 2;
     }
 
-    IEnumerator StopAtPoint(float duration)
+    IEnumerator StopAtPoint(float duration) // // This makes the guard 
     {
         animator.SetBool("move", false);
         stoppedAtPoint = true;

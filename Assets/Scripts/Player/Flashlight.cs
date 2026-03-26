@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Flashlight : MonoBehaviour
 {
+    // Properties
     bool isOn = false;
     public bool canFlash = false;
     public GameObject light;
@@ -21,7 +22,7 @@ public class Flashlight : MonoBehaviour
 
     void Start()
     {
-        if(DataManager.instance != null)
+        if(DataManager.instance != null) // Checks if the player has a flashlight
         canFlash = DataManager.instance.canFlash;
     }
 
@@ -59,7 +60,7 @@ public class Flashlight : MonoBehaviour
             }
             else
             {
-                guardScript.viewDistance = defaultDist * 2;
+                guardScript.viewDistance = defaultDist * 2; // Makes the guards view distance further when the flashlight is activated. 
                 isOn = true;
 
                 // VFX
@@ -69,7 +70,7 @@ public class Flashlight : MonoBehaviour
                 animator.SetTrigger("light");
                 animator.SetBool("flashlight", true);
             }
-            light.SetActive(isOn);
+            light.SetActive(isOn); // Turns on the flashlight
             light.GetComponent<AudioSource>().Play();
             playerController.updateFlashlight("idk");
         }
