@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TaserProjectile : MonoBehaviour
 {
+    // Properties 
     public float bulletSpeed;
     public float freezeduration = 0f;
     public float lifetime = 3f;
@@ -17,34 +18,34 @@ public class TaserProjectile : MonoBehaviour
     void Start()
     {
         origin = transform.position;
-        GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
-        Destroy(gameObject, lifetime + 0.5f);
-        RemoveEffect(0.5f);
+        GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse); // Forces the projectile forwards
+        Destroy(gameObject, lifetime + 0.5f); // Destroys it after a while
+        RemoveEffect(0.5f); // Removes the effect 
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision) // If the player in range
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             return;
         }
 
-        Enemy enemy = collision.gameObject.GetComponentInParent<Enemy>();
+        Enemy enemy = collision.gameObject.GetComponentInParent<Enemy>(); // Gets the enemys collider
         GuardEnemy guardEnemy = collision.gameObject.GetComponentInParent<GuardEnemy>();
 
-        if (enemy)
+        if (enemy) // If you shoot the normal enemy
         {
-            enemy.Freeze(freezeduration);
+            enemy.Freeze(freezeduration); // Freezes him for a bit 
             GameObject clonedHitVFX = Instantiate(hitVFX, collision.transform.position, Quaternion.identity);
             Destroy(clonedHitVFX, freezeduration + 0.5f);
             StopHitVFX(freezeduration, clonedHitVFX.GetComponent<ParticleSystem>());
         }
 
-        else if (guardEnemy)
+        else if (guardEnemy) // If you shoot the guard
         {
-            guardEnemy.Freeze(freezeduration);
+            guardEnemy.Freeze(freezeduration); // Freezes him for this time
             GameObject clonedHitVFX = Instantiate(hitVFX, collision.transform.position, Quaternion.identity);
-            Destroy(clonedHitVFX, freezeduration + 0.5f);
+            Destroy(clonedHitVFX, freezeduration + 0.5f); // Destroys the vfx
             StopHitVFX(freezeduration, clonedHitVFX.GetComponent<ParticleSystem>());
         }
 
@@ -65,7 +66,7 @@ public class TaserProjectile : MonoBehaviour
         vfx.Stop();
     }
 
-    IEnumerator RemoveEffect(float delayTime)
+    IEnumerator RemoveEffect(float delayTime) // Removes the effect 
     {
         yield return new WaitForSeconds(delayTime);
 

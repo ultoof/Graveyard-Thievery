@@ -6,49 +6,50 @@ using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
+    // Properties 
     public int cap = 0;
     public Text text;
 
 
-    public void BuyUpgradeFlashlight()
+    public void BuyUpgradeFlashlight() // Upgrades the flashlight
     {
         if (DataManager.instance.canFlash == false && DataManager.instance.money >= 50)
         {
-            DataManager.instance.money -= 50;
-            DataManager.instance.canFlash = true;
+            DataManager.instance.money -= 50; // Spends the money 
+            DataManager.instance.canFlash = true; // Allows the player to use the flashlight
         }
     }
-    public void BuyUpgradeTaser()
+    public void BuyUpgradeTaser() // Buys the Taser uppgrades
     {
-        if (DataManager.instance.canStun == false && DataManager.instance.money >= 50)
+        if (DataManager.instance.canStun == false && DataManager.instance.money >= 50) // Checks if the player can afford 
         {
-            DataManager.instance.money -= 50;
-            DataManager.instance.canStun = true;
+            DataManager.instance.money -= 50; // Spends the money 
+            DataManager.instance.canStun = true; // Unlocks the taser 
         }
     }
-    public void BuyUpgradeMaxMoneyIncrease()
+    public void BuyUpgradeMaxMoneyIncrease() // Upgrades the money capacity 
     {
-        if (cap <= 4 && DataManager.instance.money >= 100)
+        if (cap <= 4 && DataManager.instance.money >= 100) // Looks if the requriments meet 
         {
-            DataManager.instance.money -= 100;
-            DataManager.instance.maxMoney += 50;
-            cap++;
+            DataManager.instance.money -= 100; // Spends the money
+            DataManager.instance.maxMoney += 50; // Upgrades the storage 
+            cap++; // Adds one to the number that leads to cap
         }
     }
-    public void BuyUpgradeDifficulty()
+    public void BuyUpgradeDifficulty() // Upgrades difficulty 
     {
-        int cost = 100 + (DataManager.instance.difficulty * 50);
+        int cost = 100 + (DataManager.instance.difficulty * 50); // Makes the price up 
 
-        if (DataManager.instance.money >= cost)
+        if (DataManager.instance.money >= cost) // IF the player can afford 
         {
-            DataManager.instance.money -= cost;
-            DataManager.instance.difficulty++;
+            DataManager.instance.money -= cost; // WAstes the money 
+            DataManager.instance.difficulty++; // Makes the game harder 
             Debug.Log("Lowk works");
 
         }
         int newCost = 100 + (DataManager.instance.difficulty * 50);
         Debug.Log(newCost);
-        // text.text = "Cost: " + newCost;
+        // text.text = "Cost: " + newCost; // Would make the uppgrade text change with every uppgrade
         
     }
 }

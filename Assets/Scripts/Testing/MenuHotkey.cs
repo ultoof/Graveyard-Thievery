@@ -8,7 +8,7 @@ public class MenuHotkey : MonoBehaviour
     {
         if (Keyboard.current.mKey.wasPressedThisFrame)
         {
-            SceneManager.LoadScene("MenuScene");
+            SceneManager.LoadScene("MenuScene"); // Just loads this one scene
         }
     }
 }
