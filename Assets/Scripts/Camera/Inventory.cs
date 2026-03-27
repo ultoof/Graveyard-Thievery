@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    // Properties
     public Image coinUI;
     public TextMeshProUGUI coinText;
     public PlayerController playerController;
@@ -12,6 +13,6 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         coinUI.fillAmount = playerController.money / playerController.maxMoney;
-        coinText.text = $"{math.round(coinUI.fillAmount*100)}%";
+        coinText.text = $"{math.round(coinUI.fillAmount*100)}%"; // It fills up the jar when the player picks up items. 
     }
 }
