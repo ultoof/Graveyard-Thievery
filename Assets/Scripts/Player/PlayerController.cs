@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         lastDir = Vector2.down; // Set to players starting direction
 
-        if (DataManager.instance != null) // If this isn't null 
+        if (DataManager.instance == null) // If this isn't null 
         {
             return; 
         }
