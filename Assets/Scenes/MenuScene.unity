@@ -600,10 +600,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DataManager
   difficulty: 0
-  canFlash: 0
+  canFlash: 1
   tutorial: 1
-  canStun: 0
-  soul: 0
+  canStun: 1
+  soul: 1
   maxMoney: 100
   money: 10
 --- !u!4 &519309159
