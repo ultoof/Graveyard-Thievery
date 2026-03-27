@@ -13,14 +13,10 @@ public class Upgrades : MonoBehaviour
     public TextMeshProUGUI totalMoney;
     public Image flashMyLight;
 
-    void Awake()
+    void Start()
     {
-        if (DataManager.instance!= null)
-        {
-            totalMoney.text = $"{DataManager.instance.money}";
-        }
+        totalMoney.text = $"{DataManager.instance.money}";
     } 
-
 
     public void BuyUpgradeFlashlight() // Upgrades the flashlight
     {
@@ -28,6 +24,7 @@ public class Upgrades : MonoBehaviour
         {
             DataManager.instance.money -= 100; // Spends the money 
             DataManager.instance.canFlash = true; // Allows the player to use the flashlight
+            totalMoney.text = $"{DataManager.instance.money}";
         }
     }
     public void BuyUpgradeTaser() // Buys the Taser uppgrades
@@ -35,7 +32,8 @@ public class Upgrades : MonoBehaviour
         if (DataManager.instance.canStun == false && DataManager.instance.money >= 250) // Checks if the player can afford 
         {
             DataManager.instance.money -= 250; // Spends the money 
-            DataManager.instance.canStun = true; // Unlocks the taser 
+            DataManager.instance.canStun = true; // Unlocks the taser
+            totalMoney.text = $"{DataManager.instance.money}";
         }
     }
     public void BuyUpgradeMaxMoneyIncrease() // Upgrades the money capacity 
@@ -45,6 +43,7 @@ public class Upgrades : MonoBehaviour
             DataManager.instance.money -= 100; // Spends the money
             DataManager.instance.maxMoney += 50; // Upgrades the storage 
             cap++; // Adds one to the number that leads to cap
+            totalMoney.text = $"{DataManager.instance.money}";
         }
     }
     public void BuyUpgradeDifficulty() // Upgrades difficulty 
@@ -56,6 +55,7 @@ public class Upgrades : MonoBehaviour
             DataManager.instance.money -= cost; // WAstes the money 
             DataManager.instance.difficulty++; // Makes the game harder 
             Debug.Log("Lowk works");
+            totalMoney.text = $"{DataManager.instance.money}";
 
         }
         int newCost = 100 + (DataManager.instance.difficulty * 50);
