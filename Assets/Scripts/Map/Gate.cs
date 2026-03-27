@@ -32,7 +32,7 @@ public class Gate : MonoBehaviour
 
                 isOpen = true;
                 restriction.enabled = false;
-                SceneManager.LoadScene("AlleyWayScene");
+                SceneManager.LoadScene(sceneLoad);
             }
         }
     }

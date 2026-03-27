@@ -16,14 +16,14 @@ public class Taser : MonoBehaviour
 
     void Start()
     {
-        //if (DataManager.instance != null)
-        //canStun = DataManager.instance.canStun;
+        if (DataManager.instance != null)
+        canStun = DataManager.instance.canStun;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) /*&& canStun == true*/) // Checks if the player is pressing down T
+        if (Input.GetKeyDown(KeyCode.T) && canStun == true) // Checks if the player is pressing down T
         {
             if (ammo > 0) // Checks if the player has ammo 
             {
