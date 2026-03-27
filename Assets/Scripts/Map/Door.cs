@@ -41,24 +41,24 @@ public class Door : MonoBehaviour
                 audioSource.Play();
                 StartCoroutine(DoSomethingAfterDelay(3F));
             }
-            else if(Keyboard.current.eKey.isPressed && needKey == false)
+            else if(Keyboard.current.eKey.isPressed && needKey == false) // When the door doesn't need a key and the player presses E
             {
                 isOpen = true;
                 restriction.enabled = false; 
                 trigger.enabled = false;
                 spriteRenderer.enabled = false;
                 informingMessage.text = "Door is now open";
-                audioSource.Play();
-                StartCoroutine(DoSomethingAfterDelay(3F));
+                audioSource.Play(); // Plays sound 
+                StartCoroutine(DoSomethingAfterDelay(3F)); // Waits for seconds 
             }
-            else if(Keyboard.current.eKey.isPressed && playerController.key <= 0)
+            else if(Keyboard.current.eKey.isPressed && playerController.key <= 0) // If the doors needs a key and the player don't have it and presses E
             {
                 informingMessage.text = "Door is locked, you need a key";
                 StartCoroutine(DoSomethingAfterDelay(3f)); 
             }
         } 
     }
-    void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision) // If player is in range 
     {
         if (collision.CompareTag("Player"))
         {
@@ -66,7 +66,7 @@ public class Door : MonoBehaviour
         }
     }
 
-      IEnumerator DoSomethingAfterDelay(float timer)
+      IEnumerator DoSomethingAfterDelay(float timer) // It waits 
     {
         yield return new WaitForSeconds(timer); 
         informingMessage.text = "";
