@@ -54,18 +54,12 @@ public class PlayerController : MonoBehaviour
 
         if (DataManager.instance != null) // If this isn't null 
         {
-            maxMoney = DataManager.instance.maxMoney; // Makes the max money the amount of money that the player have uppgraded 
+            return; 
         }
-        else
-        {
-            maxMoney = 100f; // If the player has no uppgrades it sets it to the default 
-
-        }
-
-        if(DataManager.instance.money != 0)
-        {
-            money = DataManager.instance.money;
-        }
+        
+        maxMoney = DataManager.instance.maxMoney; // Makes the max money the amount of money that the player have uppgraded
+        money = DataManager.instance.money;
+        
     }
 
     void Update()

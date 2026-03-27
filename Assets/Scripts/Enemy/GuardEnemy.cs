@@ -28,14 +28,19 @@ public class GuardEnemy : MonoBehaviour
     public GameObject deathVFX;
     public Transform[] guardPoints;
 
+    private bool isStoppingAtPoint = false;
     private void Awake()
     {
         // Get component references
         player = GameObject.Find("Player");
+        if(player == null)
+        {
+            Debug.LogError("Player cannot be found");
+            return;
+        }
         playerController = player.GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         health = player.GetComponent<Health>();
-        rb = GetComponentInParent<Rigidbody2D>();
         guardPoints = guardPointFolder.GetComponentsInChildren<Transform>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -49,14 +54,8 @@ public class GuardEnemy : MonoBehaviour
 
     void Update()
     {
-        if (!playerController.exposed) // The player isn't exposed
-        {
-            nav.speed = 2;
-        }
-        else
-        {
-            nav.speed = 3; // The player is exposed.
-        }
+         
+         nav.speed = playerController.exposed ? 3 : 2; //If the player is exposed : 3 if not 2    
 
         if (!stoppedAtPoint && health.health > 0) // Checks if the player is still alive and the guard isn't at a guard point.
         {
@@ -93,8 +92,9 @@ public class GuardEnemy : MonoBehaviour
                 MoveToGuardPoint();
             }
         }
+    }
 
-        void MoveToGuardPoint() // The assigned guard points is where the guard goes when it can't detect the player.
+        private void MoveToGuardPoint() // The assigned guard points is where the guard goes when it can't detect the player.
         {
             nav.destination = guardPoints[currentPoint].position;
             animator.SetFloat("xMove", nav.velocity.x);
@@ -104,23 +104,16 @@ public class GuardEnemy : MonoBehaviour
 
             float pointDistance = Vector2.Distance(transform.position, guardPoints[currentPoint].position);
 
-            if (pointDistance <= 1)
+            if (pointDistance <= 1 && !isStoppingAtPoint)
             {
                 StartCoroutine(StopAtPoint(5f)); // stops at a point for a 5 sec(can be adjusted).
-                if (currentPoint != guardPoints.Length - 1)
-                {
-                    currentPoint++;
-                }
-                else
-                {
-                    currentPoint = 1;
-                }
+                currentPoint = (currentPoint < guardPoints.Length - 1) ? currentPoint + 1 : 1; // Advance guard to next spot
             }
         }
-    }
-
-    IEnumerator Attack(float delayTime) // The attack funktion
-    {
+        
+        
+        IEnumerator Attack(float delayTime) // The attack funktion
+        {
         attacking = true;
         nav.isStopped = true;
         animator.SetBool("shoot", true);
@@ -182,3 +175,5 @@ public class GuardEnemy : MonoBehaviour
         stoppedAtPoint = false;
     }
 }
+
+  
