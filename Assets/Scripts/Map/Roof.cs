@@ -26,7 +26,7 @@ public class Roof : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision) // If the player leaves radius 
     {
-            roofTileMap.GetComponent<Tilemap>().color = new Color(1f, 1f, 1f, 1f); // Makes the roof full 
+            roofTileMap.GetComponent<Tilemap>().color = new Color(1f, 1f, 1f, 1f); // Makes the roof full color again
             foreach (GameObject mapObject in roofObjects)
             {
                 mapObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
