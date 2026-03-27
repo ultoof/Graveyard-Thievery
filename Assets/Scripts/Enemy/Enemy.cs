@@ -51,13 +51,13 @@ public class Enemy : MonoBehaviour
         // Linecast to target was succesful (did not hit anything on obstacleLayerMasks)
         if (!hit)
         {
-            if (Vector2.Distance(transform.position, player.transform.position) < viewDistance)
+            if (Vector2.Distance(transform.position, player.transform.position) < viewDistance) // If the player is in the range of the smaller zombie
             {
-                Debug.DrawLine(gameObject.transform.position, player.transform.position);
+                Debug.DrawLine(gameObject.transform.position, player.transform.position); // Makes a line the zombie can see.
                 nav.destination = player.transform.position;
                 if (Vector2.Distance(transform.position, player.transform.position) < 0.5 && cooldown == false)
                 {
-                    StartCoroutine(Attack(1));
+                    StartCoroutine(Attack(1)); // Attacks player 
 
                     
                 }
@@ -68,34 +68,34 @@ public class Enemy : MonoBehaviour
     // Dont touch this is fix for coroutine on bullet :
     public void Freeze(float duration)
     {
-        StartCoroutine(FreezeRoutine(duration));
+        StartCoroutine(FreezeRoutine(duration)); // Stuns the small zombie for a little bit.
     }
 
-    IEnumerator FreezeRoutine(float duration)
+    IEnumerator FreezeRoutine(float duration) // How long the zombie should be stunned
     {
         stunned += 2;
         nav.isStopped = true;
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(duration); // How long it should wait 
         nav.isStopped = false;
         stunned += 2;
     }
     
-    IEnumerator Attack(float duration)
+    IEnumerator Attack(float duration) // A attacking funktion
     {
-        health.TakeDamage(1);
+        health.TakeDamage(1); // How much damage it will deal. 
         cooldown = true;
          if (health.health >= 1)
             {
-                GameObject hitVFXClone = Instantiate(hitVFX, player.transform.position, Quaternion.identity);
-                Destroy(hitVFXClone, 2);
+                GameObject hitVFXClone = Instantiate(hitVFX, player.transform.position, Quaternion.identity); // Spawns in a vfx
+                Destroy(hitVFXClone, 2); // Destroys the vfx. 
             }
             else
             {
-                GameObject hitVFXClone = Instantiate(deathVFX, player.transform.position, Quaternion.identity);
-                player.SetActive(false);
-                Destroy(hitVFXClone, 2);
+                GameObject hitVFXClone = Instantiate(deathVFX, player.transform.position, Quaternion.identity); // Spawns in a death fx
+                player.SetActive(false); 
+                Destroy(hitVFXClone, 2); // Destroys the fx
             }
         yield return new WaitForSeconds(duration);
-        cooldown = false;
+        cooldown = false; // Makes him not have a cooldown. 
     }
 }
