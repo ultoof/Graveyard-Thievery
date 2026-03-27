@@ -62,7 +62,10 @@ public class PlayerController : MonoBehaviour
 
         }
 
-
+        if(DataManager.instance.money != 0)
+        {
+            money = DataManager.instance.money;
+        }
     }
 
     void Update()

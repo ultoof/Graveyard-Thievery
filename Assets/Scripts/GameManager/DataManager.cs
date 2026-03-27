@@ -21,6 +21,10 @@ public class DataManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
         /*
