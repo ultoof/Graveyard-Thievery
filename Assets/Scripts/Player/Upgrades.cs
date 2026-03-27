@@ -23,17 +23,17 @@ public class Upgrades : MonoBehaviour
 
     public void BuyUpgradeFlashlight() // Upgrades the flashlight
     {
-        if (DataManager.instance.canFlash == false && DataManager.instance.money >= 50)
+        if (DataManager.instance.canFlash == false && DataManager.instance.money >= 100)
         {
-            DataManager.instance.money -= 50; // Spends the money 
+            DataManager.instance.money -= 100; // Spends the money 
             DataManager.instance.canFlash = true; // Allows the player to use the flashlight
         }
     }
     public void BuyUpgradeTaser() // Buys the Taser uppgrades
     {
-        if (DataManager.instance.canStun == false && DataManager.instance.money >= 50) // Checks if the player can afford 
+        if (DataManager.instance.canStun == false && DataManager.instance.money >= 250) // Checks if the player can afford 
         {
-            DataManager.instance.money -= 50; // Spends the money 
+            DataManager.instance.money -= 250; // Spends the money 
             DataManager.instance.canStun = true; // Unlocks the taser 
         }
     }

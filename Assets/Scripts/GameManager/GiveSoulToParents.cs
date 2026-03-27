@@ -25,6 +25,10 @@ public class GiveSoulToParents : MonoBehaviour
                 
             }
         }
+        else if(inrange == false)
+        {
+            stealTextBoi.text = "";
+        }
     }
 
     void OnTriggerStay2D(Collider2D collision)
