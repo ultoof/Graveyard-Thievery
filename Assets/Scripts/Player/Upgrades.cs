@@ -2,6 +2,7 @@ using System;
 using JetBrains.Annotations;
 using TMPro;
 using Unity.VectorGraphics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,11 +13,11 @@ public class Upgrades : MonoBehaviour
     public TextMeshProUGUI totalMoney;
     public Image flashMyLight;
 
-    void Update()
+    void Awake()
     {
-        if (DataManager.instance)
+        if (DataManager.instance!= null)
         {
-            totalMoney.text += $"{DataManager.instance.money}";
+            totalMoney.text = $"{DataManager.instance.money}";
         }
     } 
 
