@@ -50,7 +50,7 @@ public class Flashlight : MonoBehaviour
         light.transform.rotation = Quaternion.Lerp(light.transform.rotation,Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90),3f * Time.deltaTime); // Follows the mouse 
 
         // Flashlight
-        if (Keyboard.current.fKey.wasPressedThisFrame /*&& canFlash == true*/)
+        if (Keyboard.current.fKey.wasPressedThisFrame && canFlash == true)
         {
             if (isOn) // The flashlight is on 
             {

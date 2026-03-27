@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
 
-        if (DataManager.instance != null) DataManager.instance.money = money; // It picks up and makes this your money 
+        DataManager.instance.money = money; // We have a data manager that sstores all data, this  line transfers the data ingame. 
     }
 
     void FixedUpdate()

@@ -446,6 +446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 734684075058659768, guid: 24315e5c8138aa94fbb1251a2d7aeeb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1454034654002796980, guid: 24315e5c8138aa94fbb1251a2d7aeeb2, type: 3}
       propertyPath: guardPointFolder
       value: 
@@ -83231,7 +83235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -306.3001, y: -240.5}
+  m_AnchoredPosition: {x: -306.30014, y: -240.49998}
   m_SizeDelta: {x: 96, y: 64}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1548558347
