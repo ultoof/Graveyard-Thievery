@@ -605,7 +605,7 @@ MonoBehaviour:
   canStun: 0
   soul: 0
   maxMoney: 100
-  money: 100
+  money: 0
 --- !u!4 &519309159
 Transform:
   m_ObjectHideFlags: 0
