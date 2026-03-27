@@ -13,14 +13,10 @@ public class Upgrades : MonoBehaviour
     public TextMeshProUGUI totalMoney;
     public Image flashMyLight;
 
-    void Awake()
+    void Start()
     {
-        if (DataManager.instance!= null)
-        {
-            totalMoney.text = $"{DataManager.instance.money}";
-        }
+        totalMoney.text = $"{DataManager.instance.money}";
     } 
-
 
     public void BuyUpgradeFlashlight() // Upgrades the flashlight
     {

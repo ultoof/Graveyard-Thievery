@@ -874,8 +874,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0e3e645027a3083469a25ddfae9e8ad6, type: 2}
-  m_sharedMaterial: {fileID: 6423026102319817092, guid: 0e3e645027a3083469a25ddfae9e8ad6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2496,8 +2496,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Welcome to Graveyard Thievery!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0e3e645027a3083469a25ddfae9e8ad6, type: 2}
-  m_sharedMaterial: {fileID: 6423026102319817092, guid: 0e3e645027a3083469a25ddfae9e8ad6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+  m_sharedMaterial: {fileID: 7503015304138477457, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5377,6 +5377,18 @@ PrefabInstance:
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontSize
       value: 22.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+    - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7503015304138477457, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+    - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5645896986707359482, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_Camera
@@ -84715,8 +84727,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0e3e645027a3083469a25ddfae9e8ad6, type: 2}
-  m_sharedMaterial: {fileID: 6423026102319817092, guid: 0e3e645027a3083469a25ddfae9e8ad6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+  m_sharedMaterial: {fileID: 7503015304138477457, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
