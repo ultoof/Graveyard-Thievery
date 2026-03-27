@@ -37,15 +37,15 @@ public class ChurchDoor : MonoBehaviour {
                 audioSource.Play();
                 StartCoroutine(DoSomethingAfterDelay(3F));
             }
-            else if(Keyboard.current.eKey.isPressed && needKey == false)
+            else if(Keyboard.current.eKey.isPressed && needKey == false) // IF the player presses down E and the door don't need a key.
             {
                 isOpen = true;
                 restriction.enabled = false; 
                 trigger.enabled = false;
                 spriteRenderer.enabled = false;
                 informingMessage.text = "Door is now open";
-                audioSource.Play();
-                StartCoroutine(DoSomethingAfterDelay(3F));
+                audioSource.Play(); // Plays a sound 
+                StartCoroutine(DoSomethingAfterDelay(3F)); // Adds a delay 
             }
             else if(Keyboard.current.eKey.isPressed && playerController.key <= 0)
             {
@@ -54,7 +54,7 @@ public class ChurchDoor : MonoBehaviour {
             }
         } 
     }
-    void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision) // If the player is in range 
     {
         if (collision.CompareTag("Player"))
         {
@@ -62,9 +62,9 @@ public class ChurchDoor : MonoBehaviour {
         }
     }
 
-      IEnumerator DoSomethingAfterDelay(float timer)
+      IEnumerator DoSomethingAfterDelay(float timer) // The delay 
     {
-        yield return new WaitForSeconds(timer); 
+        yield return new WaitForSeconds(timer); // Delay time 
         informingMessage.text = "";
     }
 }

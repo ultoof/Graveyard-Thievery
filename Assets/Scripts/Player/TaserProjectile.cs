@@ -53,13 +53,13 @@ public class TaserProjectile : MonoBehaviour
 
         if (ray)
         {
-            GameObject clonedExplosionVFX = Instantiate(explosionVFX, ray.point, Quaternion.identity);
-            Destroy(clonedExplosionVFX, 4);
+            GameObject clonedExplosionVFX = Instantiate(explosionVFX, ray.point, Quaternion.identity); // Spawns in the explosion FX
+            Destroy(clonedExplosionVFX, 4); // Destroys the spawned in FX
         }
         else
         {
-            GameObject clonedExplosionVFX = Instantiate(explosionVFX, collision.transform.position, Quaternion.identity);
-            Destroy(clonedExplosionVFX, 4);
+            GameObject clonedExplosionVFX = Instantiate(explosionVFX, collision.transform.position, Quaternion.identity); // Spawns in the FX
+            Destroy(clonedExplosionVFX, 4); // Destroys the assigned FX
         }
 
         Destroy(gameObject, 4f);
@@ -68,15 +68,15 @@ public class TaserProjectile : MonoBehaviour
 
     IEnumerator RemoveEffect(float delayTime) // Removes the effect 
     {
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSeconds(delayTime); // Makes it a delay 
 
-        vfx.Stop();
+        vfx.Stop(); // Stops the VFX
     }
 
-    IEnumerator StopHitVFX(float delayTime, ParticleSystem particleSystem)
+    IEnumerator StopHitVFX(float delayTime, ParticleSystem particleSystem) // Stops the FX when it hits a enemy
     {
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSeconds(delayTime); // Delay
 
-        particleSystem.Stop();
+        particleSystem.Stop(); // Stops the VFX
     }
 }
