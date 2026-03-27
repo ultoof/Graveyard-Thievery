@@ -10,12 +10,9 @@ public class Upgrade : MonoBehaviour
     public TextMeshProUGUI upgradePrompt;
     public GameObject ButtonHolder;
 
-    void Start()
-    {
-        upgradePrompt.text = "Press E to open the upgrade menu";
-    }
     void Update()
     {
+        upgradePrompt.text = upgradeEnabled == false && playerInRange == true ? "Press E to open the upgrade menu" : "";
         if(playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
             SetUpgradeMenu(!upgradeEnabled);
@@ -25,14 +22,17 @@ public class Upgrade : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        playerInRange = true;
+        if(collision.gameObject.CompareTag("Player")) playerInRange = true;
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player")) playerInRange = false;
     }
 
     void SetUpgradeMenu(bool state)
     {
         upgradeEnabled = state;
         ButtonHolder.SetActive(state);
-        upgradePrompt.text = state ? "" : "Press E to open the upgrade menu";
+        
     }
-
 }
