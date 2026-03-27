@@ -13,21 +13,21 @@ public class Gate : MonoBehaviour
     public BoxCollider2D restriction;
     private SpriteRenderer spriteRenderer;
 
-    private void Awake()
+    private void Awake() // Gets component in awake
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision) // If player is in range
     {
         if (collision.CompareTag("Player"))
         {
             PlayerController playerController = collision.GetComponent<PlayerController>();
-            if (Keyboard.current.eKey.isPressed)
+            if (Keyboard.current.eKey.isPressed) // If player presses e
             {
                 isOpen = true;
                 restriction.enabled = false;
-                SceneManager.LoadScene(sceneLoad);
+                SceneManager.LoadScene(sceneLoad); // Loads the chosen scene.
             }
         }
     }
