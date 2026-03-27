@@ -1,5 +1,6 @@
 using System;
 using JetBrains.Annotations;
+using TMPro;
 using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,8 +9,16 @@ public class Upgrades : MonoBehaviour
 {
     // Properties 
     private int cap = 0;
-    public Text text;
+    public TextMeshProUGUI totalMoney;
     public Image flashMyLight;
+
+    void Update()
+    {
+        if (DataManager.instance)
+        {
+            totalMoney.text += $"{DataManager.instance.money}";
+        }
+    } 
 
 
     public void BuyUpgradeFlashlight() // Upgrades the flashlight
@@ -18,7 +27,6 @@ public class Upgrades : MonoBehaviour
         {
             DataManager.instance.money -= 50; // Spends the money 
             DataManager.instance.canFlash = true; // Allows the player to use the flashlight
-
         }
     }
     public void BuyUpgradeTaser() // Buys the Taser uppgrades
