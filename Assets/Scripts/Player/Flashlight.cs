@@ -47,15 +47,15 @@ public class Flashlight : MonoBehaviour
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - flashlightPos.transform.position;
         diff.Normalize();
 
-        light.transform.rotation = Quaternion.Lerp(light.transform.rotation,Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90),3f * Time.deltaTime);
+        light.transform.rotation = Quaternion.Lerp(light.transform.rotation,Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90),3f * Time.deltaTime); // Follows the mouse 
 
         // Flashlight
-        if (Keyboard.current.fKey.wasPressedThisFrame /*&& canFlash == true*/)
+        if (Keyboard.current.fKey.wasPressedThisFrame && canFlash == true)
         {
-            if (isOn)
+            if (isOn) // The flashlight is on 
             {
-                guardScript.viewDistance = defaultDist;
-                isOn = false;
+                guardScript.viewDistance = defaultDist; // The guard gets normal distance
+                isOn = false; // Turns off the flashlight 
                 animator.SetBool("flashlight", false);
             }
             else
