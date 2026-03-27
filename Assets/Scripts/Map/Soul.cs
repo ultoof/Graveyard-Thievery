@@ -28,7 +28,6 @@ public class Soul : MonoBehaviour
             playerController = collision.gameObject.GetComponent<PlayerController>(); // Gets the collider from player
             stealText.text = $"Press E To Steal {displayName}"; // Shows the text to steal
             inrange = true;
-            
           }
         }
 

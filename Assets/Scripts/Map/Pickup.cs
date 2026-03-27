@@ -13,6 +13,7 @@ public class Pickup : MonoBehaviour
     public GameObject vfx;
     public TextMeshProUGUI stealText;
     public float spawnWeight;
+    public bool isKey;
     private PlayerController playerController;
     private float startingMoney = 0;
     private float maxMoney = 100;
@@ -56,7 +57,7 @@ public class Pickup : MonoBehaviour
                 Destroy(gameObject); // Destroys the item. 
                 Destroy(clonedVFX, 4);
 
-                if (gameObject.name == "GoldKey")
+                if (isKey)
                 {
                     playerController.key++; // Gives the player a key. that is needed to open some doors.
                 }

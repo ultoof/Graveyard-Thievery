@@ -25,14 +25,16 @@ public class Gate : MonoBehaviour
             PlayerController playerController = collision.GetComponent<PlayerController>();
             if (Keyboard.current.eKey.isPressed)
             {
+                if (playerController.soul == true)
+                {
+                    DataManager.instance.soul = true;
+                }
+
                 isOpen = true;
                 restriction.enabled = false;
-                SceneManager.LoadScene(sceneLoad);
+                SceneManager.LoadScene("AlleyWayScene");
             }
         }
     }
-
-   
-
 }
 

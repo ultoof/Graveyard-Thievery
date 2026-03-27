@@ -7,6 +7,7 @@ public class DataManager : MonoBehaviour
     public bool canFlash;
     public bool tutorial = false;
     public bool canStun;
+    public bool soul = false;
     public float maxMoney;
     public float money;
 
