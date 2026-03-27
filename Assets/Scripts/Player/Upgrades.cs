@@ -7,8 +7,9 @@ using UnityEngine.UI;
 public class Upgrades : MonoBehaviour
 {
     // Properties 
-    public int cap = 0;
+    private int cap = 0;
     public Text text;
+    public Image flashMyLight;
 
 
     public void BuyUpgradeFlashlight() // Upgrades the flashlight
@@ -17,6 +18,7 @@ public class Upgrades : MonoBehaviour
         {
             DataManager.instance.money -= 50; // Spends the money 
             DataManager.instance.canFlash = true; // Allows the player to use the flashlight
+
         }
     }
     public void BuyUpgradeTaser() // Buys the Taser uppgrades

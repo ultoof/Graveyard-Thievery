@@ -4,10 +4,14 @@ using UnityEngine;
 public class Traps : MonoBehaviour
 {
     // Properties
+    [Header("Properties")]
     public string collidingTag;
     public bool lockPlayer = false;
-    public GameObject HiddedSprite;
     private float saveValue;
+
+
+    public GameObject HiddedSprite;
+    
 
     private PlayerController playerController;
 
