@@ -13,40 +13,45 @@ public class Upgrades : MonoBehaviour
     public TextMeshProUGUI totalMoney;
     public Image flashMyLight;
 
+    void Awake()
+    {
+        DataManager.instance.totalMoney = DataManager.instance.money;
+        DataManager.instance.money = 0;
+    }
     void Start()
     {
-        totalMoney.text = $@"$: {DataManager.instance.money}";
+        totalMoney.text = $@"$: {DataManager.instance.totalMoney}";
     } 
 
     public void BuyUpgradeFlashlight(Button button) // Upgrades the flashlight
     {
 
-        if (DataManager.instance.canFlash == false && DataManager.instance.money >= 100)
+        if (DataManager.instance.canFlash == false && DataManager.instance.totalMoney >= 100)
         {
-            DataManager.instance.money -= 100; // Spends the money 
+            DataManager.instance.totalMoney -= 100; // Spends the money 
             DataManager.instance.canFlash = true; // Allows the player to use the flashlight
-            totalMoney.text = $@"$: {DataManager.instance.money}"; 
+            totalMoney.text = $@"$: {DataManager.instance.totalMoney}"; 
             button.interactable = false;
         }
     }
     public void BuyUpgradeTaser(Button button) // Buys the Taser uppgrades
     {
-        if (DataManager.instance.canStun == false && DataManager.instance.money >= 250) // Checks if the player can afford 
+        if (DataManager.instance.canStun == false && DataManager.instance.totalMoney >= 250) // Checks if the player can afford 
         {
-            DataManager.instance.money -= 250; // Spends the money 
+            DataManager.instance.totalMoney -= 250; // Spends the money 
             DataManager.instance.canStun = true; // Unlocks the taser
-            totalMoney.text = $@"$: {DataManager.instance.money}";
+            totalMoney.text = $@"$: {DataManager.instance.totalMoney}";
             button.interactable = false;
         }
     }
     public void BuyUpgradeMaxMoneyIncrease(Button button) // Upgrades the money capacity 
     {
-        if (DataManager.instance.upgradeCap[0] <= 4 && DataManager.instance.money >= 100) // Looks if the requriments meet 
+        if (DataManager.instance.upgradeCap[0] <= 4 && DataManager.instance.totalMoney >= 100) // Looks if the requriments meet 
         {
-            DataManager.instance.money -= 100; // Spends the money
+            DataManager.instance.totalMoney -= 100; // Spends the money
             DataManager.instance.maxMoney += 50; // Upgrades the storage 
             DataManager.instance.upgradeCap[0] += 1; // Adds one to the number that leads to cap
-            totalMoney.text = $@"$: {DataManager.instance.money}";
+            totalMoney.text = $@"$: {DataManager.instance.totalMoney}";
         }
         if(DataManager.instance.upgradeCap[0] == 4)
         {
@@ -62,12 +67,12 @@ public class Upgrades : MonoBehaviour
         }
         int cost = 100 + (DataManager.instance.difficulty * 50); // Makes the price up 
     
-        if (DataManager.instance.money >= cost) // IF the player can afford 
+        if (DataManager.instance.totalMoney >= cost) // IF the player can afford 
         {
-            DataManager.instance.money -= cost; // WAstes the money 
+            DataManager.instance.totalMoney -= cost; // WAstes the money 
             DataManager.instance.difficulty++; // Makes the game harder 
             Debug.Log("Lowk works");
-            totalMoney.text = $@"$: {DataManager.instance.money}";
+            totalMoney.text = $@"$: {DataManager.instance.totalMoney}";
 
         }
         int newCost = 100 + (DataManager.instance.difficulty * 50);

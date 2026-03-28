@@ -12,6 +12,7 @@ public class DataManager : MonoBehaviour
     public bool soul = false;
     public float maxMoney;
     public float money;
+    public float totalMoney;
 
     public static DataManager instance;
 
