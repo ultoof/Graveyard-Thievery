@@ -878,8 +878,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+  m_sharedMaterial: {fileID: 4183430127982257951, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2500,8 +2500,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Welcome to Graveyard Thievery!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+  m_sharedMaterial: {fileID: 4183430127982257951, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2698,7 +2698,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.15
+  m_Intensity: 0.12
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 000000006bd90c44bb66927675b5e6c8bd801c312bfa94143101c8de7d9f45e00b4186f0
@@ -5392,24 +5392,28 @@ PrefabInstance:
       objectReference: {fileID: 187065480}
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontSize
-      value: 26
+      value: 23.15
       objectReference: {fileID: 0}
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 4183430127982257951, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+    - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
     - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 4183430127982257951, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
     - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -5417,6 +5421,18 @@ PrefabInstance:
     - target: {fileID: 5295093443703842342, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -793.0601
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396651934794003841, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+    - target: {fileID: 5396651934794003841, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4183430127982257951, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+    - target: {fileID: 5396651934794003841, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5612872009091393982, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -82897,6 +82913,18 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 25.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5396651934794003841, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+    - target: {fileID: 5396651934794003841, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4183430127982257951, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+    - target: {fileID: 5396651934794003841, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5645896986707359482, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_Camera
       value: 
@@ -83271,7 +83299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -306.3001, y: -240.49997}
+  m_AnchoredPosition: {x: -306.30005, y: -240.49997}
   m_SizeDelta: {x: 96, y: 64}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1548558347
@@ -84767,8 +84795,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+  m_sharedMaterial: {fileID: 4183430127982257951, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -86489,7 +86517,7 @@ MonoBehaviour:
   - If you walk to your right you will see a bunch of items you can steal. Try some
     thievery!
   - Stealing items fills up your inventory in the top right.
-  - When your inventory is full you need to escape.
+  - When your inventory is full you need to escape through a gate.
   - After escaping you can buy upgrades at your hideout, which is a trashbin...
   - One of these is the taser. Press T to try it out!
   - This is all you need to know, but stay on your guard. There are zombies out to

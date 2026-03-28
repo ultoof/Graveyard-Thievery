@@ -188,8 +188,8 @@ MonoBehaviour:
     not go in vain.  Even in hardship or unexpected events we will remain standing
     for we are Great.  \n\nyours sincerely : The Devoted \U0001F60A\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
-  m_sharedMaterial: {fileID: 7503015304138477457, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
+  m_sharedMaterial: {fileID: 4183430127982257951, guid: 7df94b937fa56bc40bb16830b0b9889b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
