@@ -42,7 +42,8 @@ public class Pickup : MonoBehaviour
             if (inrange == true && DataManager.instance.money < DataManager.instance.maxMoney || inrange == true && DataManager.instance.money <= 0)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity); // Spawns the vfx
-                DataManager.instance.money = math.round(Math.Clamp(DataManager.instance.money + money, 0, DataManager.instance.maxMoney)); // Adds money 
+                DataManager.instance.money = math.round(Math.Clamp(DataManager.instance.money + money, 0, DataManager.instance.maxMoney)); // Adds money
+                Debug.Log($"{DataManager.instance.money}");
                 //DataManager.instance.money = startingMoney + playerController.money;
                 Destroy(gameObject); // Destroys the item. 
                 Destroy(clonedVFX, 4);

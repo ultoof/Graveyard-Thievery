@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     // Properties 
     public bool exposed = false;
     public int difficulty = 0;
+    public float money = 0f;
+    public float maxMoney = 100f;
     public float speed = 4f;
     public float sprintMultiplier = 1.5f;
     public float crouchMultiplier = 0.8f;
@@ -33,12 +35,6 @@ public class PlayerController : MonoBehaviour
     private ParticleSystem smokeEmitter;
     private AudioSource audioSource;
     public ParticleSystem detectedEmitter;
-
-    void Start()
-    {
-        if (DataManager.instance != null)
-            difficulty = DataManager.instance.difficulty; // Shows the players difficulty. Removes borders 
-    }
 
     void Awake()
     {
@@ -72,6 +68,7 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
+
     }
 
     void FixedUpdate()
