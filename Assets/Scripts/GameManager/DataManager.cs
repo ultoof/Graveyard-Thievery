@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    public List <int> upgradeCap = new List<int>(10);
     public int difficulty = 0;
     public bool canFlash;
     public bool tutorial = false;
