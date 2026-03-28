@@ -36,12 +36,6 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioSource;
     public ParticleSystem detectedEmitter;
 
-    void Start()
-    {
-        if (DataManager.instance != null)
-            difficulty = DataManager.instance.difficulty; // Shows the players difficulty. Removes borders 
-    }
-
     void Awake()
     {
         // Get components

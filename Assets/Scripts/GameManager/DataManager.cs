@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    public List <int> upgradeCap = new List<int>(10);
+    public List <int> upgradeCap = new List<int>(){0,0,0};
     public int difficulty = 0;
     public bool canFlash;
     public bool tutorial = false;
