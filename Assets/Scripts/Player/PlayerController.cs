@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     // Properties 
     public bool exposed = false;
     public int difficulty = 0;
+    public float money = 0f;
+    public float maxMoney = 100f;
     public float speed = 4f;
     public float sprintMultiplier = 1.5f;
     public float crouchMultiplier = 0.8f;
@@ -49,6 +51,21 @@ public class PlayerController : MonoBehaviour
         smokeEmitter = smokeVFX.GetComponent<ParticleSystem>();
         audioSource = GetComponent<AudioSource>();
         lastDir = Vector2.down; // Set to players starting direction
+
+        if (DataManager.instance != null) // If this isn't null 
+        {
+            maxMoney = DataManager.instance.maxMoney; // Makes the max money the amount of money that the player have uppgraded 
+        }
+        else
+        {
+            maxMoney = 100f; // If the player has no uppgrades it sets it to the default 
+
+        }
+
+        if(DataManager.instance.money != 0)
+        {
+            money = DataManager.instance.money;
+        }
     }
 
     void Update()
@@ -72,6 +89,8 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("move", moveDir.sqrMagnitude > 0.01f ? true : false);
+
+        if (DataManager.instance != null) DataManager.instance.money = money; // It picks up and makes this your money 
     }
 
     void FixedUpdate()
