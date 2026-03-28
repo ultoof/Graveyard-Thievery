@@ -41,15 +41,14 @@ public class Upgrades : MonoBehaviour
     }
     public void BuyUpgradeMaxMoneyIncrease(Button button) // Upgrades the money capacity 
     {
-        if (DataManager.instance.upgradeCap[1] <= 4 && DataManager.instance.money >= 100) // Looks if the requriments meet 
+        if (DataManager.instance.upgradeCap[0] <= 4 && DataManager.instance.money >= 100) // Looks if the requriments meet 
         {
             DataManager.instance.money -= 100; // Spends the money
             DataManager.instance.maxMoney += 50; // Upgrades the storage 
-            DataManager.instance.upgradeCap[1] += 1; // Adds one to the number that leads to cap
+            DataManager.instance.upgradeCap[0] += 1; // Adds one to the number that leads to cap
             totalMoney.text = $@"$: {DataManager.instance.money}";
-            button.interactable = false;
         }
-        if( DataManager.instance.upgradeCap[1] ==4)
+        if(DataManager.instance.upgradeCap[0] == 4)
         {
             button.interactable = false;
         }
