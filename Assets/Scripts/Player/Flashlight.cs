@@ -5,7 +5,6 @@ public class Flashlight : MonoBehaviour
 {
     // Properties
     bool isOn = false;
-    public bool canFlash = false;
     public GameObject light;
     public GameObject circleLight;
     public GameObject player;
@@ -19,12 +18,6 @@ public class Flashlight : MonoBehaviour
     private PlayerController playerController;
 
     private Animator animator;
-
-    void Start()
-    {
-        if(DataManager.instance != null) // Checks if the player has a flashlight
-        canFlash = DataManager.instance.canFlash;
-    }
 
     // Setup
     void Awake()
@@ -50,7 +43,7 @@ public class Flashlight : MonoBehaviour
         light.transform.rotation = Quaternion.Lerp(light.transform.rotation,Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90),3f * Time.deltaTime); // Follows the mouse 
 
         // Flashlight
-        if (Keyboard.current.fKey.wasPressedThisFrame && canFlash == true)
+        if (Keyboard.current.fKey.wasPressedThisFrame && DataManager.instance.canFlash == true)
         {
             if (isOn) // The flashlight is on 
             {
