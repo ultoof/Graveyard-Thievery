@@ -46,7 +46,7 @@ public class Soul : MonoBehaviour
             if (inrange == true)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
-                playerController.soul = true;
+                DataManager.instance.soul = true;
                 Destroy(gameObject); // MAkes the item dissapear 
                 Destroy(clonedVFX,2);
             }

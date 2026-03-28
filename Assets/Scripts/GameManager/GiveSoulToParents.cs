@@ -16,10 +16,7 @@ public class GiveSoulToParents : MonoBehaviour
         {
             if(Keyboard.current.eKey.wasPressedThisFrame && DataManager.instance.soul == false)
             {
-                stealTextBoi.text = "Parents : You useless midget we dead gang";
-                ClearTextAfterPeriod(3);
                 stealTextBoi.text = "Get us our souls";
-
             }
             else if(Keyboard.current.eKey.wasPressedThisFrame && DataManager.instance.soul == true)
             {
