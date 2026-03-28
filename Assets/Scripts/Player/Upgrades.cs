@@ -15,7 +15,7 @@ public class Upgrades : MonoBehaviour
 
     void Awake()
     {
-        DataManager.instance.totalMoney = DataManager.instance.money;
+        DataManager.instance.totalMoney += DataManager.instance.money;
         DataManager.instance.money = 0;
     }
     void Start()
