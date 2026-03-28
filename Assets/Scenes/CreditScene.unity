@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 25, y: -907}
+  m_AnchoredPosition: {x: 25, y: -907.00006}
   m_SizeDelta: {x: -1720, y: -840}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693395055
@@ -181,12 +181,13 @@ MonoBehaviour:
     Devoted) \nA.K.A: The Grind Incarnate\n\nViggo (Keeper Of the Details)\nA.K.A:
     He Who Does What Others Won't\n\nGraphics:\nAlice Qvist(The Visual Architect)\nA.K.A
     : Creator Of The Foundation\n\nMilo Samuelson(The Visionary)\nAKA: He Whom Embodies
-    Art\n\nHonorable Mentions :\n\nSabrina Carpenter(Assistant To The Devoted)\n\nBosse
-    The Cat(He Who Foresaw It All)\n\n\nIn Hopes of making it to the game awards
-    and proving all the nej sayers wrong. The 5 of us have carved a path that may
-    inspire generations after us. We shall not be forgotten and our efforts will
-    not go in vain.  Even in hardship or unexpected events we will remain standing
-    for we are Great.  \n\nyours sincerely : The Devoted \U0001F60A\n"
+    Art\n\nVFX:\nNeo Ljung \n\nMusic:\nExallt Daodu\n\nSFX:\nNeo Ljung\n\nHonorable
+    Mentions :\n\nSabrina Carpenter(Assistant To The Devoted)\n\nBosse The Cat(He
+    Who Foresaw It All)\n\n\nIn Hopes of making it to the game awards and proving
+    all the nej sayers wrong. The 5 of us have carved a path that may inspire generations
+    after us. We shall not be forgotten and our efforts will not go in vain.  Even
+    in hardship or unexpected events we will remain standing for we are Great.  \n\nyours
+    sincerely : The Devoted \U0001F60A\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
   m_sharedMaterial: {fileID: 7503015304138477457, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
