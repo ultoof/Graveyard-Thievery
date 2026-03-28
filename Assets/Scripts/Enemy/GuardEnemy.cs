@@ -106,7 +106,7 @@ public class GuardEnemy : MonoBehaviour
 
             if (pointDistance <= 1 && !isStoppingAtPoint)
             {
-                StartCoroutine(StopAtPoint(5f)); // stops at a point for a 5 sec(can be adjusted).
+                StartCoroutine(StopAtPoint(2.5f)); // stops at a point for a 5 sec(can be adjusted).
                 currentPoint = (currentPoint < guardPoints.Length - 1) ? currentPoint + 1 : 1; // Advance guard to next spot
             }
         }

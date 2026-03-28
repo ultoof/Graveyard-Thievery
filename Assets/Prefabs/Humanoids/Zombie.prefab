@@ -71,7 +71,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -231,8 +231,8 @@ MonoBehaviour:
   obstacleLayerMasks:
     serializedVersion: 2
     m_Bits: 8
-  viewDistance: 5
-  attackRange: 2
+  viewDistance: 2
+  attackRange: 3
   damage: 10
 --- !u!61 &8205796848815072717
 BoxCollider2D:

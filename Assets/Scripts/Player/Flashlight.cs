@@ -12,6 +12,7 @@ public class Flashlight : MonoBehaviour
     public GameObject guard;
     public GameObject iconVFX;
     public GameObject flashlightPos;
+    public bool hasBeenUsed = false;
     private ParticleSystem iconParticle;
     private GuardEnemy guardScript;
     private float defaultDist;
@@ -53,6 +54,7 @@ public class Flashlight : MonoBehaviour
             }
             else
             {
+                hasBeenUsed = true;
                 guardScript.viewDistance = defaultDist * 2; // Makes the guards view distance further when the flashlight is activated. 
                 isOn = true;
 

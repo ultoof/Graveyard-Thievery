@@ -24,6 +24,12 @@ public class GiveSoulToParents : MonoBehaviour
             else if(Keyboard.current.eKey.wasPressedThisFrame && DataManager.instance.soul == true)
             {
                 winScreen.SetActive(true);
+                DataManager.instance.tutorial = false;
+                DataManager.instance.canFlash = false;
+                DataManager.instance.canStun = false;
+                DataManager.instance.soul = false;
+                DataManager.instance.money = 0;
+                DataManager.instance.maxMoney = 100;
             }
         }
         else if(inrange == false)
