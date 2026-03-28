@@ -22,8 +22,8 @@ public class Tutorial : MonoBehaviour
     void Awake()
     {
         // Turns of uppgrades 
-        flashlight.canFlash = true;
-        taser.canStun = true;
+        DataManager.instance.canFlash = true;
+        DataManager.instance.canStun = true;
         canvas.enabled = false;
     }
 
