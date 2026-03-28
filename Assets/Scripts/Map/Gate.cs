@@ -32,7 +32,6 @@ public class Gate : MonoBehaviour
 
                 isOpen = true;
                 restriction.enabled = false;
-                DataManager.instance.money += playerController.money;
                 Debug.Log(DataManager.instance.money);
                 SceneManager.LoadScene(sceneLoad);
             }

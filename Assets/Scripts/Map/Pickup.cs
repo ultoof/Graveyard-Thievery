@@ -15,17 +15,7 @@ public class Pickup : MonoBehaviour
     public float spawnWeight;
     public bool isKey;
     private PlayerController playerController;
-    private float startingMoney = 0;
-    private float maxMoney = 100;
 
-    private void Awake()
-    {
-        if (DataManager.instance) // Checks the money it would add. 
-        {
-            startingMoney = DataManager.instance.money;
-            maxMoney = DataManager.instance.maxMoney;
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision) // If player is able to pick up items 
     {
@@ -49,10 +39,10 @@ public class Pickup : MonoBehaviour
     {
         if (Keyboard.current.eKey.wasPressedThisFrame) // Checks if E is getting pressed 
         {
-            if (inrange == true && playerController.money < maxMoney || inrange == true && money <= 0)
+            if (inrange == true && DataManager.instance.money < DataManager.instance.maxMoney || inrange == true && DataManager.instance.money <= 0)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity); // Spawns the vfx
-                playerController.money = math.round(Math.Clamp(playerController.money + money, 0, playerController.maxMoney)); // Adds money 
+                DataManager.instance.money = math.round(Math.Clamp(DataManager.instance.money + money, 0, DataManager.instance.maxMoney)); // Adds money 
                 //DataManager.instance.money = startingMoney + playerController.money;
                 Destroy(gameObject); // Destroys the item. 
                 Destroy(clonedVFX, 4);

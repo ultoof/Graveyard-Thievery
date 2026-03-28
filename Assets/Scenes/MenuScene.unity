@@ -605,7 +605,7 @@ MonoBehaviour:
   canStun: 0
   soul: 0
   maxMoney: 100
-  money: 0
+  money: 12
 --- !u!4 &519309159
 Transform:
   m_ObjectHideFlags: 0
@@ -1415,7 +1415,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7ca7648e4ee64c345aa7957934b8d8d0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

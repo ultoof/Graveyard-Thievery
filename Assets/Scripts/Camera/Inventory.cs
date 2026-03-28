@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        coinUI.fillAmount = playerController.money / playerController.maxMoney;
+        coinUI.fillAmount = DataManager.instance.money / DataManager.instance.maxMoney;
         coinText.text = $"{math.round(coinUI.fillAmount*100)}%"; // It fills up the jar when the player picks up items. 
     }
 }
