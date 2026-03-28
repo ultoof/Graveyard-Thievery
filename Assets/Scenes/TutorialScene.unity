@@ -885,8 +885,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2500,8 +2500,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Welcome to Graveyard Thievery!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
-  m_sharedMaterial: {fileID: 7503015304138477457, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5374,6 +5374,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 856935030974350193, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -583.0401
+      objectReference: {fileID: 0}
+    - target: {fileID: 912183531127252869, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -275.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062443338492736344, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -275.00003
+      objectReference: {fileID: 0}
     - target: {fileID: 1303137046134213127, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: playerController
       value: 
@@ -5393,14 +5405,22 @@ PrefabInstance:
     - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 7503015304138477457, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4987342698724060687, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295093443703842342, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -793.0601
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612872009091393982, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -899.00006
       objectReference: {fileID: 0}
     - target: {fileID: 5645896986707359482, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_Camera
@@ -5414,6 +5434,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 187065480}
+    - target: {fileID: 6500465829150152802, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -687.1202
+      objectReference: {fileID: 0}
     - target: {fileID: 6743921420195895132, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -82857,6 +82881,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 912183531127252869, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -275.00003
+      objectReference: {fileID: 0}
     - target: {fileID: 1303137046134213127, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: coinText
       value: 
@@ -84739,15 +84767,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
-  m_sharedMaterial: {fileID: 7503015304138477457, guid: 903c11e9645f8694d9e93a6008c0b777, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4289703855
+  m_fontColor: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -86199,7 +86227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 414546784773527469, guid: 23569d86ba80bae4b960d25d13ee5668, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
