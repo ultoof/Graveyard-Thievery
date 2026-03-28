@@ -54,6 +54,9 @@ public class Tutorial : MonoBehaviour
             text.enabled = false;
             button.enabled = false;
             DataManager.instance.tutorial = true;
+            DataManager.instance.canFlash = false;
+            DataManager.instance.canStun = false;
+            //DataManager.instance.money = 0;
             SceneManager.LoadSceneAsync("MenuScene"); // Sends you back to hte menu when you are done with the tutorial.
         }
     }
