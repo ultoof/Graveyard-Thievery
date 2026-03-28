@@ -1,13 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public class CameraTrap : MonoBehaviour
 {
     // Properties
-    private Collider2D revealCollider;
     private AudioSource audioSource;
     private void Awake()
     {
-        revealCollider = GetComponent<PolygonCollider2D>();
         audioSource = GetComponent<AudioSource>(); // Gets these components 
     }
 
@@ -16,8 +15,8 @@ public class CameraTrap : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            playerController.exposed = true; // Makes the player exposed 
-            playerController.CamLightOn(); 
+            StartCoroutine(FreezeRoutine(10f,playerController));
+            playerController.CamLightOn();
             audioSource.Play();
         }  
     }
@@ -27,8 +26,14 @@ public class CameraTrap : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            playerController.exposed = false; // Makes him not exposed
             playerController.CamLightOff();
         }
+    }
+
+    IEnumerator FreezeRoutine(float duration, PlayerController playerController)
+    {
+        playerController.exposed = true;
+        yield return new WaitForSeconds(duration);
+        playerController.exposed = false;
     }
 }

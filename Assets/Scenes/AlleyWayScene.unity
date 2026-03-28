@@ -157547,6 +157547,7 @@ GameObject:
   - component: {fileID: 1850231689}
   - component: {fileID: 1850231688}
   - component: {fileID: 1850231692}
+  - component: {fileID: 1850231693}
   m_Layer: 0
   m_Name: timmy_tuff_base_0
   m_TagString: Untagged
@@ -157691,8 +157692,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 345307691
-  m_SortingLayer: 5
+  m_SortingLayerID: 823951549
+  m_SortingLayer: 4
   m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5554685730089456180, guid: b5ec0079eb6b1034fb72935fc8f7cbac, type: 3}
@@ -157714,7 +157715,7 @@ Transform:
   m_GameObject: {fileID: 1850231687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.458, y: 4.125, z: 0}
+  m_LocalPosition: {x: -5.399, y: 3.286, z: 0}
   m_LocalScale: {x: 0.608338, y: 0.608338, z: 0.608338}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157737,6 +157738,18 @@ MonoBehaviour:
   isOpen: 0
   trigger: {fileID: 1850231689}
   restriction: {fileID: 1850231689}
+--- !u!114 &1850231693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850231687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5a7e3211836be498d99d35c2b2893b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LayerControllerStatic
 --- !u!1 &1861855664
 GameObject:
   m_ObjectHideFlags: 0
