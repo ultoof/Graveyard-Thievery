@@ -2833,7 +2833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &670554975
 Transform:
   m_ObjectHideFlags: 0
@@ -7225,6 +7225,10 @@ PrefabInstance:
     - target: {fileID: 5679150633635631798, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679150633635631798, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6338226079017093959, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: playerController
