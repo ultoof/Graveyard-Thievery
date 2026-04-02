@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 204800516}
   - component: {fileID: 204800515}
   - component: {fileID: 204800514}
+  - component: {fileID: 204800517}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -555,6 +556,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &204800517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204800513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc87e965ad52744a96687e281de5e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  FlashButton: {fileID: 2098417982}
+  TaseButton: {fileID: 609861334}
+  BackButton: {fileID: 622464119}
 --- !u!1001 &235027787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3482,7 +3498,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 28b5eca01f26c0d438b234083b86637a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4123,7 +4139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -253, y: 203}
+  m_AnchoredPosition: {x: -253.00003, y: 203}
   m_SizeDelta: {x: -1720, y: -1030}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1075375294
@@ -9030,7 +9046,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.55
+  m_fontSize: 30.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
