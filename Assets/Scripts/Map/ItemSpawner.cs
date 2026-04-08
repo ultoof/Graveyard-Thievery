@@ -1,38 +1,71 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemSpawner : MonoBehaviour
 {
-    // Properties 
     public GameObject itemFolder;
     public TextMeshProUGUI stealText;
+
     private Pickup[] spawnableItems;
     private List<GameObject> consideredItems = new List<GameObject>();
 
+    // Unique ID for THIS spawner
+    private string spawnerID;
+
     void Awake()
     {
-        spawnableItems = itemFolder.GetComponentsInChildren<Pickup>(); // Gets the component in the child
-        Debug.Log(spawnableItems);
+        spawnableItems = itemFolder.GetComponentsInChildren<Pickup>();
+
+        // Unique per scene + position (very important)
+        spawnerID = SceneManager.GetActiveScene().name + "_" + transform.position.ToString();
     }
 
     void Start()
     {
-        float rng = UnityEngine.Random.Range(0.1f, 100f); // Gives out the random number 
-        foreach (Pickup pickup in spawnableItems)
+        // If already collected == do NOTHING
+        if (ItemTracker.collectedSpawners.Contains(spawnerID))
         {
-            if (pickup.spawnWeight >= rng)
-            {
-                consideredItems.Add(pickup.gameObject); // Adds the gameobject
-            }
+            Debug.Log("Spawner already used: " + spawnerID);
+            return;
         }
 
-        int rngFinal = UnityEngine.Random.Range(1, consideredItems.Count);
+        consideredItems.Clear();
 
-        GameObject finalItem = Instantiate(consideredItems[rngFinal], gameObject.transform);
-        Pickup finalPickup = finalItem.GetComponent<Pickup>(); // Makes the item avalible too pickup.
+        float totalWeight = 0f;
 
-        finalItem.transform.position = gameObject.transform.position;
-        finalPickup.stealText = stealText; // Shows the steal text.
+        foreach (Pickup pickup in spawnableItems)
+        {
+            totalWeight += pickup.spawnWeight;
+        }
+
+        if (totalWeight <= 0)
+        {
+            Debug.LogWarning("No items to spawn!");
+            return;
+        }
+
+        float rng = Random.Range(0, totalWeight);
+        float cumulative = 0f;
+
+        foreach (Pickup pickup in spawnableItems)
+        {
+            cumulative += pickup.spawnWeight;
+
+            if (rng <= cumulative)
+            {
+                GameObject finalItem = Instantiate(pickup.gameObject, transform);
+                Pickup finalPickup = finalItem.GetComponent<Pickup>();
+
+                finalItem.transform.position = transform.position;
+                finalPickup.stealText = stealText;
+
+                // 🔥 Pass spawner ID to the item
+                finalPickup.spawnerID = spawnerID;
+
+                break;
+            }
+        }
     }
 }

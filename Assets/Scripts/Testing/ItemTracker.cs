@@ -1,3 +1,6 @@
-using UnityEngine;
+using System.Collections.Generic;
 
-MonoBehaviour 
+public static class ItemTracker
+{
+    public static HashSet<string> collectedSpawners = new HashSet<string>();
+}

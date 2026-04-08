@@ -8,8 +8,10 @@ public class Taser : MonoBehaviour
     public float shootingRate = 0.5f;
     public GameObject shootVFX;
     private ParticleSystem shootParticle;
+    public bool hasBeenUsed = false;
 
-    private void Awake() {
+    private void Awake() 
+    {
         shootParticle = shootVFX.GetComponent<ParticleSystem>(); // Gets the particle system 
     }
 
@@ -20,6 +22,7 @@ public class Taser : MonoBehaviour
         {
             if (ammo > 0) // Checks if the player has ammo 
             {
+                hasBeenUsed = true;
                 ammo--; // Removes one bullet
                 shootParticle.Play(); // Spawns Particle 
                 shootVFX.GetComponent<AudioSource>().Play(); // Plays the sound
