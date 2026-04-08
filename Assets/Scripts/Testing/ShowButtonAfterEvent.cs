@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Test : MonoBehaviour
+public class ShowButtonAfterEvent : MonoBehaviour
 {
     public GameObject ExitCutsceneButton;
     
