@@ -43,18 +43,14 @@ public class Pickup : MonoBehaviour
             if (DataManager.instance.money < DataManager.instance.maxMoney || DataManager.instance.money <= 0)
             {
                 GameObject clonedVFX = Instantiate(vfx, transform.position, Quaternion.identity);
-
                 DataManager.instance.money = math.round(
-                    Mathf.Clamp(DataManager.instance.money + money, 0, DataManager.instance.maxMoney)
-                );
+                Mathf.Clamp(DataManager.instance.money + money, 0, DataManager.instance.maxMoney));
 
                 Destroy(clonedVFX, 4);
-
                 if (isKey)
                 {
                     playerController.key++;
                 }
-
                 // 🔥 Mark THIS SPAWNER as used
                 ItemTracker.collectedSpawners.Add(spawnerID);
 
