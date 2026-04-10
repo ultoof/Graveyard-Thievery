@@ -10,6 +10,7 @@ public class DataManager : MonoBehaviour
     public bool tutorial = false;
     public bool canStun;
     public bool soul = false;
+    public int health = 3; 
     public float maxMoney;
     public float money;
     public float totalMoney;

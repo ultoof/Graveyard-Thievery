@@ -84,7 +84,7 @@ public class Enemy : MonoBehaviour
     {
         health.TakeDamage(1); // How much damage it will deal. 
         cooldown = true;
-         if (health.health >= 1)
+         if (DataManager.instance.health >= 1)
             {
                 GameObject hitVFXClone = Instantiate(hitVFX, player.transform.position, Quaternion.identity); // Spawns in a vfx
                 Destroy(hitVFXClone, 2); // Destroys the vfx. 

@@ -57,7 +57,7 @@ public class GuardEnemy : MonoBehaviour
          
          nav.speed = playerController.exposed ? 3 : 2; //If the player is exposed : 3 if not 2    
 
-        if (!stoppedAtPoint && health.health > 0) // Checks if the player is still alive and the guard isn't at a guard point.
+        if (!stoppedAtPoint && DataManager.instance.health > 0) // Checks if the player is still alive and the guard isn't at a guard point.
         {
             // Create a Linecast between this enemy and player
             RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, obstacleLayerMasks);
@@ -128,7 +128,7 @@ public class GuardEnemy : MonoBehaviour
             Destroy(shootVFX, 4);
             health.TakeDamage(1); // Deal damage
 
-            if (health.health >= 1)
+            if (DataManager.instance.health >= 1)
             {
                 GameObject hitVFXClone = Instantiate(hitVFX, player.transform.position, Quaternion.identity);
                 Destroy(hitVFXClone, 2);

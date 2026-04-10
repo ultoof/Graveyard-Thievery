@@ -15,7 +15,7 @@ public class HeartsAnimator : MonoBehaviour
 
     void Update()
     {
-        float frame = (float)healthScript.health / (float)healthScript.maxHealth;
+        float frame = (float)DataManager.instance.health / (float)healthScript.maxHealth;
         DisplayHearts(Mathf.RoundToInt(frame * nrOfHearts)); // It will remove hearts when taking damage 
     }
 
