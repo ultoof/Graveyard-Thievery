@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -9,14 +10,25 @@ public class Upgrade : MonoBehaviour
     bool upgradeEnabled = false;
     bool playerInRange;
     public TextMeshProUGUI upgradePrompt;
+    public TextMeshProUGUI hintText;
     public GameObject ButtonHolder;
+    public GameObject moneyText;
 
     void Update()
     {
         upgradePrompt.text = upgradeEnabled == false && playerInRange == true ? "Press E to open the upgrade menu" : "";
-        if(playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
+        if (playerInRange || upgradeEnabled)
         {
-            SetUpgradeMenu(!upgradeEnabled); // If the uppgrade is not activated it turns on the menu
+            upgradePrompt.text = upgradeEnabled ? "Press E to close" : "Press E to open the upgrade menu";
+        }
+        else
+        {
+            upgradePrompt.text = "";
+        }
+
+        if (Keyboard.current.eKey.wasPressedThisFrame && (playerInRange || upgradeEnabled))
+        {
+            SetUpgradeMenu(!upgradeEnabled);
         }
     }
 
@@ -34,6 +46,7 @@ public class Upgrade : MonoBehaviour
     {
         upgradeEnabled = state;
         ButtonHolder.SetActive(state);
-        upgradePrompt.text = state ? "" : "Press E to open the upgrade menu"; // Shows text 
+        moneyText.SetActive(state);
+        hintText.text = state ? "Shadow: What do you need?" : "";
     }
 }

@@ -602,7 +602,7 @@ MonoBehaviour:
   upgradeCap: 000000000000000000000000
   difficulty: 0
   canFlash: 0
-  tutorial: 0
+  tutorial: 1
   canStun: 0
   soul: 0
   health: 3

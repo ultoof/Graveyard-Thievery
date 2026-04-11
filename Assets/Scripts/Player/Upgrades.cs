@@ -1,16 +1,14 @@
 using System;
-using JetBrains.Annotations;
 using TMPro;
-using Unity.VectorGraphics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
     // Properties
-    private int cap = 0;
     public TextMeshProUGUI totalMoney;
+    public TextMeshProUGUI hintText;
+    public String[] hints;
     public Image flashMyLight;
 
     void Awake()
@@ -80,6 +78,10 @@ public class Upgrades : MonoBehaviour
         int newCost = 100 + (DataManager.instance.difficulty * 50);
         Debug.Log(newCost);
         // text.text = "Cost: " + newCost; // Would make the uppgrade text change with every uppgrade
-        
+    }
+
+    public void ChangeHintText(int hint)
+    {
+        hintText.text = hints[hint];
     }
 }

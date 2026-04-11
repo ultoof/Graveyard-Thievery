@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa5e756cf363774b9430dc0a36f3598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  health: 3
   maxHealth: 3
   isDead: 0
   gameOverPanel: {fileID: 0}
@@ -227,7 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ae755b395cfcb46ac3e1d73f5052c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flashlight
-  canFlash: 0
   light: {fileID: 7564796484145713086}
   circleLight: {fileID: 7768551186538579473}
   player: {fileID: 509810150712577835}
@@ -235,6 +233,7 @@ MonoBehaviour:
   guard: {fileID: 0}
   iconVFX: {fileID: 2135875831211511518}
   flashlightPos: {fileID: 1843193308454387999}
+  hasBeenUsed: 0
 --- !u!114 &5939157907944999135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,8 +249,8 @@ MonoBehaviour:
   taserProjectilePrefab: {fileID: 6122290386127711035, guid: a16efbd7517035e459f8a00826e79673, type: 3}
   ammo: 5
   shootingRate: 0.5
-  canStun: 0
   shootVFX: {fileID: 8512235256515502263}
+  hasBeenUsed: 0
 --- !u!114 &7573997825917873033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14953,7 +14952,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 823951549
   m_SortingLayer: 4
-  m_SortingOrder: -1
+  m_SortingOrder: -32768
   m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
