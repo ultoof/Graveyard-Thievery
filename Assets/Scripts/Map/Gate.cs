@@ -33,6 +33,7 @@ public class Gate : MonoBehaviour
             isOpen = true;
             restriction.enabled = false;
             Debug.Log(DataManager.instance.money);
+            DataManager.instance.health = 3;
             SceneManager.LoadScene(sceneLoad);
         }
     }

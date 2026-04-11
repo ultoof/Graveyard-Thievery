@@ -13,15 +13,17 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage) // Makes the player take damage 
     {
-        DataManager.instance.health = math.clamp(DataManager.instance.health - damage, 0, maxHealth); 
-
-        if (DataManager.instance.health <= 0) // If the player is dead 
+        if (!isDead)
         {
-            gameOverPanel.SetActive(true); // Spawns the Game over screen 
-            Debug.Log("H");
+            DataManager.instance.health = math.clamp(DataManager.instance.health - damage, 0, maxHealth); 
 
-            isDead = true; // He dies 
-            Debug.Log("Bro is popped");
+            if (DataManager.instance.health <= 0) // If the player is dead 
+            {
+                gameOverPanel.SetActive(true); // Spawns the Game over screen 
+                isDead = true; 
+                DataManager.instance.health = 3;
+                DataManager.instance.money = 0;
+            }
         }
     }
 }
