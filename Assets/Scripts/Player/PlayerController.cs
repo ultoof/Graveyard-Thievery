@@ -2,6 +2,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Health))]
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private ParticleSystem smokeEmitter;
     private AudioSource audioSource;
     public ParticleSystem detectedEmitter;
+    public GameObject houseSpawn;
 
     void Awake()
     {
@@ -45,6 +47,11 @@ public class PlayerController : MonoBehaviour
         smokeEmitter = smokeVFX.GetComponent<ParticleSystem>();
         audioSource = GetComponent<AudioSource>();
         lastDir = Vector2.down; // Set to players starting direction
+
+        if (SceneManager.GetActiveScene().name == "AlleyWayScene" && DataManager.instance.position == "House")
+        {
+            transform.position = houseSpawn.transform.position;
+        }
     }
 
     void Update()

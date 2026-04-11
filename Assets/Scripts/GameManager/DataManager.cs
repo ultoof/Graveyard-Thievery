@@ -14,6 +14,7 @@ public class DataManager : MonoBehaviour
     public float maxMoney;
     public float money;
     public float totalMoney;
+    public string position = "Default";
 
     public static DataManager instance;
 

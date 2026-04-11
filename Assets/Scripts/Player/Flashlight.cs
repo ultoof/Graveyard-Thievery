@@ -12,6 +12,7 @@ public class Flashlight : MonoBehaviour
     public GameObject guard;
     public GameObject iconVFX;
     public GameObject flashlightPos;
+    public GameObject icon;
     public bool hasBeenUsed = false;
     private ParticleSystem iconParticle;
     private GuardEnemy guardScript;
@@ -28,6 +29,11 @@ public class Flashlight : MonoBehaviour
         iconParticle = iconVFX.GetComponent<ParticleSystem>();
         defaultDist = guardScript.viewDistance;
         playerController = player.GetComponent<PlayerController>();
+
+        if (DataManager.instance.canFlash)
+        {
+            icon.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -69,5 +75,10 @@ public class Flashlight : MonoBehaviour
             light.GetComponent<AudioSource>().Play();
             playerController.updateFlashlight("idk");
         }
+    }
+
+    public void AddIcon()
+    {
+        icon.SetActive(true);
     }
 }

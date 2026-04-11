@@ -10,6 +10,8 @@ public class Upgrades : MonoBehaviour
     public TextMeshProUGUI hintText;
     public String[] hints;
     public Image flashMyLight;
+    public Flashlight flashlight;
+    public Taser taser;
 
     void Awake()
     {
@@ -31,6 +33,7 @@ public class Upgrades : MonoBehaviour
             DataManager.instance.canFlash = true; // Allows the player to use the flashlight
             totalMoney.text = $@"$: {DataManager.instance.totalMoney}"; 
             button.interactable = false;
+            flashlight.AddIcon();
         }
     }
     public void BuyUpgradeTaser(Button button) // Buys the Taser uppgrades
@@ -42,6 +45,7 @@ public class Upgrades : MonoBehaviour
             DataManager.instance.canStun = true; // Unlocks the taser
             totalMoney.text = $@"$: {DataManager.instance.totalMoney}";
             button.interactable = false;
+            taser.AddIcon();
         }
     }
     public void BuyUpgradeMaxMoneyIncrease(Button button) // Upgrades the money capacity 

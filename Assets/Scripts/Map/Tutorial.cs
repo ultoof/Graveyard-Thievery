@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -30,6 +29,8 @@ public class Tutorial : MonoBehaviour
         // Turns of uppgrades 
         DataManager.instance.canFlash = true;
         DataManager.instance.canStun = true;
+        taser.AddIcon();
+        flashlight.AddIcon();
         canvas.enabled = false;
     }
 
