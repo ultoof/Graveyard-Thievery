@@ -17,13 +17,19 @@ public class Border : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            warningText.text = "You are not worthy to pass this shadow yet...";
+        }
+    }
 
-
-    void OnTriggerStay2D(Collider2D collision) // Looks if the player is colliding with border. 
+    void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             warningText.text = "";
-        }
+        } 
     }
 }

@@ -10,7 +10,10 @@ public class Tutorial : MonoBehaviour
     // Properties 
     public Sprite[] cutsceneSprites;
     public String[] tutorialText;
+    public String[] cutsceneDialouge;
+    public AudioSource[] voiceLines;
     public TextMeshProUGUI text;
+    public TextMeshProUGUI cutSceneText;
     public Button button;
     public Canvas canvas;
     public Image image;
@@ -30,13 +33,21 @@ public class Tutorial : MonoBehaviour
         canvas.enabled = false;
     }
 
+    private void Start() {
+        voiceLines[0].Play();
+        cutSceneText.text = cutsceneDialouge[0];
+    }
+
     public void AdvanceCutscene() // Plays the cutscene
-    {
+    { 
         currentScene++;
+
+        if (currentScene <= 12) voiceLines[currentScene+1].Play();
 
         if (currentScene <= 13)
         {
             image.sprite = cutsceneSprites[currentScene]; // Plays thrue the cutscene
+            cutSceneText.text = cutsceneDialouge[currentScene];
         }
         else
         {
