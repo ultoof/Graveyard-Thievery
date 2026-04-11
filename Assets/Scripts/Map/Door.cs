@@ -58,15 +58,22 @@ public class Door : MonoBehaviour
             }
         } 
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            informingMessage.text = "Press E to open the door";
+        }
+    }
     void OnTriggerExit2D(Collider2D collision) // If player is in range 
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             informingMessage.text = "";
         }
     }
 
-      IEnumerator DoSomethingAfterDelay(float timer) // It waits 
+    IEnumerator DoSomethingAfterDelay(float timer) // It waits 
     {
         yield return new WaitForSeconds(timer); 
         informingMessage.text = "";

@@ -28,6 +28,7 @@ public class Upgrades : MonoBehaviour
 
         if (DataManager.instance.canFlash == false && DataManager.instance.totalMoney >= 100)
         {
+            DataManager.instance.difficulty++;
             DataManager.instance.totalMoney -= 100; // Spends the money 
             DataManager.instance.canFlash = true; // Allows the player to use the flashlight
             totalMoney.text = $@"$: {DataManager.instance.totalMoney}"; 
@@ -38,6 +39,7 @@ public class Upgrades : MonoBehaviour
     {
         if (DataManager.instance.canStun == false && DataManager.instance.totalMoney >= 250) // Checks if the player can afford 
         {
+            DataManager.instance.difficulty++;
             DataManager.instance.totalMoney -= 250; // Spends the money 
             DataManager.instance.canStun = true; // Unlocks the taser
             totalMoney.text = $@"$: {DataManager.instance.totalMoney}";

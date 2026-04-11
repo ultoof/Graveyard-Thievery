@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -11,12 +12,8 @@ public class Gate : MonoBehaviour
     public bool isOpen = false;
     public BoxCollider2D trigger;
     public BoxCollider2D restriction;
-    private SpriteRenderer spriteRenderer;
-
-    private void Awake() // Gets component in awake
-    {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-    }
+    public TextMeshProUGUI informingText;
+    public String message;
 
     void OnTriggerStay2D(Collider2D collision) // If player is in range
     {
@@ -37,5 +34,20 @@ public class Gate : MonoBehaviour
             }
         }
     }
-}
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            informingText.text = message;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            informingText.text = "";
+        }
+    }
+}
