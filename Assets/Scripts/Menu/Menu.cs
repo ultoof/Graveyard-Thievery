@@ -7,6 +7,8 @@ public class Menu : MonoBehaviour
     public void RestartScene() // Resets scene.
     {
         Debug.Log("K");
+        ItemTracker.collectedSpawners.Clear();
+        DataManager.instance.ResetToDefault();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -29,6 +31,8 @@ public class Menu : MonoBehaviour
         }
         else
         {
+            ItemTracker.collectedSpawners.Clear();
+            DataManager.instance.ResetToDefault();
             SceneManager.LoadScene("MainScene");
         }
     }

@@ -10997,7 +10997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05505f0bbd620364eae8d13e8c999090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapBorder
-  textObject: {fileID: 0}
+  textObject: {fileID: 856765787}
 --- !u!4 &444039026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9116217254255269652, guid: aa259231ef5775a418dca77333303751, type: 3}
@@ -27521,6 +27521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   totalMoney: {fileID: 282592249}
   hintText: {fileID: 856765787}
+  prompt: {fileID: 856765787}
   hints:
   - 'Shadow: Billy has hidden their souls inside his church!'
   - 'Shadow: Go to your house down the street and give the souls back to your parents
@@ -35358,7 +35359,7 @@ PrefabInstance:
       objectReference: {fileID: 1483245263}
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontSize
-      value: 23.05
+      value: 22.8
       objectReference: {fileID: 0}
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontAsset

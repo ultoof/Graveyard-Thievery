@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6995614961121478316}
   - component: {fileID: 2830708867630489646}
   - component: {fileID: 8008295960911461713}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: TriggerColliderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 5956764084967966119}
   - component: {fileID: 3719261755361155494}
   - component: {fileID: 7870253598287367886}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: GhostTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2394464, y: -7.230637, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2534, y: 1.2534, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6995614961121478316}

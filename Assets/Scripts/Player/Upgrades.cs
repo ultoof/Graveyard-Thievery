@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ public class Upgrades : MonoBehaviour
     // Properties
     public TextMeshProUGUI totalMoney;
     public TextMeshProUGUI hintText;
+    public TextMeshProUGUI prompt;
     public String[] hints;
     public Image flashMyLight;
     public Flashlight flashlight;
@@ -20,6 +22,7 @@ public class Upgrades : MonoBehaviour
     }
     void Start()
     {
+        ShowPrompt("Your loot has been deposited, talk to the shadow to use your earnings", 3f);
         totalMoney.text = $@"$: {DataManager.instance.totalMoney}";
     } 
 
@@ -84,8 +87,21 @@ public class Upgrades : MonoBehaviour
         // text.text = "Cost: " + newCost; // Would make the uppgrade text change with every uppgrade
     }
 
+    public void ShowPrompt(string message, float duration)
+    {
+    prompt.text = message;
+    StartCoroutine(ClearPromptAfterTime(duration));
+    }
+
     public void ChangeHintText(int hint)
     {
         hintText.text = hints[hint];
     }
+
+    IEnumerator ClearPromptAfterTime(float time)
+    {
+    yield return new WaitForSeconds(time);
+    prompt.text = "";
+    }
 }
+
