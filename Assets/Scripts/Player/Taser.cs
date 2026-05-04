@@ -10,7 +10,6 @@ public class Taser : MonoBehaviour
     public GameObject icon;
     public GameObject[] charges;
     public bool hasBeenUsed = false;
-
     private ParticleSystem shootParticle;
 
     private void Awake() 
