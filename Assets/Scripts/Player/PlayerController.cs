@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Health))]
 [RequireComponent(typeof(Rigidbody2D))]
 
+
+// attempts 2
 public class PlayerController : MonoBehaviour
 {
     // Properties 
@@ -87,52 +89,52 @@ public class PlayerController : MonoBehaviour
         }
 
         // Move with WASD
-            // When shift key is pressed = increased movment speed(sprint set true, shift set false) : higher detection
-            // When ctrl key is pressed = reduced movement speed(shift set true, sprint set false) : lower detection
-            // The animator is sent a bool  true when the player is shifting and running and it is set to false when they are running or in a different state
+        // When shift key is pressed = increased movment speed(sprint set true, shift set false) : higher detection
+        // When ctrl key is pressed = reduced movement speed(shift set true, sprint set false) : lower detection
+        // The animator is sent a bool  true when the player is shifting and running and it is set to false when they are running or in a different state
 
-            if (Keyboard.current.shiftKey.isPressed && movementRestriction == false && animator.GetBool("move") == true)// If the player runs  // Fixed it so that when standing still u cant sprint.
+        if (Keyboard.current.shiftKey.isPressed && movementRestriction == false && animator.GetBool("move") == true)// If the player runs  // Fixed it so that when standing still u cant sprint.
+        {
+            if (Stamina > 0) // if the player has more stamina 
             {
-                if (Stamina > 0) // if the player has more stamina 
-                {
-                    rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
-                    animator.SetBool("sprint", true);
-                    animator.SetBool("crouch", false);
-                    animator.SetBool("slowed", false);
-                    smokeEmitter.Play(); // Plays the FX
-                    StaminaMod = -5; // Removes stamina 
-                }
-                else
-                {
-                    // Slows movement if attempt to sprint when no stamina
-                    rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
-                    animator.SetBool("crouch", false);
-                    animator.SetBool("sprint", false);
-                    animator.SetBool("slowed", true);
-                    smokeEmitter.Stop(); // Stops the FX
-                    StaminaMod = -100; // You run way slower due too stamina being under 0
-                }
-
-            }
-            else if (Keyboard.current.ctrlKey.isPressed && movementRestriction == false) // If the player presses ctrl he crouches
-            {
-                rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
-                animator.SetBool("crouch", true);
-                animator.SetBool("sprint", false);
+                rb.MovePosition(rb.position + moveDir * speed * sprintMultiplier * Time.fixedDeltaTime);
+                animator.SetBool("sprint", true);
+                animator.SetBool("crouch", false);
                 animator.SetBool("slowed", false);
-                smokeEmitter.Stop(); // Stops the fx
-                StaminaMod = 5; // Gains stamina 
+                smokeEmitter.Play(); // Plays the FX
+                StaminaMod = -5; // Removes stamina 
             }
             else
             {
-                //This is just normal movement 
-                rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
-                animator.SetBool("sprint", false);
+                // Slows movement if attempt to sprint when no stamina
+                rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
                 animator.SetBool("crouch", false);
-                animator.SetBool("slowed", false);
+                animator.SetBool("sprint", false);
+                animator.SetBool("slowed", true);
                 smokeEmitter.Stop(); // Stops the FX
-                StaminaMod = 1;
+                StaminaMod = -100; // You run way slower due too stamina being under 0
             }
+
+        }
+        else if (Keyboard.current.ctrlKey.isPressed && movementRestriction == false) // If the player presses ctrl he crouches
+        {
+            rb.MovePosition(rb.position + moveDir * speed * crouchMultiplier * Time.fixedDeltaTime);
+            animator.SetBool("crouch", true);
+            animator.SetBool("sprint", false);
+            animator.SetBool("slowed", false);
+            smokeEmitter.Stop(); // Stops the fx
+            StaminaMod = 5; // Gains stamina 
+        }
+        else
+        {
+            //This is just normal movement 
+            rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
+            animator.SetBool("sprint", false);
+            animator.SetBool("crouch", false);
+            animator.SetBool("slowed", false);
+            smokeEmitter.Stop(); // Stops the FX
+            StaminaMod = 1;
+        }
         Stamina = math.clamp(Stamina + StaminaMod, -100, 1000);
     }
 
