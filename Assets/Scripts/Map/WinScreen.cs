@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,14 +15,18 @@ public class WinScreen : MonoBehaviour
     public TextMeshProUGUI buttonText;
     public Canvas canvas;
     public Image image;
+    public EventSystem eventSystem;
+    public GameObject button;
 
     private int currentScene = 0;
 
-    public void StartCutscene() {
+    public void StartCutscene()
+    {
         canvas.enabled = false;
         cutSceneText.text = cutsceneDialouge[0];
         image.sprite = cutsceneSprites[0];
         voiceLines[0].Play();
+        eventSystem.SetSelectedGameObject(button);
     }
 
     public void AdvanceCutscene() // Plays the cutscene

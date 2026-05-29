@@ -29512,6 +29512,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 831321602}
     - target: {fileID: 5939157907944999135, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 2012616502}
+    - target: {fileID: 5939157907944999135, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
       propertyPath: charges.Array.size
       value: 5
       objectReference: {fileID: 0}

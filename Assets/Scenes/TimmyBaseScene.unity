@@ -6090,6 +6090,8 @@ MonoBehaviour:
   buttonText: {fileID: 577200793}
   canvas: {fileID: 1631431499}
   image: {fileID: 1442685665}
+  eventSystem: {fileID: 2111252973}
+  button: {fileID: 448085657}
 --- !u!1 &1324786924
 GameObject:
   m_ObjectHideFlags: 0
@@ -7003,7 +7005,7 @@ PrefabInstance:
       objectReference: {fileID: 2134390339}
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontSize
-      value: 23.05
+      value: 22.95
       objectReference: {fileID: 0}
     - target: {fileID: 1350254840343202507, guid: cce75ca2578f5a94c803d96323efd725, type: 3}
       propertyPath: m_fontAsset
@@ -8440,6 +8442,10 @@ PrefabInstance:
       propertyPath: icon
       value: 
       objectReference: {fileID: 1631431505}
+    - target: {fileID: 5939157907944999135, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 2134390339}
     - target: {fileID: 5939157907944999135, guid: ea6b00402f41bda4ba4d7579c3df4062, type: 3}
       propertyPath: charges.Array.size
       value: 5

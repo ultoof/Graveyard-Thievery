@@ -10,6 +10,7 @@ public class Taser : MonoBehaviour
     public GameObject icon;
     public GameObject[] charges;
     public bool hasBeenUsed = false;
+    public PlayerController playerController;
     private ParticleSystem shootParticle;
 
     private void Awake() 
@@ -30,16 +31,31 @@ public class Taser : MonoBehaviour
             if (ammo > 0) // Checks if the player has ammo 
             {
                 hasBeenUsed = true;
-                charges[5-ammo].SetActive(false);
+                charges[5 - ammo].SetActive(false);
                 ammo--; // Removes one bullet
                 shootParticle.Play(); // Spawns Particle 
                 shootVFX.GetComponent<AudioSource>().Play(); // Plays the sound
 
                 // Aim
                 GameObject taserProjectile = Instantiate(taserProjectilePrefab, transform.position, Quaternion.identity);
-                Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - taserProjectile.transform.position;
-                diff.Normalize(); 
-                taserProjectile.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90);
+                Vector2 lastDir = playerController.lastDir;
+                
+                if (lastDir.y > 0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y > 0.05)
+                {
+                    taserProjectile.transform.rotation = Quaternion.Euler(0, 0, 0f);
+                }
+                else if (lastDir.y < -0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y < -0.05)
+                {
+                    taserProjectile.transform.rotation = Quaternion.Euler(0, 0, 180f);
+                }
+                else if (lastDir.x > 0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x > 0.05)
+                {
+                    taserProjectile.transform.rotation = Quaternion.Euler(0, 0, 270f);
+                }
+                else if (lastDir.x < -0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x < -0.05)
+                {
+                    taserProjectile.transform.rotation = Quaternion.Euler(0, 0, 90f);
+                }
             }
         }
     }

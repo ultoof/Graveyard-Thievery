@@ -140,22 +140,7 @@ public class PlayerController : MonoBehaviour
 
     public void updateFlashlight(string dir) // Checks what direction the flashlight is supposed to be directed 
     {
-        if (lastDir.y > 0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y > 0.05)
-        {
-            flashlightPos.position = transform.position + new Vector3(0.04f, 0.07f, 0f);
-        }
-        else if (lastDir.y < -0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y < -0.05)
-        {
-            flashlightPos.position = transform.position + new Vector3(-0.08f, -0.055f, 0f);
-        }
-        else if (lastDir.x > 0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x > 0.05)
-        {
-            flashlightPos.position = transform.position + new Vector3(0.2f, 0f, 0f);
-        }
-        else if (lastDir.x < -0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x < -0.05)
-        {
-            flashlightPos.position = transform.position + new Vector3(-0.2f, 0f, 0f);
-        }
+
     }
 
     public void FootStep() // Footstep function 

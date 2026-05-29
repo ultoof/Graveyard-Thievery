@@ -1,5 +1,7 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Flashlight : MonoBehaviour
 {
@@ -43,11 +45,33 @@ public class Flashlight : MonoBehaviour
         //DataManager.instance.TransportValue = canFlash;
 
         // Flashlight rotation
-        light.transform.position = flashlightPos.transform.position;
-        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - flashlightPos.transform.position;
-        diff.Normalize();
 
-        light.transform.rotation = Quaternion.Lerp(light.transform.rotation,Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg - 90),3f * Time.deltaTime); // Follows the mouse 
+        Vector2 lastDir = playerController.lastDir;
+        Vector2 targetPosition = transform.position;
+        float targetOrientation = 0f;
+        if (lastDir.y > 0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y > 0.05)
+        {
+            targetOrientation = 0f;
+            targetPosition = transform.position + new Vector3(0.04f, 0.07f, 0f);
+        }
+        else if (lastDir.y < -0.7 || lastDir.x < 0.1 && lastDir.x > -0.1 && lastDir.y < -0.05)
+        {
+            targetOrientation = 180f;
+            targetPosition = transform.position + new Vector3(-0.08f, -0.055f, 0f);
+        }
+        else if (lastDir.x > 0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x > 0.05)
+        {
+            targetOrientation = 270f;
+            targetPosition = transform.position + new Vector3(0.2f, 0f, 0f);
+        }
+        else if (lastDir.x < -0.71 || lastDir.y < 0.1 && lastDir.y > -0.1 && lastDir.x < -0.05)
+        {
+            targetOrientation = 90f;
+            targetPosition = transform.position + new Vector3(-0.2f, 0f, 0f);
+        }
+
+        light.transform.rotation = Quaternion.Euler(0,0,targetOrientation);
+        light.transform.position = targetPosition;
 
         // Flashlight
         if (Keyboard.current.fKey.wasPressedThisFrame && DataManager.instance.canFlash == true)
@@ -73,7 +97,6 @@ public class Flashlight : MonoBehaviour
             }
             light.SetActive(isOn); // Turns on the flashlight
             light.GetComponent<AudioSource>().Play();
-            playerController.updateFlashlight("idk");
         }
     }
 
