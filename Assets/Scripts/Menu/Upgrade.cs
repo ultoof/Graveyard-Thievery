@@ -13,6 +13,7 @@ public class Upgrade : MonoBehaviour
     public TextMeshProUGUI hintText;
     public GameObject ButtonHolder;
     public GameObject moneyText;
+    public PlayerController playerController;
 
     void Update()
     {
@@ -48,5 +49,6 @@ public class Upgrade : MonoBehaviour
         ButtonHolder.SetActive(state);
         moneyText.SetActive(state);
         hintText.text = state ? "Shadow: What do you need?" : "";
+        playerController.speed = state ? 0f : 1.8f;
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -18,6 +19,8 @@ public class Tutorial : MonoBehaviour
     public Image image;
     public Flashlight flashlight;
     public Taser taser;
+    public EventSystem eventSystem;
+    public GameObject secondButton;
 
     private int currentScene = 0;
     private int textScene = 0;
@@ -52,6 +55,7 @@ public class Tutorial : MonoBehaviour
         }
         else
         {
+            eventSystem.SetSelectedGameObject(secondButton);
             canvas.enabled = true;
             gameObject.SetActive(false);
         }
